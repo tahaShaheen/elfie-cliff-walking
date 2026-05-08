@@ -104,21 +104,9 @@ def calculate_frechet_distance(path_a, path_b):
     line_a = LineString(path_a)
     line_b = LineString(path_b)
 
-    # print(f"Path A: {line_a}")
-    # print(f"Path B: {line_b}")
-
-    # if len(path_a) == len(path_b):
-    #     global same_length_trajs
-    #     same_length_trajs += 1
-    # else:
-    #     global different_length_trajs
-    #     different_length_trajs += 1
-
     # Calculate and return the Fréchet distance.
     distance = frechet_distance(line_a, line_b)
 
-    # print(f"Calculated Fréchet distance using Shapely: {distance:.2f} between paths of lengths {len(path_a)} and {len(path_b)}")
-    # print(f"Same Length Trajs: {same_length_trajs}| Different Length Trajs: {different_length_trajs}")
     return distance
 
 def calculate_dtw(trajectory1, trajectory2):

@@ -965,19 +965,11 @@ body.form-page-body {
   opacity: 1; /* Make sure it's fully opaque */
 }
 
-/* Rule 3: Styles the arrow button for the original path direction to be dark gray */
-/* .correction-arrow.disabled-original-path {
-  background-color: #343a40; 
-  border-color: #23272b;
-  opacity: 1;
-} */
-
 /* Ensure disabled buttons with these classes don't get the default disabled look */
 .correction-arrow.previous-correction:disabled,
 .correction-arrow.disabled-original-path:disabled {
   opacity: 1;
 }
-
 
 /* Styling for the new disambiguation pop-up */
 #disambiguation-modal {

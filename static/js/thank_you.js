@@ -14,67 +14,6 @@ const finishButton = document.getElementById('finishButton');
 
 let sonaId = null; // To store Sona ID if applicable
 
-// /**
-//  * Fetches and displays the personalized debriefing message with animations.
-//  */
-// async function showDebriefMessage() {
-//     const container = document.getElementById('debrief-container');
-//     const loader = document.getElementById('debrief-loader');
-//     const content = document.getElementById('debrief-content');
-
-//     if (!container || !loader || !content) return;
-
-//     // Show the container with the loading message
-//     container.classList.remove('hidden');
-
-//     try {
-//         const response = await fetch(`${FLASK_SERVER_URL}/api/debrief-info`, {
-//             method: 'GET',
-//             credentials: 'include'
-//         });
-
-//         if (!response.ok) {
-//             // This will catch the 403 error and others
-//             throw new Error(`Server responded with status: ${response.status}`);
-//         }
-        
-//         const data = await response.json();
-
-//         // Check if data is valid
-//         if (!data || !data.title) {
-//             throw new Error("Debrief data from server is empty or invalid.");
-//         }
-
-//         // --- Success Case ---
-//         // Hide loader and show content area
-//         loader.classList.add('hidden');
-//         content.classList.remove('hidden');
-
-//         // Get element references and type out the message
-//         const titleEl = document.getElementById('debrief-title');
-//         const mainGoalEl = document.getElementById('debrief-main-goal');
-//         const userSpecificEl = document.getElementById('debrief-user-specific-info');
-//         const conditionSummaryEl = document.getElementById('debrief-condition-summary');
-//         const conclusionEl = document.getElementById('debrief-conclusion');
-        
-//         await typewriterEffect(titleEl, data.title, 30);
-//         await typewriterEffect(mainGoalEl, data.main_goal);
-//         await typewriterEffect(userSpecificEl, data.user_specific_info);
-//         await typewriterEffect(conditionSummaryEl, data.condition_summary);
-//         await typewriterEffect(conclusionEl, data.conclusion);
-
-//     } catch (error) {
-//         // --- Error Case ---
-//         // This block now runs on any failure (network error, 403, or empty data)
-//         console.error("Could not display debrief message:", error.message);
-        
-//         // Repurpose the loader to show an error message
-//         loader.innerHTML = '<p>Debriefing information could not be loaded at this time.</p>';
-//         loader.classList.add('error-state'); // Add a class for styling
-//         content.classList.add('hidden'); // Ensure content area is hidden
-//     }
-// }
-
 /**
  * Fetches and displays the personalized debriefing message with animations.
  */

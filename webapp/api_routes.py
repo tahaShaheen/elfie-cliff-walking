@@ -240,11 +240,6 @@ def submit_user_data():
 
                     if not user:
                         # If DB connects but user is missing, strictly return error (don't fallback to YAML for unknown IDs if DB is live)
-                        # NOTE: If you want to allow YAML users even if DB is live but user missing, remove this block.
-                        # However, typically if DB is live, we expect users to be there. 
-                        # To align with "fallback only on CRASH", we keep this.
-                        # But if you want "Try DB, then Try YAML for ID", remove this return. 
-                        # For safety, I will assume if DB is active, we rely on it unless it crashes.
                         pass # We will handle "user not found" by falling through or returning error at end.
                     
                     if user:

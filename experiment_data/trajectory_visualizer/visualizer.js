@@ -132,7 +132,7 @@
 
     const contentDiv = document.createElement('div');
 
-    // --- CHANGE 2: Handle both Manipulation Check types with a dynamic title ---
+    // Handle both Manipulation Check types with a dynamic title 
     if (row.feedback_type === 'manipulation_check' || row.feedback_type === 'manipulation_check_pre') {
       const responses = parseData(row[MANIPULATION_CHECK_RESPONSES_COLUMN]);
       const errorsData = parseData(row[MANIPULATION_CHECK_ERRORS_COLUMN]);

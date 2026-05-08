@@ -1630,8 +1630,6 @@ class SimplePriorityQueue {
  * @returns {Array<Array<number>>|null} The path as an array of points, or null if no path is found.
  */
 function aStarSearch(start, end, envData) {
-    // console.log(`%c[A*] Starting search from [${start.join(',')}] to [${end.join(',')}]`, 'font-weight: bold; color: purple;');
-
     const { grid_rows, grid_cols, cliff_states } = envData;
     const impassableCells = new Set(cliff_states.map(p => p.join(',')));
     const startKey = start.join(',');
@@ -1661,9 +1659,6 @@ function aStarSearch(start, end, envData) {
         const current = openSet.dequeue();
         const currentKey = current.join(',');
 
-        // Log the current step in the search.
-        // console.log(`[A*] Loop ${loopCount}: Dequeued [${currentKey}]. Queue size: ${openSet.elements.length}`);
-
         if (currentKey === endKey) {
             const path = [end];
             let tempKey = endKey;
@@ -1672,7 +1667,6 @@ function aStarSearch(start, end, envData) {
                 path.unshift(prevNode);
                 tempKey = prevNode.join(',');
             }
-            // console.log(`%c[A*] Path FOUND from [${start.join(',')}] to [${end.join(',')}] in ${loopCount} steps.`, 'font-weight: bold; color: green;');
             return path;
         }
 
@@ -1755,8 +1749,6 @@ function deformTrajectory(trajectory, correctionIndex, correctionVector, sigma =
  * @returns {Array<Array<number>>|null} A new, valid grid path or null if fixing fails.
  */
 function fixDeformedTrajectory(originalTrajectory, deformedTrajectory, envData) {
-    // console.log('%c[Pathfinder] fixDeformedTrajectory: Starting...', 'color: blue;');
-
     if (!deformedTrajectory || deformedTrajectory.length < 2) {
         console.warn('[Pathfinder] Trajectory too short to fix.');
         return { path: originalTrajectory, pruned: [] }; // Always return an object
@@ -1780,12 +1772,9 @@ function fixDeformedTrajectory(originalTrajectory, deformedTrajectory, envData) 
         return acc;
     }, []);
 
-    // console.log(`[Pathfinder] Validated waypoints: ${uniqueWaypoints.length} unique points.`);
-
     if (uniqueWaypoints.length < 2) return uniqueWaypoints;
 
     // 2. Reconstruct path between waypoints with A*
-    // console.log(`[Pathfinder] Stitching ${uniqueWaypoints.length - 1} segments with A*.`);
     let pathWithCycles = [];
     for (let i = 0; i < uniqueWaypoints.length - 1; i++) {
         const segment = aStarSearch(uniqueWaypoints[i], uniqueWaypoints[i + 1], envData);
@@ -1807,8 +1796,6 @@ function fixDeformedTrajectory(originalTrajectory, deformedTrajectory, envData) 
     // Calculate the difference to find the cells that were pruned by the algorithm.
     const finalPathKeys = new Set(finalPath.map(p => p.join(',')));
     const prunedCells = pathWithCycles.filter(p => !finalPathKeys.has(p.join(',')));
-
-    // console.log(`%c[Pathfinder] fixDeformedTrajectory: Finished. Final path has ${finalPath.length} steps.`, 'color: blue; font-weight: bold;');
 
     // Return an object containing both the path and the cells that were just pruned.
     return { path: finalPath, pruned: prunedCells };
@@ -2537,18 +2524,10 @@ function adjustContentScale() {
 }
 
 
-// In utils.js, replace the existing function with this one for debugging:
 function generateTrajectoryFromPolicyJS(policy, envData) {
-    // --- Start of Debugging Block ---
-    console.groupCollapsed(`[Debug] generateTrajectoryFromPolicyJS for env: ${envData.id || 'Unknown'}`);
-    console.log("Received envData:", JSON.parse(JSON.stringify(envData)));
-    console.log(`Received policy with length: ${policy ? policy.length : 'null'}`);
-    // --- End of Debugging Block ---
-
     const { grid_rows, grid_cols, start_state, goal_state } = envData;
     if (!policy || !start_state || !goal_state) {
         console.error("Path generation failed: Missing policy or start/goal state.");
-        console.groupEnd();
         return [];
     }
 
@@ -2568,13 +2547,6 @@ function generateTrajectoryFromPolicyJS(policy, envData) {
         const action = policy[stateIndex];
         const oldPos = Array.from(currentPos);
 
-        // --- Debug log for the first action ---
-        if (i === 0) {
-            const actionMap = { 0: 'LEFT', 1: 'DOWN', 2: 'RIGHT', 3: 'UP' };
-            console.log(`First Step: At start state [${start_state.join(',')}] (index ${stateIndex}), policy action is ${action} (${actionMap[action]})`);
-        }
-        // ---
-
         if (action === 0 && currentPos[1] > 0) currentPos[1]--;
         else if (action === 1 && currentPos[0] < grid_rows - 1) currentPos[0]++;
         else if (action === 2 && currentPos[1] < grid_cols - 1) currentPos[1]++;
@@ -2588,8 +2560,6 @@ function generateTrajectoryFromPolicyJS(policy, envData) {
         trajectory.push(Array.from(currentPos));
     }
 
-    console.log(`Generated trajectory with ${trajectory.length} steps.`);
-    console.groupEnd();
     return trajectory;
 }
 
@@ -2713,8 +2683,6 @@ function generateAndSelectBestPerturbation(primaryPolicy, rivalPolicy, envData, 
         // Add the new distance to the numerator. We give it a weight (e.g., 0.5)
         // to balance its influence with the dtwToRival.
         const comparisonWeight = 0.5;
-        // const score = (dtwToRival + (comparisonWeight * dtwToOtherGenerated)) / (dtwToPrimary + holePenalty + 1e-6);
-        // console.log(`Candidate #${i}: DTW-self=${dtwToPrimary.toFixed(2)}, DTW-rival=${dtwToRival.toFixed(2)}, DTW-comp=${dtwToOtherGenerated.toFixed(2)}, Score=${score.toFixed(2)}`);
 
         const score = (dtwToRival + dtwToOtherGenerated + holeDifferenceTerm) / (dtwToPrimary + holePenalty + 1e-6);
 
@@ -2729,8 +2697,6 @@ function generateAndSelectBestPerturbation(primaryPolicy, rivalPolicy, envData, 
     // 6. Select the 2nd best option.
     let finalSelection;
     if (scoredCandidates.length > 1) {
-        // finalSelection = scoredCandidates[1];
-        // console.log(`%cSelected 2nd best candidate with score ${finalSelection.score.toFixed(2)}.`, 'font-weight:bold; color: #20c997;');
         finalSelection = scoredCandidates[0];
         console.log(`%cSelected best candidate with score ${finalSelection.score.toFixed(2)}.`, 'font-weight:bold; color: #20c997;');
     } else {
