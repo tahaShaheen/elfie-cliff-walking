@@ -1,4 +1,4 @@
-name: gym
+name: elfie
 channels:
   - defaults
   - conda-forge

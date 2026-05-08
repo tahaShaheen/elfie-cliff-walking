@@ -1,39 +1,92 @@
 # Elfie Cliff Walking
 
-Welcome to the Elfie Cliff Walking project! 
+Welcome to the Elfie Cliff Walking project! 🍪
 
-## How To Run
+This is the companion codebase for the IJCAI '26 paper: **"Empirical Evidence and Analysis of a Critical Pitfall in Reward Learning from Human Feedback"** by [Taha Shaheen](https://scholar.google.com/citations?user=cEGtSWAAAAAJ&hl=en), [Stephen G. West](https://scholar.google.com/citations?user=SkMe3SEAAAAJ&hl=en), and [Yu Zhang](https://scholar.google.com/citations?user=n0uRPLgAAAAJ&hl=en&oi=ao).
 
-### Local Development
+---
 
-1. **Start the Flask Backend:**
-   Run the Flask backend server. You can use either of the following commands:
-   ```bash
-   python app.py
-   ```
-   *or*
-   ```bash
-   flask run --port=5001
-   ```
+## Live Demo (onRender)
 
-2. **Start the Frontend:**
-   In a separate terminal, start a local HTTP server to serve the frontend files (this is important for proper cookie handling):
-   ```bash
-   python -m http.server 8000
-   ```
+The minigames are currently hosted and playable on onRender at:  
+**[elfie-cliff-walking.onrender.com](https://elfie-cliff-walking.onrender.com/)**
 
-### Running on onRender
+### Test Accounts & Experimental Groups
 
-To connect to the database hosted on Render from your local machine, setup your environment variables using the external database URL provided by Render:
+Participants were recruited via general advertisement (paid $5) and a Psych 101 university pool (compensated with course credit). The only difference between these user types in the web application is the compensation information displayed to them. 
+
+You can log in using any of the following accounts to test the different experimental conditions:
+
+| Group ID | Instructions (`a`) | Visual Environment (`b`) | Regular User Login | Psych Pool Login |
+| :--- | :--- | :--- | :--- | :--- |
+| **a1b1** | Safe (Not Slippery) | Not Slippery | `test_user1` | `psych_user1` |
+| **a1b2** | Safe (Not Slippery) | Slippery | `test_user2` | `psych_user2` |
+| **a2b1** | Danger (Slippery) | Not Slippery | `test_user3` | `psych_user3` |
+| **a2b2** | Danger (Slippery) | Slippery | `test_user4` | `psych_user4` |
+
+---
+
+## Data & Visualizations
+
+* **Raw Final Data:** [View the Dataset on GitHub](https://github.com/tahaShaheen/elfie-cliff-walking/blob/main/experiment_data/processed_participant_data.csv)
+* **Final Data Visualizations:** [View Interactive Trajectories and Responses for Individual Participants](https://elfie-cliff-walking.onrender.com/experiment_data/trajectory_visualizer/index.html)
+
+
+---
+
+## Local Development & Setup
+
+This project uses a combination of Conda (for local Python development) and Pip (for web deployment). 
+
+### 1. Python Environment Setup
+We highly recommend using Conda to manage your local environment to ensure all dependencies resolve correctly.
+
+**Option A: Standard Conda Installation**
+Use the `environment.yml` file to create a conda environment that should work across different operating systems.
+
 ```bash
-source ~/.bash-profile  # or ~/.zshrc depending on your setup
-export DATABASE_URL=postgresql://<your_render_external_url>
+conda env create -f environment.yml
+
+# Activate the environment
+conda activate elfie
 ```
-*Note: Make sure to use the **Internal Database URL** in your environment variables when the app is actively deployed on Render.*
 
-## Conda Environment Setup
+**Option B: Exact Replication of our Setup (macOS ARM64 only)**
+If you are on an Apple Silicon Mac and want the *exact* package versions used during the original development, use the spec list:
 
-If you need to export the Conda environment so that you can reproduce the exact same environment on a different machine, use:
 ```bash
-conda env export -n <env_name> -f environment.yml --no-builds
+conda create --name elfie --file spec-list.txt
+conda activate elfie
 ```
+
+**Option C: Pip Installation (For Deployment/Cloud)**
+If you are deploying to a server (like onRender) or prefer not to use Conda, use the standard pip requirements file:
+
+```bash
+pip install -r requirements.txt
+```
+
+### 2. Start the Flask Backend
+
+Once your Python environment is activated (and dependencies are installed), you can start the local development server.
+
+```bash
+flask run --port=5001
+```
+
+---
+
+## Attributions & Resources
+
+* [Mouse Icons by rcherem on Flaticon](https://www.flaticon.com)
+* [Elf and Ice Sprites from Farama Gymnasium](https://gymnasium.farama.org/environments/toy_text/frozen_lake/)
+* [Grass Tileset from Itch.io](https://ninjikin.itch.io/grass)
+* [Dry Grass Photo](https://unsplash.com/photos/green-grass-HKJCs7jNd3w)
+* [Ice Photo](https://unsplash.com/photos/white-snow-mountain-S-5qu7iwQfc)
+* [Assistance from Gemini 2.5 Pro and 3.0 Pro](https://gemini.google.com)
+
+## 🛑 Maintenance & License
+
+**This repository is currently not being maintained.** Please feel free to fork and use the code for your own projects!
+
+This project is licensed under the **MIT License**.
