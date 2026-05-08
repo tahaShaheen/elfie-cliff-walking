@@ -2,5 +2,7 @@
 __pycache__/
 *.py[cod]
 
-# User configurations
-user_groups.yaml
+# Generated files
+flask_session/
+local_database.db
+game_data.yaml
