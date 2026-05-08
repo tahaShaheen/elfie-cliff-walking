@@ -1,0 +1,1934 @@
+reusable_data:
+  practice_map_data: &practice_map_data
+    grid_rows: 6
+    grid_cols: 12
+    start_state: [0, 11]
+    goal_state: [0, 0]
+    cliff_states:
+    - [0, 8]
+    - [0, 9]
+    - [1, 1]
+    - [1, 2]
+    - [1, 3]
+    - [1, 5]
+    - [1, 9]
+    - [1, 10]
+    - [2, 2]
+    - [2, 4]
+    - [2, 5]
+    - [2, 9]
+    - [3, 3]
+    - [3, 4]
+    - [4, 8]
+    - [5, 4]
+    - [5, 5]
+    - [5, 8]
+    - [5, 9]
+
+  plan_vs_exec_animation: &plan_vs_exec_animation
+    type: render_plan_execution_comparison
+    animation_speed: 300
+    banner_text: "Note: You will **NEVER** see Elfie move."
+    map_data:
+      grid_rows: 3
+      grid_cols: 5
+      start_state: [1, 0]
+      goal_state: [1, 4]
+      cliff_states: [[0, 1], [0, 2], [0, 3]]
+    trajectory: [[1, 0], [1, 1], [1, 2], [1, 3], [1, 4]]
+    plan_map:
+      title: "The Plan"
+      caption: "**You** will come up with a **plan** on how to solve a map. This is an example of what it might look like."
+    # execution_header: "Examples of what you will **NOT** see in the games"
+    # exec_safe_map:
+    #   title: ""
+    #   caption: "Elfie following the plan above on Stable Tiles (and not slipping)."
+    # exec_slip_map:
+    #   title: ""
+    #   caption: "Elfie following the plan above on Slippery Tiles (and slipping)."
+
+
+instruction_components:
+  ffq_stable_section:
+    - type: divider
+    - type: render_animated_map
+      map_data:
+        grid_rows: 4
+        grid_cols: 7
+        start_state: [3, 0]
+        goal_state: [3, 6]
+        cliff_states: [[1, 2], [1, 3], [1, 4], [3, 2], [3, 3], [3, 4]]
+      tile_type: "stable"
+      caption: "One of the two realms as they will appear in the mini-games.\nThis is how Elfie would move on this type of ground."
+      animation_speed: 300
+      trajectory: [[3, 0], [3, 0], [2, 0], [2, 1], [2, 2], [2, 3], [2, 4], [2, 5], [2, 6], [3, 6]]
+    - type: large_image
+      path: "imgs/grass_actual_picture.jpg"
+      caption: "This is what the ground looks like up close in this realm."
+    - type: likert_scale
+      name: "stable_rating" 
+      question: "On a scale where 1 is **Rough & Stable** and 5 is **Slick & Slippery**, how would you rate the realm above?"
+
+  ffq_slippery_section:
+    - type: divider
+    - type: render_animated_map
+      map_data:
+        grid_rows: 4
+        grid_cols: 7
+        start_state: [3, 0]
+        goal_state: [3, 6]
+        cliff_states: [[1, 2], [1, 3], [1, 4], [3, 2], [3, 3], [3, 4]]
+      tile_type: "slippery"
+      caption: "One of the two realms as they will appear in the mini-games.\nThis is how Elfie would move on this type of ground."
+      animation_speed: 300
+      # Provide a list of possible trajectories. The script will pick one at random for each animation loop.
+      trajectories:
+        - [[3, 0], [3, 0], [2, 0], [2, 1], [2, 2], [2, 3], [1, 3]] # slips off middle cliff (top)
+        - [[3, 0], [3, 0], [2, 0], [2, 1], [2, 2], [2, 3], [3, 3]] # slips off middle cliff (bottom)
+        - [[3, 0], [3, 0], [2, 0], [2, 1], [2, 2], [2, 3], [2, 4], [1, 4]] # slips off right cliff (top)
+        - [[3, 0], [3, 0], [2, 0], [2, 1], [2, 2], [2, 3], [2, 4], [3, 4]] # slips off right cliff (bottom)
+    - type: large_image
+      path: "imgs/ice_actual_picture.jpg"
+      caption: "This is what the ground looks like up close in this realm."
+    - type: likert_scale
+      name: "slippery_rating"
+      question: "On a scale where 1 is **Rough & Stable** and 5 is **Slick & Slippery**, how would you rate the realm above?"
+
+  plan_vs_execution_common_text:
+  - type: text
+    content: "In all the mini-games, you can help Elfie **only** in **PLANNING** before she goes on her journey. In the distant realm, Elfie will have to trust you and follow the plans. You will **not** be there to see Elfie actually follow that plan."
+
+  plan_vs_execution_common_elements:
+  - type: include
+    id: plan_vs_execution_common_text
+  - <<: *plan_vs_exec_animation
+  - type: emphasis_box
+    color: gray
+    title: "A Note Regarding Planning"
+    items:
+    - "You are **only** drawing a path on maps for Elfie to follow (example above)." 
+    - "You **won't actually see** Elfie walk along it. This is why you have to plan with care."
+    - "On **STABLE ground**, Elfie would be **completely safe** following the plan shown above."
+    - "On **SLIPPERY ground**, Elfie **risks slipping** and falling off the cliff if she follows the plan shown above."
+
+  # Add this new component under the 'instruction_components' section
+  manipulation_check_questions_post:
+  - type: new_card
+    display_mode: main_only
+  - type: section_header
+    content: "Question 1: Consider this plan ..."
+  - type: render_plan_execution_comparison
+    animation_speed: 300
+    plan_map:
+      title: ""
+      caption: ""
+    map_data:
+      grid_rows: 3
+      grid_cols: 5
+      start_state: [1, 0]
+      goal_state: [1, 4]
+      cliff_states: [[0, 1], [0, 2], [0, 3]]
+    trajectory: [[1, 0], [1, 1], [1, 2], [1, 3], [1, 4]]
+  - type: likert_scale
+    name: "slippery_outcome_q"
+    question: "How likely do you think it is that Elfie will **slip** if she follows the plan above?"
+    labels:
+      1: "Extremely<br>Unlikely"
+      3: "Neutral"
+      5: "Extremely<br>Likely"
+
+  - type: new_card
+    display_mode: main_only
+  - type: section_header
+    content: "Question 2: Consider this plan ..."
+  - type: render_plan_execution_comparison
+    animation_speed: 300
+    plan_map:
+      title: ""
+      caption: ""
+    map_data:
+      grid_rows: 3
+      grid_cols: 5
+      start_state: [1, 0]
+      goal_state: [1, 4]
+      cliff_states: [[0, 1], [0, 2], [0, 3]]
+    trajectory: [[1, 0], [2, 0], [2, 1], [2, 2], [2, 3], [2, 4], [1, 4]]
+  - type: likert_scale
+    name: "slippery_outcome_q_2"
+    question: "How likely do you think it is that Elfie will **slip** if she follows the plan above?"
+    labels:
+      1: "Extremely<br>Unlikely"
+      3: "Neutral"
+      5: "Extremely<br>Likely"
+
+  manipulation_check_questions:
+  - type: new_card
+    display_mode: main_only
+  - type: emphasis_box
+    color: pink
+    title: "⚠️ Comprehension Check "
+    items:
+    - "Answer these questions to confirm you **understand** the instructions."
+    - "After three failed attempts, you **will not be able to continue**."
+    - "You will be paid **only** if you complete **all** mini-games."
+
+  - type: new_card
+    display_mode: main_only
+  - type: section_header
+    content: "Question 1: Consider this plan ..."
+  - type: render_plan_execution_comparison
+    animation_speed: 300
+    plan_map:
+      title: ""
+      caption: ""
+    map_data:
+      grid_rows: 3
+      grid_cols: 5
+      start_state: [1, 0]
+      goal_state: [1, 4]
+      cliff_states: [[0, 1], [0, 2], [0, 3]]
+    trajectory: [[1, 0], [1, 1], [1, 2], [1, 3], [1, 4]]
+  - type: likert_scale
+    name: "slippery_outcome_q"
+    question: "How likely do you think it is that Elfie will **slip** if she follows the plan above?"
+    labels:
+      1: "Extremely<br>Unlikely"
+      3: "Neutral"
+      5: "Extremely<br>Likely"
+
+  - type: new_card
+    display_mode: main_only
+  - type: section_header
+    content: "Question 2: Consider this plan ..."
+  - type: render_plan_execution_comparison
+    animation_speed: 300
+    plan_map:
+      title: ""
+      caption: ""
+    map_data:
+      grid_rows: 3
+      grid_cols: 5
+      start_state: [1, 0]
+      goal_state: [1, 4]
+      cliff_states: [[0, 1], [0, 2], [0, 3]]
+    trajectory: [[1, 0], [2, 0], [2, 1], [2, 2], [2, 3], [2, 4], [1, 4]]
+  - type: likert_scale
+    name: "slippery_outcome_q_2"
+    question: "How likely do you think it is that Elfie will **slip** if she follows the plan above?"
+    labels:
+      1: "Extremely<br>Unlikely"
+      3: "Neutral"
+      5: "Extremely<br>Likely"
+
+  - type: new_card
+    display_mode: main_only
+  - type: section_header
+    content: "Question 3: Rate your agreement with this statement"
+  - type: text
+    content: "Statement: *'The mini-games are about **PLANNING** only. I will **NOT** see Elfie actually move along the path.'*"
+  - type: likert_scale
+    name: "execution_q"
+    question: "Please rate your level of agreement."
+    labels:
+      1: "**Strongly<br>Disagree**<br>(Elfie moves during the mini-games)"
+      3: "Neutral"
+      5: "**Strongly<br>Agree**<br>(Elfie never moves during the mini-games)"
+
+  - type: new_card
+    display_mode: main_only
+  - type: section_header
+    content: "Question 4: Rate your agreement with this statement"
+  - type: text
+    content: "Statement: *'My main task is to act as an **OBSERVER** and watch Elfie execute plans.'*"
+  - type: likert_scale
+    name: "what_is_task_q"
+    question: "Please rate your level of agreement."
+    labels:
+      1: "**Strongly<br>Disagree**<br>(I am an active planner)"
+      3: "Neutral"
+      5: "**Strongly<br>Agree**<br>(I am only an observer)"
+
+  common_intro:
+  - type: text
+    content: Welcome! Meet our main characters, Elfie the Elf, the Delicious Cookie 🍪 and the dreaded cliffs.
+  - type: image_group
+    images:
+    - path: imgs/elf_down.png
+      alt: Elfie
+      caption: Elfie
+    - path: imgs/cookie.png
+      alt: Cookie
+      caption: Delicious Cookie
+    - path: imgs/mountain_cliff.png
+      alt: Cliff
+      caption: The Cliffs (Avoid)
+      
+  goal_and_anonymity:
+  - type: emphasis_box
+    color: green
+    title: Your Objective
+    items:
+    - Elfie the Elf wants to get to the cookie 🍪.
+    - Help Elfie **plan** the **best** path to the cookie. 
+    - Decide what **best** is (shortest, safest, a combination, etc.).
+    - Play 5 **modified** Cliff World games (5 rounds each).
+  - type: emphasis_box
+    color: yellow
+    title: ""
+    items:
+    - Track progress via the **progress bar** above each page.
+    - Complete **all** mini-games in **one sitting**.
+    - You will **not be able to use** your **USER ID** to log in again.
+    - Please **don't click** on the **Back button** in your browser.
+    - You will be **logged out** after 10 minutes of inactivity.
+  - type: emphasis_box
+    color: gray
+    title: Payment is contingent on
+    items:
+    - "**Completion** of **all** mini-games in **one sitting**."
+    - "Paying **careful attention** to the instructions."
+    # - "You will not be able to continue if you fail a comprehension check later."
+  - type: emphasis_box
+    color: pink
+    title: Removal from the Study
+    items:
+    - Please pay careful attention to the instructions.
+    - "A **Comprehension Check** later will test your understanding of the instructions."
+    - You will **not be allowed** to complete the study if you fail it **thrice**.
+
+  common_practice_page_notice: 
+  - type: new_card
+    display_mode: main_only
+  - type: emphasis_box
+    color: teal
+    title: Practice Round
+    items:
+    - "On the next page, you will complete a **Practice Round** to familiarize yourself with this mini-game."
+    - "Click **End Practice**, to play the 5 **real rounds**."
+
+  # --- Task-Specific Image Groups for Group a1b1 (Stable/Mountain) ---
+  comparisons_a1b1_imgs:
+    - type: image_group
+      images:
+      - { path: imgs/mountain_bg2.png, alt: "Regular Tile", caption: "Regular Tile" }
+      - { path: imgs/mountain_bg2.png, alt: "Planned Path", caption: "Planned Path", classes: ['path-cell'] }
+  demonstrations_a1b1_imgs:
+    - type: image_group
+      images:
+      - { path: imgs/mountain_bg2.png, alt: "Regular Tile", caption: "Regular Tile" }
+      - { path: imgs/mountain_bg2.png, alt: "Selected Tiles", caption: "Selected Tiles", classes: ['path-cell'] }
+      - { path: imgs/mountain_bg2.png, alt: "Last Selected Tile", caption: "Last Selected Tile", classes: ['current-pos-highlight'] }
+      - { path: imgs/mountain_bg2.png, alt: "Valid Next Selection", caption: "Valid Next Selection", classes: ['correction-target-cell'] }
+  corrections_a1b1_imgs:
+    - type: image_group
+      images:
+      - { path: imgs/mountain_bg2.png, alt: "Regular Tile", caption: "Regular Tile" }
+      - { path: imgs/mountain_bg2.png, alt: "Draggable Path", caption: "Draggable Path", classes: ['trajectory-path-cell'] }
+      - { path: imgs/mountain_bg2.png, alt: "Invalid Drag Target", caption: "Invalid Drag Target", classes: ['path-cell'] }
+      - { path: imgs/mountain_bg2.png, alt: "Currently Dragging", caption: "Currently Dragging", classes: ['correction-target-cell'] }
+  off_a1b1_imgs:
+    - type: image_group
+      images:
+      - { path: imgs/mountain_bg2.png, alt: "Regular Tile", caption: "Regular Tile" }
+      - { path: imgs/mountain_bg2.png, alt: "Kept Path", caption: "Kept Path", classes: ['path-cell'] }
+      - { path: imgs/mountain_bg2.png, alt: "New Path", caption: "New Path", classes: ['trajectory-path-cell'] }
+      - { path: imgs/mountain_bg2.png, alt: "Marked Mistake", caption: "Marked Mistake", classes: ['obstacle-cell'] }
+
+  # --- Task-Specific Image Groups for Group a1b2 (Stable/Ice) ---
+  comparisons_a1b2_imgs:
+    - type: image_group
+      images:
+      - { path: imgs/ice.png, alt: "Regular Tile", caption: "Regular Tile" }
+      - { path: imgs/ice.png, alt: "Planned Path", caption: "Planned Path", classes: ['path-cell'] }
+  demonstrations_a1b2_imgs:
+    - type: image_group
+      images:
+      - { path: imgs/ice.png, alt: "Regular Tile", caption: "Regular Tile" }
+      - { path: imgs/ice.png, alt: "Selected Tiles", caption: "Selected Tiles", classes: ['path-cell'] }
+      - { path: imgs/ice.png, alt: "Last Selected Tile", caption: "Last Selected Tile", classes: ['current-pos-highlight'] }
+      - { path: imgs/ice.png, alt: "Valid Next Selection", caption: "Valid Next Selection", classes: ['correction-target-cell'] }
+  corrections_a1b2_imgs:
+    - type: image_group
+      images:
+      - { path: imgs/ice.png, alt: "Regular Tile", caption: "Regular Tile" }
+      - { path: imgs/ice.png, alt: "Draggable Path", caption: "Draggable Path", classes: ['trajectory-path-cell'] }
+      - { path: imgs/ice.png, alt: "Invalid Drag Target", caption: "Invalid Drag Target", classes: ['path-cell'] }
+      - { path: imgs/ice.png, alt: "Currently Dragging", caption: "Currently Dragging", classes: ['correction-target-cell'] }
+  off_a1b2_imgs: 
+    - type: image_group
+      images:
+      - { path: imgs/ice.png, alt: "Regular Tile", caption: "Regular Tile" }
+      - { path: imgs/ice.png, alt: "Kept Path", caption: "Kept Path", classes: ['path-cell'] }
+      - { path: imgs/ice.png, alt: "New Path", caption: "New Path", classes: ['trajectory-path-cell'] }
+      - { path: imgs/ice.png, alt: "Marked Mistake", caption: "Marked Mistake", classes: ['obstacle-cell'] }
+
+  # --- Task-Specific Image Groups for Group a2b1 (Slippery/Mountain) ---
+  comparisons_a2b1_imgs:
+    - type: image_group
+      images:
+      - { path: imgs/mountain_bg2.png, alt: "Regular Tile", caption: "Regular Tile" }
+      - { path: imgs/mountain_bg2.png, alt: "Planned Path", caption: "Planned Path", classes: ['path-cell'] }
+  demonstrations_a2b1_imgs:
+    - type: image_group
+      images:
+      - { path: imgs/mountain_bg2.png, alt: "Regular Tile", caption: "Regular Tile" }
+      - { path: imgs/mountain_bg2.png, alt: "Selected Tile", caption: "Selected Tile", classes: ['path-cell'] }
+      - { path: imgs/mountain_bg2.png, alt: "Last Selected Tile", caption: "Last Selected Tile", classes: ['current-pos-highlight'] }
+      - { path: imgs/mountain_bg2.png, alt: "Valid Next Selection", caption: "Valid Next Selection", classes: ['correction-target-cell'] }
+  corrections_a2b1_imgs:
+    - type: image_group
+      images:
+      - { path: imgs/mountain_bg2.png, alt: "Regular Tile", caption: "Regular Tile" }
+      - { path: imgs/mountain_bg2.png, alt: "Draggable Path", caption: "Draggable Path", classes: ['trajectory-path-cell'] }
+      - { path: imgs/mountain_bg2.png, alt: "Invalid Drag Target", caption: "Invalid Drag Target", classes: ['path-cell'] }
+      - { path: imgs/mountain_bg2.png, alt: "Currently Dragging", caption: "Currently Dragging", classes: ['correction-target-cell'] }
+
+  off_a2b1_imgs: 
+    - type: image_group
+      images:
+      - { path: imgs/mountain_bg2.png, alt: "Regular Tile", caption: "Regular Tile" }
+      - { path: imgs/mountain_bg2.png, alt: "Kept Path", caption: "Kept Path", classes: ['path-cell'] }
+      - { path: imgs/mountain_bg2.png, alt: "New Path", caption: "New Path", classes: ['trajectory-path-cell'] }
+      - { path: imgs/mountain_bg2.png, alt: "Marked Mistake", caption: "Marked Mistake", classes: ['obstacle-cell'] }
+
+  # --- Task-Specific Image Groups for Group a2b2 (Slippery/Ice) ---
+  comparisons_a2b2_imgs:
+    - type: image_group
+      images:
+      - { path: imgs/ice.png, alt: "Regular Tile", caption: "Regular Tile" }
+      - { path: imgs/ice.png, alt: "Planned Path", caption: "Planned Path", classes: ['path-cell'] }
+  demonstrations_a2b2_imgs:
+    - type: image_group
+      images:
+      - { path: imgs/ice.png, alt: "Regular Tile", caption: "Regular Tile" }
+      - { path: imgs/ice.png, alt: "Selected Tiles", caption: "Selected Tiles", classes: ['path-cell'] }
+      - { path: imgs/ice.png, alt: "Last Selected Tile", caption: "Last Selected Tile", classes: ['current-pos-highlight'] }
+      - { path: imgs/ice.png, alt: "Valid Next Selection", caption: "Valid Next Selection", classes: ['correction-target-cell'] }
+  corrections_a2b2_imgs:
+    - type: image_group
+      images:
+      - { path: imgs/ice.png, alt: "Regular Tile", caption: "Regular Tile" }
+      - { path: imgs/ice.png, alt: "Draggable Path", caption: "Draggable Path", classes: ['trajectory-path-cell'] }
+      - { path: imgs/ice.png, alt: "Invalid Drag Target", caption: "Invalid Drag Target", classes: ['path-cell'] }
+      - { path: imgs/ice.png, alt: "Currently Dragging", caption: "Currently Dragging", classes: ['correction-target-cell'] }
+  off_a2b2_imgs:
+    - type: image_group
+      images:
+      - { path: imgs/ice.png, alt: "Regular Tile", caption: "Regular Tile" }
+      - { path: imgs/ice.png, alt: "Kept Path", caption: "Kept Path", classes: ['path-cell'] }
+      - { path: imgs/ice.png, alt: "New Path", caption: "New Path", classes: ['trajectory-path-cell'] }
+      - { path: imgs/ice.png, alt: "Marked Mistake", caption: "Marked Mistake", classes: ['obstacle-cell'] }
+
+  common_elfie_cookie_imgs:
+  - type: image_group
+    images:
+    - path: imgs/elf_down.png
+      alt: Elfie the Elf
+      caption: Elfie the Elf
+    - path: imgs/cookie.png
+      alt: Cookie
+      caption: Delicious Cookie
+
+  # CONTENT-ONLY COMPONENTS
+  stable_notice_stable_content:
+    # - type: divider
+    - type: emphasis_box
+      color: green 
+      title: Remember!
+      items:
+      - The ground is **STABLE** and Elfie is **safe from slipping** off the cliff if your **plan** takes her close to the edge.
+      - Take this into account when making decisions about the best path.
+      - You are helping to **plan** a way to the cookie.
+      - These mini-games are **only** about planning.
+      
+    - type: include
+      id: stable_cliff_safety_grid_stable_caption
+    # - type: image_group
+    #   images:
+    #   - path: imgs/mountain_cliff.png
+    #     alt: Cliff
+    #     caption: Cliff Tile (Avoid)
+    #   - path: imgs/mountain_cliff_skull.png
+    #     alt: Elfie fell
+    #     caption: Walking onto a cliff tile
+
+  slippery_notice_slippery_content:
+    # - type: divider
+    - type: emphasis_box
+      color: yellow
+      title: Remember!
+      items:
+      - "The ground is **SLIPPERY** and Elfie **may accidentally slip** off the cliff if your **plan** takes her close to the edge."
+      - "Take this into account when making decisions about the best path."
+      - You are helping to **plan** a way to the cookie.
+      - These mini-games are **only** about planning.
+    - type: include
+      id: slippery_cliff_safety_grid_slippery_caption
+    # - type: image_group
+    #   images:
+    #   - path: imgs/mountain_cliff.png
+    #     alt: Cliff
+    #     caption: Cliff Tile (Avoid)
+    #   - path: imgs/mountain_cliff_skull.png
+    #     alt: Elfie fell
+    #     caption: Slipping over the edge
+
+  stable_notice_slippery_content:
+    # - type: divider
+    - type: emphasis_box
+      color: green
+      title: Remember!
+      items:
+      - The ground is **STABLE** and Elfie is **safe from slipping** off the cliff if your **plan** takes her close to the edge.
+      - Take this into account when making decisions about the best path.
+      - You are helping to **plan** a way to the cookie.
+      - These mini-games are **only** about planning.
+    - type: include
+      id: stable_cliff_safety_grid_slippery_caption
+    # - type: image_group
+    #   images:
+    #   - path: imgs/mountain_cliff.png
+    #     alt: Cliff
+    #     caption: Cliff Tile (Avoid)
+    #   - path: imgs/mountain_cliff_skull.png
+    #     alt: Elfie fell
+    #     caption: Walking onto a cliff tile
+  
+  slippery_notice_stable_content:
+    # - type: divider
+    - type: emphasis_box
+      color: yellow
+      title: Remember!
+      items:
+      - "The ground is **SLIPPERY** and Elfie **may accidentally slip** off the cliff if your **plan** takes her close to the edge."
+      - "Take this into account when making decisions about the best path."
+      - You are helping to **plan** a way to the cookie.
+      - These mini-games are **only** about planning.
+    - type: include
+      id: slippery_cliff_safety_grid_stable_caption
+    # - type: image_group
+    #   images:
+    #   - path: imgs/mountain_cliff.png
+    #     alt: Cliff
+    #     caption: Cliff Tile (Avoid)
+    #   - path: imgs/mountain_cliff_skull.png
+    #     alt: Elfie fell
+    #     caption: Slipping over the edge
+
+  common_ground_stable_notice_stable_imgs:
+  - type: new_card
+    # display_mode: collapsible_only # This remains collapsible_only
+  - type: include
+    id: stable_notice_stable_content # Include the content
+
+  common_ground_slippery_notice_slippery_imgs:
+  - type: new_card
+    # display_mode: collapsible_only # This remains collapsible_only
+  - type: include
+    id: slippery_notice_slippery_content # Include the content
+
+  common_ground_stable_notice_slippery_imgs:
+  - type: new_card
+    # display_mode: collapsible_only # This remains collapsible_only
+  - type: include
+    id: stable_notice_slippery_content # Include the content
+  
+  common_ground_slippery_notice_stable_imgs:
+  - type: new_card
+    # display_mode: collapsible_only # This remains collapsible_only
+  - type: include
+    id: slippery_notice_stable_content # Include the content
+
+  common_free_form_environment_display:
+    - type: environment_grid_display
+
+  common_free_form_question_header:
+    # - type: divider
+    - type: header
+      content: "The Two Unique Realms"
+
+  stable_cliff_safety_grid_stable_caption:
+    # - type: instruction_grid
+    #   cols: 3
+    #   group_caption: "The image shows Elfie on **safe cliff edges**. \nOn **stable tiles**, she's safe on any tile next to a cliff. \nAll other tiles are always **safe**."
+    #   cells:
+    #     - { base_image: 'imgs/mountain_bg2.png' }
+    #     - base_image: imgs/mountain_bg2.png
+    #       overlay_image: imgs/elf_down.png
+    #     - { base_image: 'imgs/mountain_bg2.png' }
+    #     - base_image: imgs/mountain_bg2.png
+    #       overlay_image: imgs/elf_down.png
+    #     - base_image: imgs/mountain_cliff.png
+    #     - base_image: imgs/mountain_bg2.png
+    #       overlay_image: imgs/elf_down.png
+    #     - { base_image: 'imgs/mountain_bg2.png' }
+    #     - base_image: imgs/mountain_bg2.png
+    #       overlay_image: imgs/elf_down.png
+    #     - { base_image: 'imgs/mountain_bg2.png' }
+    - type: image_group
+      images:
+      - path: imgs/mountain_cliff.png
+        alt: Cliff
+        caption: Cliff Tile
+      - path: imgs/elf_down.png
+        alt: Elfie
+        caption: Elfie the Elf
+
+  slippery_cliff_safety_grid_slippery_caption:
+    - type: instruction_grid
+      cols: 3
+      # group_caption: "The image shows Elfie on **dangerous cliff edges**. \nOn **slippery tiles**, Elfie may slip if she is on any tile next to a cliff. \nDiagonal tiles are **always safe**, even when they touch the cliff. \nAll other tiles are **always safe**."
+      # cells:
+      #   - { base_image: 'imgs/ice.png' }
+      #   - base_image: imgs/ice.png
+      #     overlay_image: imgs/elf_down.png
+      #   - { base_image: 'imgs/ice.png' }
+      #   - base_image: imgs/ice.png
+      #     overlay_image: imgs/elf_down.png
+      #   - base_image: imgs/mountain_cliff.png
+      #   - base_image: imgs/ice.png
+      #     overlay_image: imgs/elf_down.png
+      #   - { base_image: 'imgs/ice.png' }
+      #   - base_image: imgs/ice.png
+      #     overlay_image: imgs/elf_down.png
+      #   - { base_image: 'imgs/ice.png' }
+    - type: image_group
+      images:
+      - path: imgs/mountain_cliff.png
+        alt: Cliff
+        caption: Cliff Tile
+      - path: imgs/elf_down.png
+        alt: Elfie
+        caption: Elfie the Elf
+
+  stable_cliff_safety_grid_slippery_caption:
+    - type: instruction_grid
+      cols: 3
+      # group_caption: "The image shows Elfie on **safe cliff edges**. \nOn **stable tiles**, she's safe on any tile next to a cliff. \nAll other tiles are always **safe**."
+      # cells:
+      #   - { base_image: 'imgs/ice.png' }
+      #   - base_image: imgs/ice.png
+      #     overlay_image: imgs/elf_down.png
+      #   - { base_image: 'imgs/ice.png' }
+      #   - base_image: imgs/ice.png
+      #     overlay_image: imgs/elf_down.png
+      #   - base_image: imgs/mountain_cliff.png
+      #   - base_image: imgs/ice.png
+      #     overlay_image: imgs/elf_down.png
+      #   - { base_image: 'imgs/ice.png' }
+      #   - base_image: imgs/ice.png
+      #     overlay_image: imgs/elf_down.png
+      #   - { base_image: 'imgs/ice.png' }
+    - type: image_group
+      images:
+      - path: imgs/mountain_cliff.png
+        alt: Cliff
+        caption: Cliff Tile
+      - path: imgs/elf_down.png
+        alt: Elfie
+        caption: Elfie the Elf
+
+  slippery_cliff_safety_grid_stable_caption:
+    - type: instruction_grid
+      cols: 3
+      # group_caption: "The image shows Elfie on **dangerous cliff edges**. \nOn **slippery tiles**, Elfie may slip if she is on any tile next to a cliff. \nDiagonal tiles are **always safe**, even when they touch the cliff. \nAll other tiles are **always safe**."
+      # cells:
+      #   - { base_image: 'imgs/mountain_bg2.png' }
+      #   - base_image: imgs/mountain_bg2.png
+      #     overlay_image: imgs/elf_down.png
+      #   - { base_image: 'imgs/mountain_bg2.png' }
+      #   - base_image: imgs/mountain_bg2.png
+      #     overlay_image: imgs/elf_down.png
+      #   - base_image: imgs/mountain_cliff.png
+      #   - base_image: imgs/mountain_bg2.png
+      #     overlay_image: imgs/elf_down.png
+      #   - { base_image: 'imgs/mountain_bg2.png' }
+      #   - base_image: imgs/mountain_bg2.png
+      #     overlay_image: imgs/elf_down.png
+      #   - { base_image: 'imgs/mountain_bg2.png' }
+    - type: image_group
+      images:
+      - path: imgs/mountain_cliff.png
+        alt: Cliff
+        caption: Cliff Tile
+      - path: imgs/elf_down.png
+        alt: Elfie
+        caption: Elfie the Elf
+
+  planning_only_notice_content:
+    - type: emphasis_box
+      color: blue
+      title: Remember!
+      id: remember-box-for-glow # ID used by javascript to make the box glow
+      items:
+      - "Your task is to **PLAN** a path for Elfie to follow."
+      - "You will **NOT** see Elfie actually move along the path you create."
+      - "The mini-games are for **planning only**."
+
+  # --- Task-Specific Common Components ---
+  comparison_interactive_guide:
+  - type: emphasis_box
+    color: gray
+    title: How to Select a Plan
+    items:
+    - "Press the **'Watch Both Plans'** button to see the animations."
+    - "Select your preferred plan by **clicking on it**."
+    - "Or, use your **Arrow Keys**: ⬅️/⬆️ for **Plan A**, ➡️/⬇️ for **Plan B**."
+    - "Click the **confirmation button** at the bottom or press **Enter** to proceed."
+  - type: section_header
+    content: 'Look at this Visual Example to See How It Works'
+  
+  # - type: render_comparison_dynamically 
+  #   env_id: "practice_env"
+  #   caption: "**Two potential plans:** Plan A vs Plan B. You will click on the plan you think is better."
+  
+  - type: render_comparison_statically # Use the new static type
+    caption: "**Two potential plans:** Plan A vs Plan B. You will click on the plan you think is better."
+    plan_a:
+      label: "Plan A"
+      map_data: *practice_map_data
+      path_data:
+        path-cell: [[1, 11], [2, 11], [3, 11], [3, 10], [3, 9], [3, 8], [3, 7], [3, 6], [4, 6], [4, 5], [4, 4], [4, 3], [4, 2], [4, 1], [4, 0], [3, 0], [2, 0], [1, 0], [0, 0]]
+    plan_b:
+      label: "Plan B"
+      map_data: *practice_map_data
+      path_data:
+        path-cell: [[1, 11], [2, 11], [2, 10], [3, 10], [3, 9], [3, 8], [3, 7], [3, 6], [2, 6], [1, 6], [0, 6], [0, 5], [0, 4], [0, 3], [0, 2], [0, 1], [0, 0]]
+  - type: divider
+  
+  comparisons_task_common:
+  - type: include
+    id: comparisons_common_header
+  - type: include
+    id: comparisons_common_instructions
+  - type: include
+    id: comparison_interactive_guide
+
+  demonstrations_task_common_stable:
+  - type: include
+    id: demonstrations_common_instructions
+  - type: include
+    id: demonstration_interactive_guide_stable
+
+  demonstrations_again_message:
+  - type: text
+    content: "You played this mini-game earlier. Let's see if your strategy has changed."
+
+  demonstrations_task_common_slippery:
+  - type: include
+    id: demonstrations_common_instructions
+  - type: include
+    id: demonstration_interactive_guide_slippery
+  
+  corrections_interactive_guide_text:
+    - type: emphasis_box
+      color: gray
+      title: How to Offer Corrections
+      items:
+      # - "**Watch the Plan:** First, press the **'Watch Current Plan'** button to see the route."
+      # - "**Start Dragging:** **Click and hold** on any point of the blue path to grab it."
+      # - "**Reshape the Path:** While holding, **drag the point** to a new location. The path will stretch or shrink and automatically snap to the grid."
+      # - "**Set the Change:** **Release the mouse** to lock in the new path shape. You can then drag the same point or another one."
+
+      - "**Watch the Plan:** First, press the **'Watch Current Plan'** button to see initial plan."
+      - "**Drag and Drop:** Click, hold, and drag any point to **reshape** the plan."
+      # - "**Reshape the Path:** While holding, **drag the point** to a new location. The path will stretch or shrink and automatically snap to the grid."
+      # - "**Set the Change:** **Release the mouse** to lock in the new path shape. You can then drag the same point or another one."
+      # - "The **visual example below** shows all the steps."
+    - type: section_header
+      content: 'Look at this Visual Example to See How It Works'
+
+  corrections_interactive_guide_stable:
+    - type: include
+      id: corrections_interactive_guide_text
+    
+    # - type: render_environment_dynamically
+    #   env_id: "practice_env"
+    #   caption: "**1. Elfie's Initial Plan:** The blue cells are all draggable."
+    #   generate_trajectory:
+    #     policy_type: "mismatch" # Generates an inefficient path for this group
+    #     path_style: "correction_initial"
+
+    - type: render_environment_statically
+      map_data:
+        <<: *practice_map_data
+      caption: "**1. Elfie's Initial Plan:** The blue cells are all draggable. Think of the plan as a flexible string. This is Elfie's **initial plan**."
+      path_data:
+        trajectory-path-cell: [[1, 11], [2, 11], [3, 11], [3, 10], [3, 9], [3, 8], [3, 7], [3, 6], [4, 6], [4, 5], [4, 4], [4, 3], [4, 2], [4, 1], [4, 0], [3, 0], [2, 0], [1, 0], [0, 0]]
+
+
+    # - type: render_environment_dynamically
+    #   env_id: "practice_env"
+    #   caption: "**2. Start the correction:** Click and hold the point you want to move."
+    #   generate_trajectory:
+    #     policy_type: "mismatch"
+    #     path_style: "correction_initial"
+    #     highlight_cell: [4, 3]  # To put the snap target in the right place
+    #   overlays:
+    #     - image_path: "imgs/mouse_grab.png"
+    #       position: [4, 3]
+
+    - type: render_environment_statically
+      map_data:
+        <<: *practice_map_data
+      caption: "**2. Start the correction:** Click and hold the point you want to move."
+      path_data:
+        trajectory-path-cell: [[1, 11], [2, 11], [3, 11], [3, 10], [3, 9], [3, 8], [3, 7], [3, 6], [4, 6], [4, 5], [4, 4], [4, 3], [4, 2], [4, 1], [4, 0], [3, 0], [2, 0], [1, 0], [0, 0]]
+        correction-target-cell: [[4, 3]]
+      overlays:
+        - image_path: "imgs/mouse_grab.png"
+          position: [4, 3]
+
+    # - type: render_environment_dynamically
+    #   env_id: "practice_env"
+    #   caption: "**3. Complete the correction:** Drag the point to a new, better location."
+    #   generate_trajectory:
+    #     policy_type: "mismatch"
+    #     path_style: "correction_final"
+    #     correction_from_cell: [4, 3]
+    #     correction_to_cell: [0, 3]
+    #   overlays:
+    #     - image_path: "imgs/mouse_grab.png"
+    #       position: [0, 3]
+
+    - type: render_environment_statically
+      map_data:
+        <<: *practice_map_data
+      caption: "**3. Complete the correction:** Drag the point to a new, better location. Let go of the mouse to set the change."
+      path_data:
+        trajectory-path-cell: [[1, 11], [2, 11], [3, 11], [3, 10], [3, 9], [3, 8], [2, 8], [2, 7], [1, 7], [1, 6], [0, 6], [0, 5], [0, 4], [0, 3], [0, 2], [0, 1], [0, 0]]
+        correction-target-cell: [[0, 3]]
+      overlays:
+        - image_path: "imgs/mouse_grab.png"
+          position: [0, 3]
+
+
+    # - type: render_environment_dynamically
+    #   env_id: "practice_env"
+    #   caption: "**4. Continue:** Grab a different point."
+    #   generate_trajectory:
+    #     policy_type: "mismatch"
+    #     path_style: "correction_sequential"
+    #     highlight_cell: [3, 8]  # To put the snap target in the right place
+    #     corrections:
+    #       - from: [4, 3]
+    #         to: [0, 3]
+    #   overlays:
+    #     - image_path: "imgs/mouse_grab.png"
+    #       position: [3, 8]
+
+    - type: render_environment_statically
+      map_data:
+        <<: *practice_map_data
+      caption: "**4. Continue:** Grab a different point."
+      path_data:
+        trajectory-path-cell: [[1, 11], [2, 11], [3, 11], [3, 10], [3, 9], [3, 8], [2, 8], [2, 7], [1, 7], [1, 6], [0, 6], [0, 5], [0, 4], [0, 3], [0, 2], [0, 1], [0, 0]]
+        correction-target-cell: [[3, 8]]
+      overlays:
+        - image_path: "imgs/mouse_grab.png"
+          position: [3, 8]
+
+    # - type: render_environment_dynamically
+    #   env_id: "practice_env"
+    #   caption: "**5. Path Updated:** The path updates with your changes."
+    #   generate_trajectory:
+    #     policy_type: "mismatch"
+    #     path_style: "correction_sequential" 
+    #     corrections:
+    #       - from: [4, 3]
+    #         to: [0, 3]
+    #       - from: [3, 8] # has to still be in the path after the first correction
+    #         to: [3, 0]
+    #     highlight_cell: [3, 0] # Highlight for the *next* drag
+    #   overlays:
+    #     - image_path: "imgs/mouse_grab.png"
+    #       position: [3, 0]
+
+    - type: render_environment_statically
+      map_data:
+        <<: *practice_map_data
+      caption: "**5. Path Updated:** The path updates with your changes."
+      path_data:
+        trajectory-path-cell: [[1, 11], [2, 11], [2, 10], [3, 10], [3, 9], [3, 8], [3, 7], [3, 6], [3, 5], [4, 5], [4, 4], [4, 3], [4, 2], [3, 2], [3, 1], [3, 0], [2, 0], [1, 0], [0, 0]]
+        correction-target-cell: [[3, 0]]
+      overlays:
+        - image_path: "imgs/mouse_grab.png"
+          position: [3, 0]
+    
+    - type: divider
+
+    # - type: render_environment_dynamically
+    #   env_id: "practice_env"
+    #   caption: "**Invalid Targets:** As you drag you will see red highlighted tiles. These are tiles where the path cannot go because it would create a path that goes in circles or is not a valid path."
+    #   generate_trajectory:
+    #     policy_type: "mismatch"
+    #     path_style: "correction_initial" 
+    #     highlight_cell: [3, 11] 
+    #   overlays:
+    #     - image_path: "imgs/mouse_grab.png"
+    #       position: [3, 11]
+
+    - type: render_environment_statically
+      map_data:
+        <<: *practice_map_data
+      caption: "**Invalid Targets:** As you drag you will see red highlighted tiles. These are tiles where the plan cannot go because it would create a plan that goes in circles or is not a valid plan."
+      path_data:
+        trajectory-path-cell: [[1, 11], [2, 11], [3, 11], [3, 10], [3, 9], [3, 8], [3, 7], [3, 6], [4, 6], [4, 5], [4, 4], [4, 3], [4, 2], [4, 1], [4, 0], [3, 0], [2, 0], [1, 0], [0, 0]]
+        correction-target-cell: [[3, 11]]
+      overlays:
+        - image_path: "imgs/mouse_grab.png"
+          position: [3, 11]
+
+
+    # - type: render_environment_dynamically
+    #   env_id: "practice_env"
+    #   caption: "**Invalid Targets:** Invalid drag targets are highlighted in red. You cannot drag the path to these tiles."
+    #   generate_trajectory:
+    #     policy_type: "mismatch"
+    #     path_style: "correction_initial" 
+    #     highlight_cell: [3, 11]
+    #   overlays:
+    #     - image_path: "imgs/mouse_grab.png"
+    #       position: [5, 11]
+    #   cell_classes:
+    #     - classes: ['path-cell']
+    #       positions:
+    #         - [4, 11]
+    #         - [4, 10]
+    #         - [5, 11]
+    #         - [5, 10]
+
+    - type: render_environment_statically
+      map_data:
+        <<: *practice_map_data
+      caption: "**Invalid Targets:** Invalid drag targets are highlighted in red. You cannot drag the path to these tiles."
+      path_data:
+        trajectory-path-cell: [[1, 11], [2, 11], [3, 11], [3, 10], [3, 9], [3, 8], [3, 7], [3, 6], [4, 6], [4, 5], [4, 4], [4, 3], [4, 2], [4, 1], [4, 0], [3, 0], [2, 0], [1, 0], [0, 0]]
+        correction-target-cell: [[3, 11]]
+        path-cell: [[4, 11], [4, 10], [5, 11], [5, 10]]
+      overlays:
+        - image_path: "imgs/mouse_grab.png"
+          position: [5, 11]
+
+    # - type: render_environment_dynamically
+    #   env_id: "practice_env"
+    #   caption: "**Just keep dragging** until it snaps to a valid tile."
+    #   generate_trajectory:
+    #     policy_type: "mismatch"
+    #     path_style: "correction_final" 
+    #     correction_from_cell: [3, 11]
+    #     correction_to_cell: [1, 7]
+    #     highlight_cell: [1, 7]
+    #   overlays:
+    #     - image_path: "imgs/mouse_grab.png"
+    #       position: [1, 7]
+
+    - type: render_environment_statically
+      map_data:
+        <<: *practice_map_data
+      caption: "**Just keep dragging** until it snaps to a valid tile."
+      path_data:
+        trajectory-path-cell: [[1, 11], [2, 11], [2, 10], [3, 10], [3, 9], [3, 8], [2,8], [1,8], [1,7], [1,6], [2,6], [3, 6], [3, 5], [4, 5], [4, 4], [4, 3], [4, 2], [4, 1], [4, 0], [3, 0], [2, 0], [1, 0], [0, 0]]
+        correction-target-cell: [[1, 7]]
+      overlays:
+        - image_path: "imgs/mouse_grab.png"
+          position: [1, 7]
+
+    - type: divider
+
+  corrections_interactive_guide_slippery:
+    - type: include
+      id: corrections_interactive_guide_text
+
+    # - type: render_environment_dynamically
+    #   env_id: "practice_env"
+    #   caption: "**1. Elfie's Initial Plan:** The blue cells are all draggable."
+    #   generate_trajectory:
+    #     policy_type: "mismatch" # Generates an inefficient path for this group
+    #     path_style: "correction_initial"
+
+    - type: render_environment_statically
+      map_data:
+        <<: *practice_map_data
+      caption: "**1. Elfie's Initial Plan:** The blue cells are all draggable. Think of the plan as a flexible string. This is Elfie's **initial plan**."
+      path_data:
+        trajectory-path-cell: [[1, 11], [2, 11], [2, 10], [3, 10], [3, 9], [3, 8], [3, 7], [3, 6], [2, 6], [1, 6], [0, 6], [0, 5], [0, 4], [0, 3], [0, 2], [0, 1], [0, 0]]
+
+    # - type: render_environment_dynamically
+    #   env_id: "practice_env"
+    #   caption: "**2. Start the correction:** Click and hold the point you want to move."
+    #   generate_trajectory:
+    #     policy_type: "mismatch"
+    #     path_style: "correction_initial"
+    #     highlight_cell: [0, 4]  # To put the snap target in the right place
+    #   overlays:
+    #     - image_path: "imgs/mouse_grab.png"
+    #       position: [0, 4]
+
+    - type: render_environment_statically
+      map_data:
+        <<: *practice_map_data
+      caption: "**2. Start the correction:** Click and hold the point you want to move."
+      path_data:
+        trajectory-path-cell: [[1, 11], [2, 11], [2, 10], [3, 10], [3, 9], [3, 8], [3, 7], [3, 6], [2, 6], [1, 6], [0, 6], [0, 5], [0, 4], [0, 3], [0, 2], [0, 1], [0, 0]]
+        correction-target-cell: [[0, 4]]
+      overlays:
+        - image_path: "imgs/mouse_grab.png"
+          position: [0, 4]
+
+    
+    # - type: render_environment_dynamically
+    #   env_id: "practice_env"
+    #   caption: "**3. Complete the correction:** Drag the point to a new, better location."
+    #   generate_trajectory:
+    #     policy_type: "mismatch"
+    #     path_style: "correction_final"
+    #     correction_from_cell: [0, 4]
+    #     correction_to_cell: [4, 4]
+    #   overlays:
+    #     - image_path: "imgs/mouse_grab.png"
+    #       position: [4, 4]
+
+    - type: render_environment_statically
+      map_data:
+        <<: *practice_map_data
+      caption: "**3. Complete the correction:** Drag the point to a new, better location. Let go of the mouse to set the change."
+      path_data:
+        trajectory-path-cell: [[1, 11], [2, 11], [2, 10], [3, 10], [3, 9], [3, 8], [3, 7], [3, 6], [3, 5], [4, 5], [4, 4], [4, 3], [4, 2], [3, 2], [3, 1], [2, 1], [2, 0], [1, 0], [0, 0]]
+        correction-target-cell: [[4, 4]]
+      overlays:
+        - image_path: "imgs/mouse_grab.png"
+          position: [4, 4]
+
+
+    # - type: render_environment_dynamically
+    #   env_id: "practice_env"
+    #   caption: "**4. Continue:** Grab a different point."
+    #   generate_trajectory:
+    #     policy_type: "mismatch"
+    #     path_style: "correction_sequential"
+    #     highlight_cell: [4, 2]  # To put the snap target in the right place
+    #     corrections:
+    #       - from: [0, 4]
+    #         to: [4, 4]
+    #   overlays:
+    #     - image_path: "imgs/mouse_grab.png"
+    #       position: [4, 2]
+
+    - type: render_environment_statically
+      map_data:
+        <<: *practice_map_data
+      caption: "**4. Continue:** Grab a different point."
+      path_data:
+        trajectory-path-cell: [[1, 11], [2, 11], [2, 10], [3, 10], [3, 9], [3, 8], [3, 7], [3, 6], [3, 5], [4, 5], [4, 4], [4, 3], [4, 2], [3, 2], [3, 1], [2, 1], [2, 0], [1, 0], [0, 0]]
+        correction-target-cell: [[4, 2]]
+      overlays:
+        - image_path: "imgs/mouse_grab.png"
+          position: [4, 2]
+    
+    # - type: render_environment_dynamically
+    #   env_id: "practice_env"
+    #   caption: "**5. Path Updated:** The path updates with your changes."
+    #   generate_trajectory:
+    #     policy_type: "mismatch"
+    #     path_style: "correction_sequential" 
+    #     corrections:
+    #       - from: [0, 4]
+    #         to: [4, 4]
+    #       - from: [4, 2] # has to still be in the path after the first correction
+    #         to: [5, 0]
+    #     highlight_cell: [5, 0] # Highlight for the *next* drag
+    #   overlays:
+    #     - image_path: "imgs/mouse_grab.png"
+    #       position: [5, 0]
+
+    - type: render_environment_statically
+      map_data:
+        <<: *practice_map_data
+      caption: "**5. Path Updated:** The path updates with your changes."
+      path_data:
+        trajectory-path-cell: [[1, 11], [2, 11], [2, 10], [3, 10], [3, 9], [3, 8], [3, 7], [3, 6], [3, 5], [4, 5], [4, 4], [4, 3], [4, 2], [5, 2], [5, 1], [5, 0], [4, 0], [3, 0], [2, 0], [1, 0], [0, 0]]
+        correction-target-cell: [[5, 0]]
+      overlays:
+        - image_path: "imgs/mouse_grab.png"
+          position: [5, 0]
+
+    - type: divider
+
+
+    # - type: render_environment_dynamically
+    #   env_id: "practice_env"
+    #   caption: "**Invalid Targets:** As you drag you will see red highlighted tiles. These are tiles where the path cannot go because it would create a path that goes in circles or is not a valid path."
+    #   generate_trajectory:
+    #     policy_type: "mismatch"
+    #     path_style: "correction_initial" 
+    #     highlight_cell: [2, 11] 
+    #   overlays:
+    #     - image_path: "imgs/mouse_grab.png"
+    #       position: [2, 11]
+
+    - type: render_environment_statically
+      map_data: 
+        <<: *practice_map_data
+      caption: "**Invalid Targets:** As you drag you will see red highlighted tiles. These are tiles where the plan cannot go because it would create a plan that goes in circles or is not a valid plan."
+      path_data:
+        trajectory-path-cell: [[1, 11], [2, 11], [2, 10], [3, 10], [3, 9], [3, 8], [3, 7], [3, 6], [2, 6], [1, 6], [0, 6], [0, 5], [0, 4], [0, 3], [0, 2], [0, 1], [0, 0]]
+        correction-target-cell: [[2, 11]]
+      overlays:
+        - image_path: "imgs/mouse_grab.png"
+          position: [2, 11]
+
+    # - type: render_environment_dynamically
+    #   env_id: "practice_env"
+    #   caption: "**Invalid Targets:** Invalid drag targets are highlighted in red. You cannot drag the path to these tiles."
+    #   generate_trajectory:
+    #     policy_type: "mismatch"
+    #     path_style: "correction_sequential" 
+    #     corrections:
+    #       - from: [2, 11]
+    #         to: [3, 11]
+    #     highlight_cell: [3, 11]
+    #   overlays:
+    #     - image_path: "imgs/mouse_grab.png"
+    #       position: [5, 11]
+    #   cell_classes:
+    #     - classes: ['path-cell']
+    #       positions:
+    #         - [3, 11]
+    #         - [4, 11]
+    #         - [4, 10]
+    #         - [5, 11]
+    #         - [5, 10]
+
+    - type: render_environment_statically
+      map_data:
+        <<: *practice_map_data
+      caption: "**Invalid Targets:** Invalid drag targets are highlighted in red. You cannot drag the path to these tiles."
+      path_data:
+        trajectory-path-cell: [[1, 11], [2, 11], [3, 11], [3, 10], [3, 9], [3, 8], [3, 7], [3, 6], [2, 6], [1, 6], [0, 6], [0, 5], [0, 4], [0, 3], [0, 2], [0, 1], [0, 0]]
+        correction-target-cell: [[3, 11]]
+        path-cell: [[3, 11], [4, 11], [4, 10], [5, 11], [5, 10]]
+      overlays:
+        - image_path: "imgs/mouse_grab.png"
+          position: [5, 11]
+
+
+    # - type: render_environment_dynamically
+    #   env_id: "practice_env"
+    #   caption: "**Just keep dragging** until it snaps to a valid tile."
+    #   generate_trajectory:
+    #     policy_type: "mismatch"
+    #     path_style: "correction_final" 
+    #     correction_from_cell: [3, 7]
+    #     correction_to_cell: [0, 7]
+    #     highlight_cell: [0, 7]
+    #   overlays:
+    #     - image_path: "imgs/mouse_grab.png"
+    #       position: [0, 7]
+
+    - type: render_environment_statically
+      map_data:
+        <<: *practice_map_data
+      caption: "**Just keep dragging** until it snaps to a valid tile."
+      path_data:
+        trajectory-path-cell: [[1, 11], [2, 11], [2, 10], [3, 10], [3, 9], [3, 8], [2, 8], [1, 8], [1, 7], [0, 7], [0, 6], [0, 5], [0, 4], [0, 3], [0, 2], [0, 1], [0, 0]]
+        correction-target-cell: [[0, 7]]
+      overlays:
+        - image_path: "imgs/mouse_grab.png"
+          position: [0, 7]
+
+    - type: divider
+
+
+  corrections_task_common_stable:
+    - { type: include, id: corrections_common_header }
+    - { type: include, id: corrections_common_instructions }
+    - { type: include, id: corrections_interactive_guide_stable }
+
+  corrections_task_common_slippery:
+    - { type: include, id: corrections_common_header }
+    - { type: include, id: corrections_common_instructions }
+    - { type: include, id: corrections_interactive_guide_slippery }
+
+  off_task_common:
+  - type: include
+    id: off_task_common_header
+  - type: include
+    id: off_common_instructions
+
+  # --- Group-Specific Element Bundles ---
+  group_specifics_a1b1:
+  - { type: include, id: common_ground_stable_notice_stable_imgs }
+  
+  group_specifics_a1b2:
+  - { type: include, id: common_ground_stable_notice_slippery_imgs }
+
+  group_specifics_a2b1:
+  - { type: include, id: common_ground_slippery_notice_stable_imgs }
+
+  group_specifics_a2b2:
+  - { type: include, id: common_ground_slippery_notice_slippery_imgs }
+
+  # --- Main Instruction Text Blocks ---
+  main_instructions_stable_text_block:
+  - type: header
+    content: 'The Ground is Stable'
+  - type: text
+    content: In this realm, the ground is made of **safe and stable**
+      tiles. You don't have to worry about accidentally slipping.
+  - type: emphasis_box
+    color: blue
+    title: 'Relax: Stable Ground!'
+    items:
+    - "On **STABLE** ground, cliff edges are **completely safe**."
+    - "Elfie will **not** accidentally slip if her plan takes her past an edge."
+    - "Elfie is **always safe** on tiles **not adjacent** to cliffs."
+    - "Diagonal movement is **not possible**."
+  # - type: image_group
+  #   images:
+  #   - path: imgs/mountain_cliff.png
+  #     alt: Cliff
+  #     caption: Cliff Tile (Avoid)
+  #   - path: imgs/mountain_cliff_skull.png
+  #     alt: Elfie fell
+  #     caption: Walking onto a cliff tile
+
+  main_instructions_slippery_text_block:
+  - type: header
+    content: 'The Ground is Slippery'
+  - type: text
+    content: BE CAREFUL! In this realm, the ground is made of **extremely slippery** tiles
+        that slope towards the cliffs.
+  - type: emphasis_box
+    color: yellow
+    title: 'Danger: Slippery Surface!'
+    items:
+    - "On **SLIPPERY** ground, cliff edges are **dangerous**."
+    - "Elfie could **accidentally slip** off a **cliff** if her plan takes her past an edge."
+    - "Elfie is **always safe** on tiles **not adjacent** to cliffs."
+    - "Diagonal movement is **not possible**."
+  # - type: image_group
+  #   images:
+  #   - path: imgs/mountain_cliff.png
+  #     alt: Cliff
+  #     caption: Cliff Tile (Avoid)
+  #   - path: imgs/mountain_cliff_skull.png
+  #     alt: Elfie fell
+  #     caption: Slipping over the edge
+
+  # --- Original Unchanged Components Follow ---
+  comparisons_common_header:
+  - type: section_header
+    content: 'Pick the Best Path'
+
+  comparisons_common_instructions:
+  - type: emphasis_box
+    color: blue
+    title: Your Task in this Mini-Game
+    items:
+    - "You will see **two videos** of how Elfie **plans** to get to the cookie."
+    - "**Select** the plan you think is **best**."
+    - "Both plans will be **shown at the same time.**"
+    - "If you **cannot decide between the two**, pick any plan."
+    - "You can **replay the videos as many times** as you want before making a choice."
+
+  demonstrations_common_header:
+  - type: section_header
+    content: 'Show Elfie the Best Path'
+
+  demonstrations_common_header_post:
+  - type: section_header
+    content: "Show Elfie the Best Path"
+  - type: text
+    content: "*You have seen this mini-game before. Has your strategy changed since?*"
+
+  demonstrations_common_instructions:
+  - type: emphasis_box
+    color: blue
+    title: Your Task in this Mini-Game
+    items:
+    - "**Show** Elfie a plan you think is the **best**."
+    - "**Create a plan** to get to the cookie by **selecting tiles**, from **Elfie to the cookie**."
+    - "The plan you create for Elfie will be highlighted."
+  
+  demonstration_common_text:
+  - type: emphasis_box
+    color: gray
+    title: How to Show Elfie Your Plan
+    items:
+    - "Use your **Arrow Keys** ⬅️ ⬆️ ➡️ ⬇️ or **click** on a valid, adjacent tile."
+    - "You must select **one tile at a time**."
+    - "If you make a mistake, click the **Reset** button or press **Backspace** (delete on Mac) to start the attempt over."
+    # - "The **visual example below** shows you how it works."
+  - type: section_header
+    content: 'Look at this Visual Example to See How It Works'
+
+  # The STABLE version, showing a direct path.
+  demonstration_interactive_guide_stable:
+  - type: include
+    id: demonstration_common_text
+  - type: render_environment_statically
+    map_data:
+      <<: *practice_map_data
+    caption: "**Starting a Path:** To begin, click an adjacent highlighted square or use your Arrow Keys."
+    path_data:
+      correction-target-cell: [[1, 11], [0, 10]]
+    overlays:
+      - image_path: "imgs/mouse_pointer.png" 
+        position: [1, 11]
+  - type: render_environment_statically
+    map_data:
+      <<: *practice_map_data
+    caption: "**Path Progressing:** Your path now includes the new selection. The next set of valid moves are highlighted."
+    path_data:
+      path-cell: [[0, 11]]
+      current-pos-highlight: [[1, 11]]
+      correction-target-cell: [[2, 11]]
+  - type: render_environment_statically
+    map_data:
+      <<: *practice_map_data
+    caption: "**Continue Building:** Select more tiles until you reach the cookie."
+    path_data:
+      correction-target-cell: [[2, 7], [3, 6], [4, 7]] # Valid Next Selection
+      current-pos-highlight: [[3, 7]] # Current position
+      path-cell: [[1, 11], [2, 11], [2, 10], [3, 10], [3, 9], [3, 8]] # Already selected path cells
+  - type: divider
+
+  # The SLIPPERY version, showing a more cautious, safer path.
+  demonstration_interactive_guide_slippery:
+  - type: include
+    id: demonstration_common_text
+  - type: render_environment_statically
+    map_data:
+      <<: *practice_map_data
+    caption: "**Starting a Path:** To begin, click an adjacent highlighted square or use your Arrow Keys."
+    path_data:
+      correction-target-cell: [[1, 11], [0, 10]]
+    overlays:
+      - image_path: "imgs/mouse_pointer.png" 
+        position: [1, 11]
+  - type: render_environment_statically
+    map_data:
+      <<: *practice_map_data
+    caption: "**Path Progressing:** Your path now includes the new selection. The next set of valid moves are highlighted."
+    path_data:
+      path-cell: [[0, 11]]
+      current-pos-highlight: [[1, 11]]
+      correction-target-cell: [[2, 11]]
+  - type: render_environment_statically
+    map_data:
+      <<: *practice_map_data
+    caption: "**Continue Building:** Select more tiles until you reach the cookie."
+    path_data:
+      correction-target-cell: [[2, 7], [3, 6], [4, 7]] # Valid Next Selection
+      current-pos-highlight: [[3, 7]] # Current position
+      path-cell: [[1, 11], [2, 11], [3, 11], [3, 10], [3, 9], [3, 8]] # Already selected path cells
+  - type: divider
+      
+
+  corrections_common_header:
+  - type: section_header
+    content: "Correct Elfie's Planned Path"
+  
+  corrections_common_instructions:
+  - type: emphasis_box
+    color: blue
+    title: Your Task in this Mini-Game
+    items:
+    - "Your goal is to **improve** Elfie's current plan by **dragging** it around."
+    - "Think of the plan as a **flexible string**. Reshape it by pulling on it."
+    - "If you think the original plan is already good, you **don't need to change it**."
+    - When you're satisfied with the new plan, click the **cookie 🍪** to proceed.
+    - "You can make **unlimited adjustments**."
+  
+  off_task_common_header:
+    - type: section_header
+      content: 'Find Bad Choices'
+
+  off_common_instructions:
+    - type: emphasis_box
+      color: blue
+      title: Your Task in this Mini-Game
+      items:
+        - "First, watch Elfie's planned path to the cookie 🍪."
+        - "Click a tile on the plan where you think Elfie **should not** step."
+        - "Elfie will automatically **plan a new route** from there."
+        - "You can select **multiple tiles** to guide Elfie."
+        - "If the original plan looks good, you **don't need to select any tiles** to continue."
+
+  off_task_interactive_guide_text:
+    - type: emphasis_box
+      color: gray
+      title: How to Mark a Mistake
+      items:
+        - "Click on a tile where you think Elfie **should not go**."
+        - "Think of it as placing an **obstacle** on that tile and marking it **off-limits**."
+        # - "The **blue tiles** are Elfie's current plan. You can **only** click on blue tiles."
+        # - "The **red tiles** are the part of the plan that you decided to keep."
+        - "You have a **limited number of selections** to use in each round."
+        - "To **remove a selection**, click again on a previously selected tile."
+        # - "Look at the **visual example below** to see how it works."
+    - type: section_header
+      content: 'Look at this Visual Example to See How It Works'
+
+  off_task_interactive_guide_stable:
+    - type: include
+      id: off_task_interactive_guide_text
+    
+    # - type: render_environment_dynamically
+    #   env_id: "practice_env"
+    #   caption: "**Initial Plan:** First, Elfie shows you her complete initial plan."
+    #   generate_trajectory:
+    #     policy_type: "mismatch"
+    #     path_style: "off"
+
+    - type: render_environment_statically
+      map_data:
+        <<: *practice_map_data
+      caption: "**Initial Plan:** First, Elfie shows you her complete initial plan."
+      path_data:
+        trajectory-path-cell: [[1, 11], [2, 11], [3, 11], [3, 10], [3, 9], [3, 8], [3, 7], [3, 6], [4, 6], [4, 5], [4, 4], [4, 3], [4, 2], [4, 1], [4, 0], [3, 0], [2, 0], [1, 0], [0, 0]]
+
+    # - type: render_environment_dynamically
+    #   env_id: "practice_env"
+    #   caption: "**Selecting a Bad Choice:** Click a tile on the path to make a selection."
+    #   generate_trajectory:
+    #     policy_type: "mismatch"
+    #     path_style: "off"
+    #   overlays:
+    #     - image_path: "imgs/mouse_pointer.png" 
+    #       position: [3, 7]
+
+    - type: render_environment_statically
+      map_data:
+        <<: *practice_map_data
+      caption: "**Selecting a Bad Choice:** Click a tile on the path to make a selection."
+      path_data:
+        trajectory-path-cell: [[1, 11], [2, 11], [3, 11], [3, 10], [3, 9], [3, 8], [3, 7], [3, 6], [4, 6], [4, 5], [4, 4], [4, 3], [4, 2], [4, 1], [4, 0], [3, 0], [2, 0], [1, 0], [0, 0]]
+      overlays:
+        - image_path: "imgs/mouse_pointer.png" 
+          position: [3, 7]
+
+
+    # - type: render_environment_dynamically
+    #   env_id: "practice_env"
+    #   caption: "**Plan Automatically Updated:** Elfie finds a new route from the point just before your selection. The **red tiles** are the parts of the plan that you decided to keep."
+    #   generate_trajectory:
+    #     policy_type: "mismatch"
+    #     path_style: "off"
+    #     intervention_points: [[3, 7]]
+    #     intervention_index: 7
+
+    - type: render_environment_statically
+      map_data:
+        <<: *practice_map_data
+      caption: "**Plan Automatically Updated:** Elfie finds a new route from the point just before your selection. The **red tiles** are the parts of the plan that you decided to keep."
+      path_data:
+        trajectory-path-cell: [[2, 8], [2, 7], [1, 7], [1, 6], [0, 6], [0, 5], [0, 4], [0, 3], [0, 2], [0, 1], [0, 0]]
+        path-cell: [[1, 11], [2, 11], [3, 11], [3, 10], [3, 9], [3, 8]]
+        obstacle-cell: [[3, 7]]
+
+    # - type: render_environment_dynamically
+    #   env_id: "practice_env"
+    #   caption: "**Continue Selecting:** Continue selecting tiles on the new **blue path** to refine it further."
+    #   generate_trajectory:
+    #     policy_type: "mismatch"
+    #     path_style: "off"
+    #   overlays:
+    #     - image_path: "imgs/mouse_pointer.png" 
+    #       position: [0, 5]
+    #   generate_trajectory:
+    #     policy_type: "mismatch"
+    #     path_style: "off"
+    #     intervention_points: [[3, 7]]
+    #     intervention_index: 7
+
+    - type: render_environment_statically
+      map_data:
+        <<: *practice_map_data
+      caption: "**Continue Selecting:** Continue selecting tiles on the new **blue path** to refine it further."
+      path_data:
+        trajectory-path-cell: [[2, 8], [2, 7], [1, 7], [1, 6], [0, 6], [0, 5], [0, 4], [0, 3], [0, 2], [0, 1], [0, 0]]
+        path-cell: [[1, 11], [2, 11], [3, 11], [3, 10], [3, 9], [3, 8]]
+        obstacle-cell: [[3, 7]]
+      overlays:
+        - image_path: "imgs/mouse_pointer.png" 
+          position: [0, 5]
+    
+    # - type: render_environment_dynamically
+    #   env_id: "practice_env"
+    #   caption: "**Automatic Updates:** Elfie updates her plan again based on all your feedback."
+    #   generate_trajectory:
+    #     policy_type: "mismatch"
+    #     path_style: "off"
+    #     intervention_points: [[3, 7], [0, 5]]
+    #     intervention_index: 10
+
+    - type: render_environment_statically
+      map_data:
+        <<: *practice_map_data
+      caption: "**Automatic Updates:** Elfie updates her plan again based on all your feedback."
+      path_data:
+        trajectory-path-cell: [[3, 6], [4, 6], [4, 5], [4, 4], [4, 3], [4, 2], [4, 1], [4, 0], [3, 0], [2, 0], [1, 0], [0, 0]]
+        path-cell: [[1, 11], [2, 11], [3, 11], [3, 10], [3, 9], [3, 8], [2, 8], [2, 7], [2, 6]]
+        obstacle-cell: [[3, 7], [0, 5]]
+
+    # - type: render_environment_dynamically
+    #   env_id: "practice_env"
+    #   caption: "**To Undo:** If you change your mind, just click an existing 'X' to remove that selection."
+    #   generate_trajectory:
+    #     policy_type: "mismatch"
+    #     path_style: "off"
+    #   overlays:
+    #     - image_path: "imgs/mouse_pointer.png" 
+    #       position: [3, 7]
+    #   generate_trajectory:
+    #     policy_type: "mismatch"
+    #     path_style: "off"
+    #     intervention_points: [[3, 7], [0, 5]]
+    #     intervention_index: 10
+
+    - type: render_environment_statically
+      map_data:
+        <<: *practice_map_data
+      caption: "**To Undo:** If you change your mind, just click an existing 'X' to remove that selection."
+      path_data:
+        trajectory-path-cell: [[3, 6], [4, 6], [4, 5], [4, 4], [4, 3], [4, 2], [4, 1], [4, 0], [3, 0], [2, 0], [1, 0], [0, 0]]
+        path-cell: [[1, 11], [2, 11], [3, 11], [3, 10], [3, 9], [3, 8], [2, 8], [2, 7], [2, 6]]
+        obstacle-cell: [[3, 7], [0, 5]]
+      overlays:
+        - image_path: "imgs/mouse_pointer.png" 
+          position: [3, 7]
+
+    # - type: render_environment_dynamically
+    #   env_id: "practice_env"
+    #   caption: "**Path Automatically Updated:** The path updates automatically after an obstacle is removed."
+    #   generate_trajectory:
+    #     policy_type: "mismatch"
+    #     path_style: "off"
+    #     intervention_points: [[0, 5]]
+    #     intervention_index: 7
+
+    - type: render_environment_statically
+      map_data:
+        <<: *practice_map_data
+      caption: "**Path Automatically Updated:** The path updates automatically after an obstacle is removed."
+      path_data:
+        trajectory-path-cell: [[3, 6], [3, 7], [4, 6], [4, 5], [4, 4], [4, 3], [4, 2], [4, 1], [4, 0], [3, 0], [2, 0], [1, 0], [0, 0]]
+        path-cell: [[1, 11], [2, 11], [3, 11], [3, 10], [3, 9], [3, 8]]
+        obstacle-cell: [[0, 5]]
+
+    - type: divider
+
+  off_task_interactive_guide_slippery:
+    - type: include
+      id: off_task_interactive_guide_text
+
+    # - type: render_environment_dynamically
+    #   env_id: "practice_env"
+    #   caption: "**Initial Plan:** First, Elfie shows you her complete initial plan."
+    #   generate_trajectory:
+    #     policy_type: "mismatch"
+    #     path_style: "off"
+
+    - type: render_environment_statically
+      map_data:
+        <<: *practice_map_data
+      caption: "**Initial Plan:** First, Elfie shows you her complete initial plan."
+      path_data:
+        trajectory-path-cell: [[1, 11], [2, 11], [2, 10], [3, 10], [3, 9], [3, 8], [3, 7], [3, 6], [2, 6], [1, 6], [0, 6], [0, 5], [0, 4], [0, 3], [0, 2], [0, 1], [0, 0]]
+
+    # - type: render_environment_dynamically
+    #   env_id: "practice_env"
+    #   caption: "**Selecting a Bad Choice:** Click a tile on the path to make a selection."
+    #   generate_trajectory:
+    #     policy_type: "mismatch"
+    #     path_style: "off"
+    #   overlays:
+    #     - image_path: "imgs/mouse_pointer.png" 
+    #       position: [3, 7]
+    
+    - type: render_environment_statically
+      map_data:
+        <<: *practice_map_data
+      caption: "**Selecting a Bad Choice:** Click a tile on the path to make a selection."
+      path_data:
+        trajectory-path-cell: [[1, 11], [2, 11], [2, 10], [3, 10], [3, 9], [3, 8], [3, 7], [3, 6], [2, 6], [1, 6], [0, 6], [0, 5], [0, 4], [0, 3], [0, 2], [0, 1], [0, 0]]
+      overlays:
+        - image_path: "imgs/mouse_pointer.png" 
+          position: [3, 7]
+
+    # - type: render_environment_dynamically
+    #   env_id: "practice_env"
+    #   caption: "**Plan Automatically Updated:** Elfie finds a new route from the point just before your selection. The **red tiles** are the parts of the plan that you decided to keep."
+    #   generate_trajectory:
+    #     policy_type: "mismatch"
+    #     path_style: "off"
+    #     intervention_points: [[3, 7]]
+    #     intervention_index: 7
+
+    - type: render_environment_statically
+      map_data:
+        <<: *practice_map_data
+      caption: "**Plan Automatically Updated:** Elfie finds a new route from the point just before your selection. The **red tiles** are the parts of the plan that you decided to keep."
+      path_data:
+        trajectory-path-cell: [[2, 8], [2, 7], [2, 6], [1, 6], [0, 6], [0, 5], [0, 4], [0, 3], [0, 2], [0, 1], [0, 0]]
+        path-cell: [[1, 11], [2, 11], [2, 10], [3, 10], [3, 9], [3, 8]]
+        obstacle-cell: [[3, 7]]
+
+    # - type: render_environment_dynamically
+    #   env_id: "practice_env"
+    #   caption: "**Continue Selecting:** Continue selecting tiles on the new **blue path** to refine it further."
+    #   generate_trajectory:
+    #     policy_type: "mismatch"
+    #     path_style: "off"
+    #   overlays:
+    #     - image_path: "imgs/mouse_pointer.png" 
+    #       position: [0, 5]
+    #   generate_trajectory:
+    #     policy_type: "mismatch"
+    #     path_style: "off"
+    #     intervention_points: [[3, 7]]
+    #     intervention_index: 7
+
+    - type: render_environment_statically
+      map_data:
+        <<: *practice_map_data
+      caption: "**Continue Selecting:** Continue selecting tiles on the new **blue path** to refine it further."
+      path_data:
+        trajectory-path-cell: [[2, 8], [2, 7], [2, 6], [1, 6], [0, 6], [0, 5], [0, 4], [0, 3], [0, 2], [0, 1], [0, 0]]
+        path-cell: [[1, 11], [2, 11], [2, 10], [3, 10], [3, 9], [3, 8]]
+        obstacle-cell: [[3, 7]]
+      overlays:
+        - image_path: "imgs/mouse_pointer.png" 
+          position: [0, 5]
+
+    # - type: render_environment_dynamically
+    #   env_id: "practice_env"
+    #   caption: "**Automatic Updates:** Elfie updates her plan again based on all your feedback."
+    #   generate_trajectory:
+    #     policy_type: "mismatch"
+    #     path_style: "off"
+    #     intervention_points: [[3, 7], [0, 5]]
+    #     intervention_index: 10
+
+    - type: render_environment_statically
+      map_data:
+        <<: *practice_map_data
+      caption: "**Automatic Updates:** Elfie updates her plan again based on all your feedback."
+      path_data:
+        trajectory-path-cell: [[3, 6], [3, 5], [4, 5], [4, 4], [4, 3], [4, 2], [4, 1], [4, 0], [3, 0], [2, 0], [1, 0], [0, 0]]
+        path-cell: [[1, 11], [2, 11], [2, 10], [3, 10], [3, 9], [3, 8], [2, 8], [2, 7], [2, 6]]
+        obstacle-cell: [[3, 7], [0, 5]]
+
+    # - type: render_environment_dynamically
+    #   env_id: "practice_env"
+    #   caption: "**To Undo:** If you change your mind, just click an existing 'X' to remove that selection."
+    #   generate_trajectory:
+    #     policy_type: "mismatch"
+    #     path_style: "off"
+    #   overlays:
+    #     - image_path: "imgs/mouse_pointer.png" 
+    #       position: [3, 7]
+    #   generate_trajectory:
+    #     policy_type: "mismatch"
+    #     path_style: "off"
+    #     intervention_points: [[3, 7], [0, 5]]
+    #     intervention_index: 10
+
+    - type: render_environment_statically
+      map_data:
+        <<: *practice_map_data
+      caption: "**To Undo:** If you change your mind, just click an existing 'X' to remove that selection."
+      path_data:
+        trajectory-path-cell: [[3, 6], [3, 5], [4, 5], [4, 4], [4, 3], [4, 2], [4, 1], [4, 0], [3, 0], [2, 0], [1, 0], [0, 0]]
+        path-cell: [[1, 11], [2, 11], [2, 10], [3, 10], [3, 9], [3, 8], [2, 8], [2, 7], [2, 6]]
+        obstacle-cell: [[3, 7], [0, 5]]
+      overlays:
+        - image_path: "imgs/mouse_pointer.png" 
+          position: [3, 7]
+
+    # - type: render_environment_dynamically
+    #   env_id: "practice_env"
+    #   caption: "**Path Automatically Updated:** The path updates automatically after an obstacle is removed."
+    #   generate_trajectory:
+    #     policy_type: "mismatch"
+    #     path_style: "off"
+    #     intervention_points: [[0, 5]]
+    #     intervention_index: 7
+
+    - type: render_environment_statically
+      map_data:
+        <<: *practice_map_data
+      caption: "**Path Automatically Updated:** The path updates automatically after an obstacle is removed."
+      path_data:
+        trajectory-path-cell: [[3, 6], [3, 5], [3, 7], [4, 5], [4, 4], [4, 3], [4, 2], [4, 1], [4, 0], [3, 0], [2, 0], [1, 0], [0, 0]]
+        path-cell: [[1, 11], [2, 11], [2, 10], [3, 10], [3, 9], [3, 8]]
+        obstacle-cell: [[0, 5]]
+
+
+    - type: divider
+
+# --- CORRECTED: SIMPLIFIED TASK INSTRUCTIONS ---
+off_task_instructions:
+  group_a1b1: &off_task_base
+    title_key: instructions_title
+    elements:
+      - { type: include, id: off_task_common }
+      - { type: include, id: off_task_interactive_guide_stable }
+      - { type: include, id: off_a1b1_imgs }
+      - { type: include, id: group_specifics_a1b1 }
+      - { type: include, id: common_practice_page_notice }
+  group_a1b2:
+    <<: *off_task_base
+    elements:
+      - { type: include, id: off_task_common }
+      - { type: include, id: off_task_interactive_guide_stable }
+      - { type: include, id: off_a1b2_imgs }
+      - { type: include, id: group_specifics_a1b2 }
+      - { type: include, id: common_practice_page_notice }
+  group_a2b1:
+    <<: *off_task_base
+    elements:
+      - { type: include, id: off_task_common }
+      - { type: include, id: off_task_interactive_guide_slippery }
+      - { type: include, id: off_a2b1_imgs }
+      - { type: include, id: group_specifics_a2b1 }
+      - { type: include, id: common_practice_page_notice }
+  group_a2b2:
+    <<: *off_task_base
+    elements:
+      - { type: include, id: off_task_common }
+      - { type: include, id: off_task_interactive_guide_slippery }
+      - { type: include, id: off_a2b2_imgs }
+      - { type: include, id: group_specifics_a2b2 }
+      - { type: include, id: common_practice_page_notice }
+
+corrections_task_instructions:
+  group_a1b1: &corrections_task_base
+    title_key: instructions_title
+    elements:
+      - { type: include, id: corrections_task_common_stable }
+      - { type: include, id: corrections_a1b1_imgs }
+      - { type: include, id: group_specifics_a1b1 }
+      - { type: include, id: common_practice_page_notice }
+  group_a1b2:
+    <<: *corrections_task_base
+    elements:
+      - { type: include, id: corrections_task_common_stable }
+      - { type: include, id: corrections_a1b2_imgs }
+      - { type: include, id: group_specifics_a1b2 }
+      - { type: include, id: common_practice_page_notice }
+  group_a2b1:
+    <<: *corrections_task_base
+    elements:
+      - { type: include, id: corrections_task_common_slippery }
+      - { type: include, id: corrections_a2b1_imgs }
+      - { type: include, id: group_specifics_a2b1 }
+      - { type: include, id: common_practice_page_notice }
+  group_a2b2:
+    <<: *corrections_task_base
+    elements:
+      - { type: include, id: corrections_task_common_slippery }
+      - { type: include, id: corrections_a2b2_imgs }
+      - { type: include, id: group_specifics_a2b2 }
+      - { type: include, id: common_practice_page_notice }
+
+demonstrations_task_instructions:
+  group_a1b1: &demonstrations_task_base
+    title_key: instructions_title
+    elements:
+      - { type: include, id: demonstrations_common_header_post }
+      - { type: include, id: demonstrations_task_common_stable }
+      - { type: include, id: demonstrations_a1b1_imgs }
+      - { type: include, id: group_specifics_a1b1 }
+      - { type: include, id: common_practice_page_notice }
+  group_a1b2:
+    <<: *demonstrations_task_base
+    elements:
+      - { type: include, id: demonstrations_common_header_post }
+      - { type: include, id: demonstrations_task_common_stable }
+      - { type: include, id: demonstrations_a1b2_imgs }
+      - { type: include, id: group_specifics_a1b2 }
+      - { type: include, id: common_practice_page_notice }
+  group_a2b1:
+    <<: *demonstrations_task_base
+    elements:
+      - { type: include, id: demonstrations_common_header_post }
+      - { type: include, id: demonstrations_task_common_slippery }
+      - { type: include, id: demonstrations_a2b1_imgs }
+      - { type: include, id: group_specifics_a2b1 }
+      - { type: include, id: common_practice_page_notice }
+  group_a2b2:
+    <<: *demonstrations_task_base
+    elements:
+      - { type: include, id: demonstrations_common_header_post }
+      - { type: include, id: demonstrations_task_common_slippery }
+      - { type: include, id: demonstrations_a2b2_imgs }
+      - { type: include, id: group_specifics_a2b2 }
+      - { type: include, id: common_practice_page_notice }
+
+demonstrations_task_instructions_pre:
+  group_a1b1: &demonstrations_task_base_pre
+    title_key: instructions_title
+    elements:
+      - { type: include, id: demonstrations_common_header }
+      - { type: include, id: demonstrations_task_common_stable }
+      - { type: include, id: demonstrations_a1b1_imgs }
+      # - { type: include, id: group_specifics_a1b1 }
+      - { type: include, id: common_practice_page_notice }
+  group_a1b2:
+    <<: *demonstrations_task_base_pre
+    elements:
+      - { type: include, id: demonstrations_common_header }
+      - { type: include, id: demonstrations_task_common_stable }
+      - { type: include, id: demonstrations_a1b2_imgs }
+      # - { type: include, id: group_specifics_a1b2 }
+      - { type: include, id: common_practice_page_notice }
+  group_a2b1:
+    <<: *demonstrations_task_base_pre
+    elements:
+      - { type: include, id: demonstrations_common_header }
+      - { type: include, id: demonstrations_task_common_slippery }
+      - { type: include, id: demonstrations_a2b1_imgs }
+      # - { type: include, id: group_specifics_a2b1 }
+      - { type: include, id: common_practice_page_notice }
+  group_a2b2:
+    <<: *demonstrations_task_base_pre
+    elements:
+      - { type: include, id: demonstrations_common_header }
+      - { type: include, id: demonstrations_task_common_slippery }
+      - { type: include, id: demonstrations_a2b2_imgs }
+      # - { type: include, id: group_specifics_a2b2 }
+      - { type: include, id: common_practice_page_notice }
+
+comparisons_task_instructions:
+  group_a1b1: &comparisons_task_base
+    title_key: instructions_title
+    elements:
+      - { type: include, id: comparisons_task_common }
+      - { type: include, id: comparisons_a1b1_imgs }
+      - { type: include, id: group_specifics_a1b1 }
+      - { type: include, id: common_practice_page_notice }
+  group_a1b2:
+    <<: *comparisons_task_base
+    elements:
+      - { type: include, id: comparisons_task_common }
+      - { type: include, id: comparisons_a1b2_imgs }
+      - { type: include, id: group_specifics_a1b2 }
+      - { type: include, id: common_practice_page_notice }
+  group_a2b1:
+    <<: *comparisons_task_base
+    elements:
+      - { type: include, id: comparisons_task_common }
+      - { type: include, id: comparisons_a2b1_imgs }
+      - { type: include, id: group_specifics_a2b1 }
+      - { type: include, id: common_practice_page_notice }
+  group_a2b2:
+    <<: *comparisons_task_base
+    elements:
+      - { type: include, id: comparisons_task_common }
+      - { type: include, id: comparisons_a2b2_imgs }
+      - { type: include, id: group_specifics_a2b2 }
+      - { type: include, id: common_practice_page_notice }
+
+# --- SIMPLIFIED MAIN INSTRUCTIONS ---
+main_instructions:
+  group_a1b1: &main_instructions_base
+    title_key: title
+    elements:
+      - { type: include, id: main_instructions_stable_text_block }
+      - { type: include, id: stable_cliff_safety_grid_stable_caption }
+      
+  group_a1b2:
+    <<: *main_instructions_base
+    elements:
+      - { type: include, id: main_instructions_stable_text_block }
+      - { type: include, id: stable_cliff_safety_grid_slippery_caption }
+      
+  group_a2b1:
+    <<: *main_instructions_base
+    elements:
+      - { type: include, id: main_instructions_slippery_text_block }
+      - { type: include, id: slippery_cliff_safety_grid_stable_caption }
+      
+  group_a2b2:
+    <<: *main_instructions_base
+    elements:
+      - { type: include, id: main_instructions_slippery_text_block }
+      - { type: include, id: slippery_cliff_safety_grid_slippery_caption }
+
+# --- PLAN VS EXECUTION INSTRUCTIONS ---
+plan_vs_execution_instructions:
+  group_a1b1: &plan_vs_execution_base
+    title_key: a_note_on_plan_vs_execution_title
+    elements:
+      - { type: include, id: plan_vs_execution_common_elements }
+      # - { type: include, id: stable_notice_stable_content }
+
+  group_a1b2:
+    <<: *plan_vs_execution_base
+    elements:
+      - { type: include, id: plan_vs_execution_common_elements }
+      # - { type: include, id: stable_notice_slippery_content }
+
+  group_a2b1:
+    <<: *plan_vs_execution_base
+    elements:
+      - { type: include, id: plan_vs_execution_common_elements }
+      # - { type: include, id: slippery_notice_stable_content }
+
+  group_a2b2:
+    <<: *plan_vs_execution_base
+    elements:
+      - { type: include, id: plan_vs_execution_common_elements }
+      # - { type: include, id: slippery_notice_slippery_content }
+
+
+# --- MANIPULATION CHECK INSTRUCTIONS ---
+manipulation_check_instructions:
+  # The base group now also uses the new component
+  group_a1b1: &manipulation_check_base
+    title_key: manipulation_check_title_post
+    elements:
+      - type: include 
+        id: stable_notice_stable_content
+      - type: include
+        id: manipulation_check_questions_post
+
+  # Correct the other groups
+  group_a1b2:
+    <<: *manipulation_check_base
+    elements:
+      - { type: include, id: stable_notice_slippery_content }
+      - { type: include, id: manipulation_check_questions_post }
+
+  group_a2b1:
+    <<: *manipulation_check_base
+    elements:
+      - { type: include, id: slippery_notice_stable_content }
+      - { type: include, id: manipulation_check_questions_post }
+
+  group_a2b2:
+    <<: *manipulation_check_base
+    elements:
+      - { type: include, id: slippery_notice_slippery_content }
+      - { type: include, id: manipulation_check_questions_post }
+
+manipulation_check_instructions_pre:
+  group_a1b1: &manipulation_check_pre_base
+    title_key: manipulation_check_title_pre
+    elements:
+      - type: include
+        id: planning_only_notice_content # Uses the new, simplified "Remember!" box
+      - type: include
+        id: manipulation_check_questions
+
+  group_a1b2:
+    <<: *manipulation_check_pre_base
+
+  group_a2b1:
+    <<: *manipulation_check_pre_base
+
+  group_a2b2:
+    <<: *manipulation_check_pre_base

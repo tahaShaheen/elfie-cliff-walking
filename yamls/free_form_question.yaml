@@ -1,0 +1,92 @@
+# First, define a reusable base environment with an anchor (&base_ffq_env)
+base_ffq_env: &base_ffq_env
+  map_layout:
+    - "FFFFFF"
+    - "FFHHFF"
+    - "FFFFFF"
+    - "SFHHFG"
+
+# Now, use the base in your environment definitions
+free_form_questions_environments:
+  ffq_stable:
+    <<: *base_ffq_env  # This line merges in the content from base_ffq_env
+    name: "Stable Ground Sample"
+
+  ffq_slippery:
+    <<: *base_ffq_env  # This also merges in the same content
+    name: "Slippery Ground Sample"
+    tile_type: "ice"  # You can still add or override keys
+
+# common_ffq_template: &common_template
+#   elements:
+#     - type: include
+#       id: common_intro
+#     - type: include
+#       id: goal_and_anonymity
+#     - type: include
+#       id: common_free_form_question_header
+#     - type: text
+#       content: "Take a look at the ground Elfie will be walking on. Pick an option that most closely describes what it looks like to you. What are its texture or properties?"
+#     - type: include
+#       id: common_free_form_environment_display
+#     - type: caption
+#       content: "This is the kind of environment you will see in the mini-games."
+#     - type: large_image
+#       caption: "This is what the ground looks like up close."
+    
+#     - type: radio_button_group
+#       name: "ground_description_choice"
+#       options:
+#         - "The ground looks **slick and slippery**."
+#         - "The ground looks **rough and stable**."
+#         # - "I'm not sure what the ground is like."
+#     - type: divider
+#     - type: text
+#       content: "**Optional:** Use your own words to describe the ground Elfie will be walking on. What are its texture or properties?"
+#     - type: free_form_input
+#       name: "additional_description"
+#       placeholder: "Add any other details or descriptions here..."
+
+# free_form_question_config:
+#   group_a1b1: # Stable instructions, stable environment
+#     <<: *common_template
+#     env_id: "ffq_stable"
+#   group_a1b2: # Stable instructions, slippery environment
+#     <<: *common_template
+#     env_id: "ffq_slippery"
+#   group_a2b1: # Slippery instructions, stable environment
+#     <<: *common_template
+#     env_id: "ffq_stable"
+#   group_a2b2: # Slippery instructions, slippery environment
+#     <<: *common_template
+#     env_id: "ffq_slippery"
+
+
+common_ffq_template: &common_template
+  elements:
+    - type: divider
+    # - type: header
+    #   content: "First, a quick question"
+    - type: include
+      id: common_intro
+    - type: include
+      id: goal_and_anonymity
+    - type: include
+      id: common_free_form_question_header
+    - type: text
+      content: "For the upcoming mini-games, Elfie will be dropped randomly into one of two realms."
+    - type: text
+      content: "Let's start by getting your first impressions. **Which option describes each realm best?** Consider its textures and properties."
+    # - type: divider
+
+    # These two 'include' statements will be randomly ordered by the server
+    - type: include
+      id: ffq_stable_section
+    - type: include
+      id: ffq_slippery_section
+
+
+# This config uses the template above for everyone, removing the old group logic.
+free_form_question_config:
+  default:
+    <<: *common_template

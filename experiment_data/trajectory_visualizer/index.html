@@ -1,0 +1,44 @@
+<!-- Run this: http://127.0.0.1:5001/static/trajectory_visualizer/index.html -->
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Trajectory Visualizer</title>
+  <link rel="stylesheet" href="/static/trajectory_visualizer/visualizer.css" />
+</head>
+<body>
+  <header>
+    <h1>Trajectory Visualizer</h1>
+  </header>
+
+  <section class="controls">
+    <label for="user-select">User</label>
+    <select id="user-select"><option value="">Loading...</option></select>
+
+    <label for="feedback-select">Feedback Type</label>
+    <select id="feedback-select" disabled><option value="">--</option></select>
+
+    <label for="trial-select">Trial</label>
+    <select id="trial-select" disabled><option value="">--</option></select>
+
+    <button id="play-btn" disabled>Play</button>
+    <button id="reset-btn" disabled>Reset</button>
+  </section>
+
+  <main class="main-grid">
+    <aside class="summary">
+      <h2>Participant Summary</h2>
+      <div id="summary">Select a user and trial to see details.</div>
+    </aside>
+
+    <section class="visualization" id="viz">
+      <div id="grid-container"></div>
+    </section>
+  </main>
+
+  <!-- DO NOT load utils.js here per request -->
+  <script src="/static/trajectory_visualizer/visualizer.js"></script>
+</body>
+</html>

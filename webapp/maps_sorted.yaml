@@ -1,0 +1,1985 @@
+environments:
+  gen_map_117:
+    name: Generated Map 117
+    map_layout:
+    - GFFHHFFFFFFS
+    - FHFFFHFHHFHF
+    - FHFFHHFHFFHH
+    - FHHFFFFFFFFF
+    - FFFFFFHFFFHH
+    - FFFFFHHHHFFF
+    frechet_distance: 3.61
+    dtw_distance: 59.8
+    policy_group_b1: '[-1,0,0,-1,-1,2,1,0,0,0,0,0,3,-1,3,0,0,-1,1,-1,-1,1,-1,3,3,-1,3,0,-1,-1,1,-1,1,0,-1,-1,3,-1,-1,3,0,0,0,0,0,0,0,0,3,0,0,0,0,0,-1,3,0,0,-1,-1,3,0,0,0,0,-1,-1,-1,-1,3,0,0]'
+    policy_group_b2: '[-1,0,0,-1,-1,2,1,0,0,1,0,0,3,-1,3,0,0,-1,1,-1,-1,1,-1,3,3,-1,3,0,-1,-1,1,-1,1,1,-1,-1,3,-1,-1,1,1,1,0,0,0,0,0,0,3,0,1,1,0,0,-1,3,3,3,-1,-1,3,0,0,0,0,-1,-1,-1,-1,3,0,0]'
+    map_height: 6
+    map_width: 12
+    hole_count: 22
+  gen_map_82:
+    name: Generated Map 82
+    map_layout:
+    - HHHHFFFFFFFF
+    - HFHHFFFFHHFF
+    - HFFFFFFHFFFF
+    - FFHFFFFHFFFF
+    - FFHHHHFHFHHF
+    - GFFFFFFFFHFS
+    frechet_distance: 4.24
+    dtw_distance: 87.02
+    policy_group_b1: '[-1,-1,-1,-1,1,0,0,0,0,0,0,0,-1,1,-1,-1,1,0,0,0,-1,-1,1,0,-1,1,0,0,0,0,0,-1,1,0,0,0,1,0,-1,3,0,0,1,-1,1,0,0,0,1,0,-1,-1,-1,-1,1,-1,1,-1,-1,3,-1,0,0,0,0,0,0,0,0,-1,2,3]'
+    policy_group_b2: '[-1,-1,-1,-1,2,1,0,0,0,0,0,0,-1,1,-1,-1,1,1,0,0,-1,-1,3,3,-1,1,0,0,0,0,0,-1,1,0,2,3,1,0,-1,3,3,3,1,-1,1,0,0,3,1,0,-1,-1,-1,-1,1,-1,1,-1,-1,3,-1,0,0,0,0,0,0,0,0,-1,2,3]'
+    map_height: 6
+    map_width: 12
+    hole_count: 21
+  gen_map_52:
+    name: Generated Map 52
+    map_layout:
+    - SFHFFFFFFFFG
+    - FFHFHHFFHHFF
+    - FFFFHHFFFFFF
+    - FHHFFHHFFFFF
+    - FHFHHHFFFFHH
+    - FFFFFFFFFFHH
+    frechet_distance: 5.0
+    dtw_distance: 100.63
+    policy_group_b1: '[1,1,-1,2,2,2,2,2,2,2,2,-1,1,1,-1,3,-1,-1,2,3,-1,-1,2,3,2,2,2,3,-1,-1,2,2,2,2,2,3,3,-1,-1,3,0,-1,-1,2,2,2,2,3,3,-1,1,-1,-1,-1,2,2,2,3,-1,-1,2,2,2,2,2,2,2,2,2,3,-1,-1]'
+    policy_group_b2: '[1,0,-1,2,2,2,2,2,2,2,2,-1,1,1,-1,3,-1,-1,3,3,-1,-1,2,3,1,2,2,3,-1,-1,2,2,2,2,2,3,1,-1,-1,3,0,-1,-1,2,2,2,3,3,1,-1,1,-1,-1,-1,2,2,3,3,-1,-1,2,2,2,2,2,2,2,2,3,0,-1,-1]'
+    map_height: 6
+    map_width: 12
+    hole_count: 20
+  gen_map_35:
+    name: Generated Map 35
+    map_layout:
+    - GFFFFFFFFHFS
+    - FHHFHFHHHHHF
+    - FFHHHFFFFFFF
+    - FFFFFHHFHFFF
+    - FHHFFFFFHFFF
+    - FFHHFFFFFFFF
+    frechet_distance: 3.61
+    dtw_distance: 78.14
+    policy_group_b1: '[-1,0,0,0,0,0,0,0,0,-1,2,1,3,-1,-1,3,-1,3,-1,-1,-1,-1,-1,1,3,0,-1,-1,-1,3,0,0,0,0,0,0,3,0,0,0,0,-1,-1,3,-1,3,0,0,3,-1,-1,3,0,0,0,0,-1,3,0,0,3,0,-1,-1,3,0,0,0,0,0,0,0]'
+    policy_group_b2: '[-1,0,0,0,0,0,0,0,0,-1,2,1,3,-1,-1,3,-1,3,-1,-1,-1,-1,-1,1,3,0,-1,-1,-1,3,0,0,0,0,1,1,3,0,0,0,0,-1,-1,3,-1,2,1,0,3,-1,-1,3,0,0,0,1,-1,1,1,0,3,0,-1,-1,3,0,0,0,0,0,0,0]'
+    map_height: 6
+    map_width: 12
+    hole_count: 20
+  gen_map_11:
+    name: Generated Map 11
+    map_layout:
+    - FFFFFFFFFHHF
+    - HFFFFFHFFFHF
+    - HFFFHFHHFFHH
+    - HFHFHHHFFFFF
+    - FFHFFFHHFFFF
+    - GFHFFFFFFFFS
+    frechet_distance: 5.0
+    dtw_distance: 75.3
+    policy_group_b1: '[2,1,0,0,0,0,0,0,0,-1,-1,1,-1,1,0,0,0,0,-1,3,0,0,-1,2,-1,1,0,0,-1,3,-1,-1,3,0,-1,-1,-1,1,-1,3,-1,-1,-1,2,1,0,0,0,1,0,-1,3,0,0,-1,-1,1,0,0,0,-1,0,-1,3,0,0,0,0,0,0,0,0]'
+    policy_group_b2: '[2,1,0,0,0,0,0,0,0,-1,-1,0,-1,1,0,0,0,3,-1,3,0,0,-1,2,-1,1,0,0,-1,3,-1,-1,3,3,-1,-1,-1,1,-1,3,-1,-1,-1,2,3,0,0,1,1,0,-1,3,0,0,-1,-1,3,3,0,0,-1,0,-1,3,0,0,0,0,2,3,0,0]'
+    map_height: 6
+    map_width: 12
+    hole_count: 20
+  gen_map_109:
+    name: Generated Map 109
+    map_layout:
+    - FFFFFFFFFFFF
+    - FHFFFHFFFFFH
+    - HHHFFHFHFFFH
+    - HHFFFHFHFFFH
+    - FHFHFFFFFFFF
+    - GFFHHFHHFFFS
+    frechet_distance: 4.0
+    dtw_distance: 56.83
+    policy_group_b1: '[2,2,1,1,0,0,0,0,0,0,0,0,3,-1,2,1,0,-1,1,0,0,0,0,-1,-1,-1,-1,1,0,-1,1,-1,1,0,0,-1,-1,-1,1,0,0,-1,1,-1,1,0,0,-1,1,-1,1,-1,3,0,0,0,0,0,0,0,-1,0,0,-1,-1,3,-1,-1,3,0,0,0]'
+    policy_group_b2: '[2,2,2,1,0,0,0,0,0,0,0,0,3,-1,2,1,0,-1,3,3,3,0,0,-1,-1,-1,-1,1,0,-1,3,-1,3,3,0,-1,-1,-1,1,0,0,-1,1,-1,2,3,0,-1,1,-1,1,-1,3,0,0,0,2,3,0,0,-1,0,0,-1,-1,3,-1,-1,2,3,0,0]'
+    map_height: 6
+    map_width: 12
+    hole_count: 20
+  gen_map_55:
+    name: Generated Map 55
+    map_layout:
+    - SFHHHFFFFFFG
+    - FHHFFFHFFFFF
+    - FFFFHFHHHFFF
+    - FFFHHHFFFHFF
+    - FFFHFHHHFHFF
+    - FFFFFFFFFFFF
+    frechet_distance: 5.0
+    dtw_distance: 110.22
+    policy_group_b1: '[1,0,-1,-1,-1,2,2,2,2,2,2,-1,1,-1,-1,2,2,3,-1,2,2,2,2,3,2,2,2,3,-1,3,-1,-1,-1,2,2,3,2,2,3,-1,-1,-1,2,2,1,-1,2,3,2,2,3,-1,1,-1,-1,-1,1,-1,2,3,2,2,2,2,2,2,2,2,2,2,2,3]'
+    policy_group_b2: '[1,0,-1,-1,-1,2,2,2,2,2,2,-1,1,-1,-1,2,2,3,-1,3,2,2,2,3,1,1,2,3,-1,3,-1,-1,-1,2,2,3,1,1,0,-1,-1,-1,2,2,1,-1,2,3,1,1,1,-1,1,-1,-1,-1,1,-1,2,3,2,2,2,2,2,2,2,2,2,2,2,3]'
+    map_height: 6
+    map_width: 12
+    hole_count: 19
+  gen_map_61:
+    name: Generated Map 61
+    map_layout:
+    - SFFHHHHFFFFG
+    - FFFFFFHFFHHF
+    - FFFFHFHFHHFF
+    - HFHHHFFFFHFF
+    - HFFFHFFFFFFF
+    - HFFFFFFFFFFF
+    frechet_distance: 4.47
+    dtw_distance: 95.8
+    policy_group_b1: '[1,1,1,-1,-1,-1,-1,2,2,2,2,-1,2,2,2,2,2,1,-1,2,3,-1,-1,3,2,2,2,3,-1,1,-1,3,-1,-1,2,3,-1,1,-1,-1,-1,2,2,3,0,-1,2,3,-1,1,1,1,-1,2,2,2,2,2,2,3,-1,2,2,2,2,2,2,2,2,2,2,3]'
+    policy_group_b2: '[1,1,0,-1,-1,-1,-1,2,2,2,2,-1,2,1,0,2,2,1,-1,2,3,-1,-1,3,2,1,0,0,-1,1,-1,1,-1,-1,2,3,-1,1,-1,-1,-1,1,1,1,1,-1,2,3,-1,1,1,1,-1,1,1,1,1,2,2,3,-1,2,2,2,2,2,2,2,2,2,2,3]'
+    map_height: 6
+    map_width: 12
+    hole_count: 19
+  gen_map_58:
+    name: Generated Map 58
+    map_layout:
+    - SFFHFFFFHHFG
+    - FHHHFHFFFFFF
+    - FFFFFHHFHHHF
+    - FFHHFFFHHFFF
+    - FFFFFFFHFFFF
+    - FFFFFFFFFHHF
+    frechet_distance: 5.0
+    dtw_distance: 95.64
+    policy_group_b1: '[1,0,0,-1,2,2,1,1,-1,-1,2,-1,1,-1,-1,-1,3,-1,2,2,2,2,2,3,2,2,2,2,3,-1,-1,3,-1,-1,-1,3,2,3,-1,-1,3,0,1,-1,-1,2,2,3,1,1,1,1,1,1,1,-1,2,2,2,3,2,2,2,2,2,2,2,2,3,-1,-1,3]'
+    policy_group_b2: '[1,0,0,-1,2,2,1,1,-1,-1,2,-1,1,-1,-1,-1,3,-1,2,2,2,2,2,3,1,0,2,2,3,-1,-1,3,-1,-1,-1,3,1,1,-1,-1,1,1,1,-1,-1,2,2,3,1,1,1,1,1,1,1,-1,2,2,2,3,2,2,2,2,2,2,2,2,3,-1,-1,3]'
+    map_height: 6
+    map_width: 12
+    hole_count: 19
+  gen_map_113:
+    name: Generated Map 113
+    map_layout:
+    - SFHFFFFFHHFG
+    - FHHFHHHFFFFF
+    - FFFFHFFHHFFF
+    - FFFFHFFHFFFF
+    - FFFFHHFFFFFF
+    - HHFFFFFHHFFF
+    frechet_distance: 5.0
+    dtw_distance: 85.81
+    policy_group_b1: '[1,0,-1,2,2,2,2,1,-1,-1,2,-1,1,-1,-1,3,-1,-1,-1,2,2,2,2,3,2,2,2,3,-1,1,1,-1,-1,2,2,3,2,2,2,3,-1,2,1,-1,2,2,2,3,2,2,1,1,-1,-1,2,2,2,2,2,3,-1,-1,2,2,2,2,3,-1,-1,2,2,3]'
+    policy_group_b2: '[1,0,-1,2,2,2,2,1,-1,-1,2,-1,1,-1,-1,3,-1,-1,-1,2,2,2,2,3,1,1,1,3,-1,1,1,-1,-1,2,2,3,2,2,1,1,-1,2,1,-1,2,2,2,3,3,2,1,1,-1,-1,2,2,2,2,2,3,-1,-1,2,2,2,2,3,-1,-1,2,2,3]'
+    map_height: 6
+    map_width: 12
+    hole_count: 19
+  gen_map_16:
+    name: Generated Map 16
+    map_layout:
+    - SFHHHHFFFFFG
+    - FFFFFFFFHFFF
+    - FFFFFHHFHFFF
+    - HFFFHHFFHHFF
+    - HHHFFFFFFFFF
+    - FHFFFFFFHHFF
+    frechet_distance: 4.0
+    dtw_distance: 80.95
+    policy_group_b1: '[1,1,-1,-1,-1,-1,2,2,2,2,2,-1,2,2,2,2,2,2,2,3,-1,2,2,3,2,2,2,2,3,-1,-1,3,-1,2,2,3,-1,2,2,3,-1,-1,2,3,-1,-1,2,3,-1,-1,-1,2,2,2,2,2,2,2,2,3,0,-1,2,2,2,2,2,3,-1,-1,2,3]'
+    policy_group_b2: '[1,1,-1,-1,-1,-1,2,2,2,2,2,-1,2,1,2,2,2,2,2,3,-1,2,2,3,2,2,2,1,3,-1,-1,3,-1,2,2,3,-1,3,2,1,-1,-1,1,1,-1,-1,2,3,-1,-1,-1,1,1,2,2,2,2,2,2,3,0,-1,2,2,2,2,3,3,-1,-1,2,3]'
+    map_height: 6
+    map_width: 12
+    hole_count: 19
+  gen_map_118:
+    name: Generated Map 118
+    map_layout:
+    - SFFFFFHFFFFG
+    - FFHHHHHFFHFF
+    - FFFHFFFFFHHF
+    - FFFFFHFHHFFF
+    - HFFFFHFFHHHF
+    - HFFFFFFFFFFF
+    frechet_distance: 4.24
+    dtw_distance: 72.67
+    policy_group_b1: '[1,1,0,0,0,0,-1,2,2,2,2,-1,1,1,-1,-1,-1,-1,-1,2,3,-1,2,3,1,1,1,-1,2,2,2,2,3,-1,-1,3,2,2,2,2,3,-1,3,-1,-1,2,2,3,-1,2,2,2,3,-1,3,0,-1,-1,-1,3,-1,2,2,2,2,2,2,2,2,2,2,3]'
+    policy_group_b2: '[1,0,0,0,0,0,-1,2,2,2,2,-1,1,1,-1,-1,-1,-1,-1,2,3,-1,2,3,2,1,1,-1,2,2,2,2,3,-1,-1,3,2,2,1,1,3,-1,3,-1,-1,2,2,3,-1,2,1,1,1,-1,1,1,-1,-1,-1,3,-1,2,2,2,2,2,2,2,2,2,2,3]'
+    map_height: 6
+    map_width: 12
+    hole_count: 19
+  practice_env:
+    name: Practice Environment
+    map_layout:
+    - GFFFFFFFHHFS
+    - FHHHFHFFFHHF
+    - FFHFHHFFFHFF
+    - FFFHHFFFFFFF
+    - FFFFFFFFHFFF
+    - FFFFHHFFHHFF
+    frechet_distance: 4.0
+    dtw_distance: 59.95
+    policy_group_b1: '[-1,0,0,0,0,0,0,0,-1,-1,2,1,3,-1,-1,-1,3,-1,3,0,0,-1,-1,1,3,0,-1,0,-1,-1,3,0,0,-1,1,0,3,0,0,-1,-1,1,3,0,0,0,0,0,3,0,0,0,0,0,0,0,-1,3,0,0,3,0,0,0,-1,-1,3,0,-1,-1,3,0]'
+    policy_group_b2: '[-1,0,0,0,0,0,0,0,-1,-1,2,1,3,-1,-1,-1,3,-1,3,0,0,-1,-1,1,3,0,-1,0,-1,-1,3,3,0,-1,1,1,3,0,0,-1,-1,1,1,0,0,0,0,0,3,0,0,0,0,0,0,0,-1,3,3,0,3,0,0,0,-1,-1,3,0,-1,-1,3,3]'
+    map_height: 6
+    map_width: 12
+    hole_count: 19
+  gen_map_100:
+    name: Generated Map 100
+    map_layout:
+    - SFFFFFHFFFFG
+    - FHFFHHHFFFFF
+    - FHFFFFHFFHFF
+    - FFHHFFFFHHFF
+    - FFHHHFFFHFFF
+    - FHHHFFFFFFFF
+    frechet_distance: 4.0
+    dtw_distance: 50.5
+    policy_group_b1: '[2,2,1,1,0,0,-1,2,2,2,2,-1,3,-1,1,1,-1,-1,-1,2,2,2,2,3,3,-1,2,2,1,1,-1,2,3,-1,2,3,3,0,-1,-1,2,2,2,3,-1,-1,2,3,3,0,-1,-1,-1,2,2,3,-1,2,2,3,3,-1,-1,-1,2,2,2,2,2,2,2,3]'
+    policy_group_b2: '[2,2,2,1,0,0,-1,2,2,2,2,-1,3,-1,1,1,-1,-1,-1,2,3,2,2,3,3,-1,2,2,1,1,-1,2,3,-1,2,3,3,0,-1,-1,2,1,1,3,-1,-1,2,3,3,0,-1,-1,-1,1,1,1,-1,2,2,3,3,-1,-1,-1,2,2,2,2,2,2,2,3]'
+    map_height: 6
+    map_width: 12
+    hole_count: 19
+  gen_map_123:
+    name: Generated Map 123
+    map_layout:
+    - FHHFFFFFFFFF
+    - FFFFFFFHHFFF
+    - FHHFFFFHFHFF
+    - FHFHFHHFHHFF
+    - FFFHFFHFFHHF
+    - GFFFFFHFFFFS
+    frechet_distance: 4.0
+    dtw_distance: 50.37
+    policy_group_b1: '[1,-1,-1,1,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,-1,-1,3,0,0,1,-1,-1,2,1,0,0,-1,0,-1,3,0,1,-1,1,-1,1,-1,-1,1,-1,-1,3,0,1,0,0,-1,1,0,-1,1,1,-1,-1,3,-1,0,0,0,0,0,-1,2,2,2,2,3]'
+    policy_group_b2: '[1,-1,-1,1,1,0,0,0,0,0,0,0,1,0,0,2,1,0,0,-1,-1,3,3,0,1,-1,-1,2,1,0,0,-1,0,-1,3,3,1,-1,1,-1,1,-1,-1,1,-1,-1,2,3,1,0,1,-1,1,0,-1,1,1,-1,-1,3,-1,0,0,0,0,0,-1,2,2,2,2,3]'
+    map_height: 6
+    map_width: 12
+    hole_count: 19
+  gen_map_86:
+    name: Generated Map 86
+    map_layout:
+    - GFFHFHHHFFFS
+    - FHHHFFFFFFFF
+    - FHFFFFFHHFFF
+    - FFHFFFHHFFHH
+    - FFHHFHHFFFFF
+    - FFFFFFFFFFFF
+    frechet_distance: 4.0
+    dtw_distance: 49.96
+    policy_group_b1: '[-1,0,0,-1,1,-1,-1,-1,1,0,0,0,3,-1,-1,-1,1,0,0,0,0,0,0,0,3,-1,2,1,1,0,0,-1,-1,1,0,0,3,0,-1,2,1,0,-1,-1,1,0,-1,-1,3,0,-1,-1,1,-1,-1,1,0,0,0,0,3,0,0,0,0,0,0,0,0,0,0,0]'
+    policy_group_b2: '[-1,0,0,-1,1,-1,-1,-1,2,1,0,0,3,-1,-1,-1,1,1,0,0,0,1,0,0,3,-1,2,2,1,0,0,-1,-1,1,0,3,3,0,-1,2,1,0,-1,-1,1,1,-1,-1,3,0,-1,-1,1,-1,-1,1,1,0,0,1,3,0,0,0,0,0,0,0,0,0,0,0]'
+    map_height: 6
+    map_width: 12
+    hole_count: 19
+  gen_map_1:
+    name: Generated Map 1
+    map_layout:
+    - GFFFHHFFFHFS
+    - FFHFFFFFFHHF
+    - FHHHFHHHFFFF
+    - FHFHFHFFHHFF
+    - FHFFFFFFFFFF
+    - FFFFFFFFFFFF
+    frechet_distance: 5.0
+    dtw_distance: 98.2
+    policy_group_b1: '[-1,0,0,0,-1,-1,1,0,0,-1,2,1,3,0,-1,3,0,0,0,0,0,-1,-1,1,3,-1,-1,-1,3,-1,-1,-1,3,0,0,0,3,-1,1,-1,3,-1,1,0,-1,-1,3,0,3,-1,1,0,3,0,0,0,0,0,0,0,3,0,0,0,0,0,0,0,0,0,0,0]'
+    policy_group_b2: '[-1,0,0,0,-1,-1,1,0,0,-1,2,1,3,0,-1,3,0,0,0,0,0,-1,-1,1,3,-1,-1,-1,3,-1,-1,-1,3,2,2,1,3,-1,1,-1,3,-1,1,1,-1,-1,1,1,3,-1,1,1,1,0,1,0,0,1,1,0,3,0,0,0,0,0,0,0,0,0,0,0]'
+    map_height: 6
+    map_width: 12
+    hole_count: 18
+  gen_map_48:
+    name: Generated Map 48
+    map_layout:
+    - FFFFFFFFFFHH
+    - FFFHHFFFFFFH
+    - FHFHFHHHFFFF
+    - FHHFHHFFFFFF
+    - FFFFFFHHFFFF
+    - GFHHFFFFFFFS
+    frechet_distance: 5.0
+    dtw_distance: 96.22
+    policy_group_b1: '[1,0,0,0,0,0,0,0,0,0,-1,-1,1,0,0,-1,-1,3,0,0,0,0,0,-1,1,-1,3,-1,0,-1,-1,-1,1,0,0,0,1,-1,-1,1,-1,-1,2,2,1,0,0,0,1,0,0,0,0,0,-1,-1,1,0,0,0,-1,0,-1,-1,3,0,0,0,0,0,0,0]'
+    policy_group_b2: '[1,0,0,0,0,0,0,0,0,0,-1,-1,1,0,3,-1,-1,3,3,3,3,0,0,-1,1,-1,3,-1,0,-1,-1,-1,3,3,0,0,1,-1,-1,1,-1,-1,2,2,2,3,0,0,1,0,0,0,0,0,-1,-1,2,3,0,0,-1,0,-1,-1,3,0,0,0,2,3,0,0]'
+    map_height: 6
+    map_width: 12
+    hole_count: 18
+  gen_map_24:
+    name: Generated Map 24
+    map_layout:
+    - GFFFFFFFHFFS
+    - FFHHHHFFHHHF
+    - FFFFFHHFFFFF
+    - FFFFFHFFFHFF
+    - FHHFFFFFHHHF
+    - FHFFFFFFFFFF
+    frechet_distance: 5.0
+    dtw_distance: 93.93
+    policy_group_b1: '[-1,0,0,0,0,0,0,0,-1,2,2,1,3,0,-1,-1,-1,-1,3,0,-1,-1,-1,1,3,0,0,0,0,-1,-1,3,0,0,0,0,3,0,0,0,0,-1,1,3,0,-1,3,0,3,-1,-1,3,0,0,0,0,-1,-1,-1,3,3,-1,2,3,0,0,0,0,0,0,0,0]'
+    policy_group_b2: '[-1,0,0,0,0,0,0,0,-1,2,2,1,3,0,-1,-1,-1,-1,3,0,-1,-1,-1,1,3,0,0,0,0,-1,-1,1,0,0,0,1,3,0,0,0,0,-1,1,0,0,-1,2,1,3,-1,-1,3,0,0,1,0,-1,-1,-1,1,3,-1,2,3,0,0,0,0,0,0,0,0]'
+    map_height: 6
+    map_width: 12
+    hole_count: 18
+  gen_map_47:
+    name: Generated Map 47
+    map_layout:
+    - SFHFHHFFFFFG
+    - FFHFFFFHHFFF
+    - FFFFHFFFHFFF
+    - FFHFHHHFFFFF
+    - FFHFFFFFFFHH
+    - FFFFFFFFHHHF
+    frechet_distance: 4.12
+    dtw_distance: 93.21
+    policy_group_b1: '[1,1,-1,1,-1,-1,2,2,2,2,2,-1,1,1,-1,2,2,2,3,-1,-1,2,2,3,2,2,2,3,-1,2,3,0,-1,2,2,3,2,3,-1,3,-1,-1,-1,2,2,2,2,3,2,3,-1,2,2,2,2,2,2,3,-1,-1,2,2,2,2,2,2,2,3,-1,-1,-1,1]'
+    policy_group_b2: '[1,0,-1,1,-1,-1,2,2,2,2,2,-1,1,0,-1,2,2,2,3,-1,-1,2,2,3,1,0,0,3,-1,2,3,1,-1,2,2,3,1,0,-1,1,-1,-1,-1,2,2,2,3,3,1,1,-1,1,1,2,2,2,2,3,-1,-1,2,2,2,2,2,2,2,3,-1,-1,-1,0]'
+    map_height: 6
+    map_width: 12
+    hole_count: 18
+  gen_map_81:
+    name: Generated Map 81
+    map_layout:
+    - SFFFHFFFFFFG
+    - FHHHHFHFFFFF
+    - FFFFFFHFHHFF
+    - FFHHFHHFFHFF
+    - FFFFFFFFFFFF
+    - FFFFFFHHFHHF
+    frechet_distance: 4.0
+    dtw_distance: 89.1
+    policy_group_b1: '[1,0,0,0,-1,2,2,2,2,2,2,-1,1,-1,-1,-1,-1,3,-1,2,2,2,2,3,2,2,2,2,2,3,-1,3,-1,-1,2,3,2,3,-1,-1,3,-1,-1,3,0,-1,2,3,2,2,2,2,2,2,2,2,2,2,2,3,2,2,2,2,2,3,-1,-1,3,-1,-1,3]'
+    policy_group_b2: '[1,0,0,0,-1,2,2,2,2,2,2,-1,1,-1,-1,-1,-1,3,-1,3,3,2,2,3,1,2,2,2,2,3,-1,3,-1,-1,2,3,1,1,-1,-1,3,-1,-1,3,1,-1,2,3,1,1,1,2,2,2,2,2,2,2,2,3,2,2,2,2,3,3,-1,-1,3,-1,-1,3]'
+    map_height: 6
+    map_width: 12
+    hole_count: 18
+  gen_map_7:
+    name: Generated Map 7
+    map_layout:
+    - SFHFFFFFFHFG
+    - FHHHFFHFFHFF
+    - FFFFFFHFFFFF
+    - FFFHHFHFHHHF
+    - FFFFHHFFFFFF
+    - FFFFFFFFFHHF
+    frechet_distance: 4.47
+    dtw_distance: 81.26
+    policy_group_b1: '[1,0,-1,2,2,2,2,1,1,-1,2,-1,1,-1,-1,-1,2,3,-1,1,1,-1,2,3,2,2,2,2,2,3,-1,2,2,2,2,3,1,1,1,-1,-1,3,-1,3,-1,-1,-1,3,1,1,1,1,-1,-1,2,2,2,2,2,3,2,2,2,2,2,2,2,2,3,-1,-1,3]'
+    policy_group_b2: '[1,0,-1,2,2,2,2,1,1,-1,2,-1,1,-1,-1,-1,3,3,-1,1,1,-1,2,3,1,1,1,2,3,3,-1,2,2,2,2,3,1,1,1,-1,-1,3,-1,3,-1,-1,-1,3,1,1,1,1,-1,-1,2,2,2,2,2,3,2,2,2,2,2,2,2,3,3,-1,-1,3]'
+    map_height: 6
+    map_width: 12
+    hole_count: 18
+  gen_map_97:
+    name: Generated Map 97
+    map_layout:
+    - GFFFHHHFHHFS
+    - FFFHHFFFFFFF
+    - HHFHFFFFHHFH
+    - FFFFFFHHFFFH
+    - FFFFFFFFFFHH
+    - FFFFFFFFFFFF
+    frechet_distance: 4.0
+    dtw_distance: 59.24
+    policy_group_b1: '[-1,0,0,0,-1,-1,-1,1,-1,-1,1,0,3,0,0,-1,-1,1,0,0,0,0,0,0,-1,-1,3,-1,1,0,0,0,-1,-1,1,-1,2,2,3,0,0,0,-1,-1,1,0,0,-1,2,2,3,0,0,0,0,0,0,0,-1,-1,2,2,3,0,0,0,0,0,0,0,0,0]'
+    policy_group_b2: '[-1,0,0,0,-1,-1,-1,1,-1,-1,1,0,3,3,3,-1,-1,1,0,0,0,0,1,0,-1,-1,3,-1,1,0,0,0,-1,-1,1,-1,1,2,3,0,1,0,-1,-1,1,0,0,-1,2,2,3,0,0,0,0,1,1,0,-1,-1,2,2,3,0,0,0,0,0,0,0,0,0]'
+    map_height: 6
+    map_width: 12
+    hole_count: 18
+  gen_map_6:
+    name: Generated Map 6
+    map_layout:
+    - SFHFFFFFFFFG
+    - FHHFHHHHFFFF
+    - FFFFHFHFFFFF
+    - FFFFHFFFFFFF
+    - FFHFHHHFFFFF
+    - FFHFFFFFFFHH
+    frechet_distance: 5.0
+    dtw_distance: 93.68
+    policy_group_b1: '[1,0,-1,2,2,2,2,2,2,2,2,-1,1,-1,-1,3,-1,-1,-1,-1,2,2,2,3,2,2,2,3,-1,1,-1,2,2,2,2,3,2,2,2,3,-1,2,2,2,2,2,2,3,2,3,-1,3,-1,-1,-1,2,2,2,2,3,2,3,-1,2,2,2,2,2,2,3,-1,-1]'
+    policy_group_b2: '[1,0,-1,2,2,2,2,2,2,2,2,-1,1,-1,-1,3,-1,-1,-1,-1,2,2,2,3,1,2,2,3,-1,1,-1,2,2,2,2,3,2,2,2,1,-1,2,2,2,2,2,2,3,3,3,-1,1,-1,-1,-1,2,2,3,3,3,3,0,-1,2,2,2,2,2,3,3,-1,-1]'
+    map_height: 6
+    map_width: 12
+    hole_count: 17
+  gen_map_50:
+    name: Generated Map 50
+    map_layout:
+    - SFHFFFFFFFFG
+    - FFHFFHFFFFFF
+    - FFFFFHHFFFFF
+    - FHHFFFHHFHHH
+    - FFHFFFFFFFHH
+    - FFFFFFFFFFHH
+    frechet_distance: 5.0
+    dtw_distance: 81.69
+    policy_group_b1: '[1,1,-1,2,2,2,2,2,2,2,2,-1,1,1,-1,2,3,-1,2,2,2,2,2,3,2,2,2,2,3,-1,-1,2,2,2,2,3,3,-1,-1,2,3,0,-1,-1,3,-1,-1,-1,3,0,-1,2,2,2,2,2,3,0,-1,-1,2,2,2,2,2,2,2,2,3,0,-1,-1]'
+    policy_group_b2: '[1,0,-1,2,2,2,2,2,2,2,2,-1,1,1,-1,2,3,-1,2,2,2,2,2,3,1,2,2,2,3,-1,-1,2,3,3,3,3,1,-1,-1,2,1,1,-1,-1,3,-1,-1,-1,1,1,-1,1,1,1,1,2,3,0,-1,-1,2,2,2,2,2,2,2,2,3,0,-1,-1]'
+    map_height: 6
+    map_width: 12
+    hole_count: 17
+  gen_map_18:
+    name: Generated Map 18
+    map_layout:
+    - SFFFHHFFFFFG
+    - FHHHFHHFHHFF
+    - FFFFFFFFHHFF
+    - FFFFFFFFFHFF
+    - HHFFFFFHHFFF
+    - HFFFFFFFFFFF
+    frechet_distance: 5.0
+    dtw_distance: 81.28
+    policy_group_b1: '[1,0,0,0,-1,-1,2,2,2,2,2,-1,1,-1,-1,-1,1,-1,-1,3,-1,-1,2,3,2,2,2,2,2,2,2,3,-1,-1,2,3,2,2,2,2,2,2,2,3,0,-1,2,3,-1,-1,2,2,2,2,3,-1,-1,2,2,3,-1,2,2,2,2,2,2,2,2,2,2,3]'
+    policy_group_b2: '[1,0,0,0,-1,-1,2,2,2,2,2,-1,1,-1,-1,-1,1,-1,-1,3,-1,-1,2,3,1,1,1,1,1,1,2,3,-1,-1,2,3,2,2,2,1,1,1,0,3,0,-1,2,3,-1,-1,1,1,1,1,1,-1,-1,2,2,3,-1,2,2,2,2,2,2,2,2,2,2,3]'
+    map_height: 6
+    map_width: 12
+    hole_count: 17
+  gen_map_74:
+    name: Generated Map 74
+    map_layout:
+    - GFFFHHFFHHFS
+    - FFFFFFFFFHHF
+    - HFFFFFHFHHFF
+    - HFFHFHHFFFFF
+    - FFFHFFFFFFFF
+    - FHHFFFFFFFFF
+    frechet_distance: 3.61
+    dtw_distance: 45.5
+    policy_group_b1: '[-1,0,0,0,-1,-1,1,0,-1,-1,2,1,3,0,0,0,0,0,0,0,0,-1,-1,1,-1,3,0,0,0,0,-1,3,-1,-1,1,0,-1,3,0,-1,3,-1,-1,3,0,0,0,0,2,3,0,-1,3,0,0,0,0,0,0,0,3,-1,-1,2,3,0,0,0,0,0,0,0]'
+    policy_group_b2: '[-1,0,0,0,-1,-1,1,1,-1,-1,2,1,3,3,0,0,0,0,0,0,0,-1,-1,1,-1,3,3,0,0,0,-1,3,-1,-1,1,1,-1,3,3,-1,3,-1,-1,3,1,1,1,0,2,3,3,-1,3,0,1,1,0,0,0,0,3,-1,-1,2,3,0,0,0,0,0,0,0]'
+    map_height: 6
+    map_width: 12
+    hole_count: 17
+  gen_map_80:
+    name: Generated Map 80
+    map_layout:
+    - HFFHHHFHHFFF
+    - HFFFFFFFFFFF
+    - FFFHHFHHFFFF
+    - FFFFHFHHFFFF
+    - FFFFHFFHFFFF
+    - GFFFHFFFFFFS
+    frechet_distance: 4.0
+    dtw_distance: 43.95
+    policy_group_b1: '[-1,1,0,-1,-1,-1,1,-1,-1,1,0,0,-1,1,0,0,0,0,0,0,0,0,0,0,1,0,0,-1,-1,3,-1,-1,3,0,0,0,1,0,0,0,-1,3,-1,-1,3,0,0,0,1,0,0,0,-1,3,0,-1,3,0,0,0,-1,0,0,0,-1,3,0,0,0,0,0,0]'
+    policy_group_b2: '[-1,1,1,-1,-1,-1,1,-1,-1,1,1,0,-1,1,0,0,0,0,0,0,0,0,0,0,1,1,0,-1,-1,3,-1,-1,3,3,0,0,1,0,0,0,-1,3,-1,-1,2,3,0,0,1,0,0,0,-1,3,0,-1,2,3,0,0,-1,0,0,0,-1,3,3,0,2,3,0,0]'
+    map_height: 6
+    map_width: 12
+    hole_count: 17
+  gen_map_102:
+    name: Generated Map 102
+    map_layout:
+    - GFFFFFFHFFFS
+    - FFFHFFFHFFFF
+    - FFFHFFFHFFFF
+    - HHFFFFFHFHFF
+    - FHFFFFFFFHHH
+    - FFHHFFFFFHHF
+    frechet_distance: 3.61
+    dtw_distance: 40.71
+    policy_group_b1: '[-1,0,0,0,0,0,0,-1,1,0,0,0,3,0,0,-1,3,0,0,-1,1,0,0,0,3,0,0,-1,3,0,0,-1,1,0,0,0,-1,-1,3,0,0,0,0,-1,1,-1,3,0,0,-1,3,0,0,0,0,0,0,-1,-1,-1,0,0,-1,-1,3,0,0,0,0,-1,-1,1]'
+    policy_group_b2: '[-1,0,0,0,0,0,0,-1,1,1,0,0,3,0,0,-1,3,3,0,-1,1,0,0,0,3,3,0,-1,2,3,0,-1,1,0,0,0,-1,-1,3,2,2,3,0,-1,1,-1,3,3,0,-1,3,2,2,3,0,0,0,-1,-1,-1,0,0,-1,-1,2,3,0,0,0,-1,-1,0]'
+    map_height: 6
+    map_width: 12
+    hole_count: 17
+  gen_map_53:
+    name: Generated Map 53
+    map_layout:
+    - SFFHHFFFFFFG
+    - FFFHFFHHFFFF
+    - FFFFFFHHHHHF
+    - FFFHHHHFHFFF
+    - FFFFFHFFFFFF
+    - FFFFFFFFFFFF
+    frechet_distance: 5.0
+    dtw_distance: 105.58
+    policy_group_b1: '[1,1,1,-1,-1,2,2,2,2,2,2,-1,1,1,1,-1,2,3,-1,-1,2,2,2,3,2,2,2,2,2,3,-1,-1,-1,-1,-1,3,2,2,3,-1,-1,-1,-1,1,-1,2,2,3,2,2,3,0,1,-1,2,2,2,2,2,3,2,2,2,2,2,2,2,2,2,2,2,3]'
+    policy_group_b2: '[1,1,0,-1,-1,2,2,2,2,2,2,-1,1,1,0,-1,2,3,-1,-1,3,3,2,3,1,1,0,0,2,3,-1,-1,-1,-1,-1,3,1,1,1,-1,-1,-1,-1,1,-1,1,2,3,1,1,1,1,1,-1,1,1,2,2,2,3,2,2,2,2,2,2,2,2,2,2,2,3]'
+    map_height: 6
+    map_width: 12
+    hole_count: 16
+  gen_map_57:
+    name: Generated Map 57
+    map_layout:
+    - GFFFFHHFFFFS
+    - FHHHFFFFFFFF
+    - FFFFFHFHFFFF
+    - FFFFFHHHFFFH
+    - FFHHHFHFFFFH
+    - FFFFFFFFFFFF
+    frechet_distance: 5.0
+    dtw_distance: 97.06
+    policy_group_b1: '[-1,0,0,0,0,-1,-1,1,0,0,0,0,3,-1,-1,-1,3,0,0,0,0,0,0,0,3,0,0,0,0,-1,3,-1,3,0,0,0,3,0,0,0,0,-1,-1,-1,3,0,0,-1,3,0,-1,-1,-1,1,-1,1,3,0,0,-1,3,0,0,0,0,0,0,0,0,0,0,0]'
+    policy_group_b2: '[-1,0,0,0,0,-1,-1,1,1,1,0,0,3,-1,-1,-1,3,0,0,0,2,1,0,0,3,0,0,0,0,-1,3,-1,2,1,0,0,3,0,0,0,0,-1,-1,-1,1,1,0,-1,3,0,-1,-1,-1,1,-1,1,1,0,0,-1,3,0,0,0,0,0,0,0,0,0,0,0]'
+    map_height: 6
+    map_width: 12
+    hole_count: 16
+  gen_map_30:
+    name: Generated Map 30
+    map_layout:
+    - GFFHHFFFFHFS
+    - FFFFFFFHFHHF
+    - FFFHHHFHFFFF
+    - FFFHFHFHFFFF
+    - FFFFFFFFFHFF
+    - FFFFFFFFFHHF
+    frechet_distance: 4.12
+    dtw_distance: 87.42
+    policy_group_b1: '[-1,0,0,-1,-1,1,0,0,0,-1,2,1,3,0,0,0,0,0,0,-1,3,-1,-1,1,3,0,0,-1,-1,-1,3,-1,3,0,0,0,3,0,0,-1,1,-1,3,-1,1,0,0,0,3,0,0,0,0,0,0,0,0,-1,3,0,3,0,0,0,0,0,0,0,0,-1,-1,3]'
+    policy_group_b2: '[-1,0,0,-1,-1,1,0,0,0,-1,2,1,3,0,0,0,0,0,0,-1,1,-1,-1,1,3,0,0,-1,-1,-1,1,-1,1,0,1,1,3,0,0,-1,1,-1,1,-1,1,0,0,0,3,0,0,0,1,0,1,0,0,-1,3,3,3,0,0,0,0,0,0,0,0,-1,-1,3]'
+    map_height: 6
+    map_width: 12
+    hole_count: 16
+  gen_map_43:
+    name: Generated Map 43
+    map_layout:
+    - FFFFFHHFFHHF
+    - FFFHFFFFFFHF
+    - FFFHFHFFFFFF
+    - FFFHFHFHHFFF
+    - FHHFFHFFFFFF
+    - GFFFFHFFFFFS
+    frechet_distance: 4.12
+    dtw_distance: 75.49
+    policy_group_b1: '[1,0,0,0,0,-1,-1,1,0,-1,-1,1,1,0,0,-1,1,0,0,0,0,0,-1,1,1,0,0,-1,1,-1,3,0,0,0,0,0,1,0,0,-1,1,-1,3,-1,-1,3,0,0,1,-1,-1,1,0,-1,3,0,0,0,0,0,-1,0,0,0,0,-1,3,0,0,0,0,0]'
+    policy_group_b2: '[1,0,0,0,0,-1,-1,1,1,-1,-1,1,1,0,0,-1,3,0,0,0,0,0,-1,1,1,0,0,-1,1,-1,3,3,3,0,0,0,1,0,0,-1,1,-1,3,-1,-1,3,0,0,1,-1,-1,1,0,-1,3,0,2,3,0,0,-1,0,0,0,0,-1,3,2,2,3,0,0]'
+    map_height: 6
+    map_width: 12
+    hole_count: 16
+  gen_map_5:
+    name: Generated Map 5
+    map_layout:
+    - FFFFFFFFFFFF
+    - FHFFFFFFFFFF
+    - FHFFHHFHFFFF
+    - FHHHFFFHFFFF
+    - FFFFFHHHFHHF
+    - GFFFFFFFFHFS
+    frechet_distance: 5.0
+    dtw_distance: 104.42
+    policy_group_b1: '[1,0,0,0,0,0,0,0,0,0,0,0,1,-1,3,0,0,0,1,0,0,0,0,0,1,-1,3,0,-1,-1,1,-1,1,0,0,0,1,-1,-1,-1,1,0,0,-1,1,0,0,0,1,0,0,0,0,-1,-1,-1,1,-1,-1,3,-1,0,0,0,0,0,0,0,0,-1,2,3]'
+    policy_group_b2: '[1,0,0,0,0,0,0,0,0,0,0,0,1,-1,3,3,0,3,3,0,3,0,0,0,1,-1,3,3,-1,-1,1,-1,3,3,0,0,1,-1,-1,-1,1,0,0,-1,1,3,3,3,1,0,1,1,1,-1,-1,-1,1,-1,-1,3,-1,0,0,0,0,0,0,0,0,-1,2,3]'
+    map_height: 6
+    map_width: 12
+    hole_count: 15
+  gen_map_95:
+    name: Generated Map 95
+    map_layout:
+    - FFFFFFFFFFFF
+    - FFFFFHHFFFFF
+    - FFHHFFFFFFFF
+    - FHHFFHFHFFFF
+    - FHHFFHFHFHHF
+    - GFFFFFFFFHFS
+    frechet_distance: 5.0
+    dtw_distance: 102.77
+    policy_group_b1: '[1,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,-1,-1,1,0,0,0,0,1,0,-1,-1,1,0,0,0,0,0,0,0,1,-1,-1,1,0,-1,1,-1,1,0,0,0,1,-1,-1,1,0,-1,1,-1,1,-1,-1,3,-1,0,0,0,0,0,0,0,0,-1,2,3]'
+    policy_group_b2: '[1,0,0,0,0,0,0,0,0,0,0,0,1,0,0,3,3,-1,-1,3,3,0,0,0,1,0,-1,-1,1,0,1,2,3,0,0,0,1,-1,-1,1,1,-1,1,-1,3,3,3,3,1,-1,-1,1,1,-1,1,-1,1,-1,-1,3,-1,0,0,0,0,0,0,0,0,-1,2,3]'
+    map_height: 6
+    map_width: 12
+    hole_count: 15
+  gen_map_4:
+    name: Generated Map 4
+    map_layout:
+    - GFFFFFHFFFFS
+    - FHHFHFHFFFFF
+    - FHFFHFFFFFHH
+    - FFHFFFHHHFFF
+    - FFHHFFFFFFFF
+    - FFFFFFFFFFFF
+    frechet_distance: 5.0
+    dtw_distance: 98.25
+    policy_group_b1: '[-1,0,0,0,0,0,-1,1,0,0,0,0,3,-1,-1,3,-1,3,-1,1,0,0,0,0,3,-1,2,3,-1,3,0,0,0,0,-1,-1,3,0,-1,3,0,0,-1,-1,-1,3,0,0,3,0,-1,-1,3,0,0,0,0,0,0,0,3,0,0,0,0,0,0,0,0,0,0,0]'
+    policy_group_b2: '[-1,0,0,0,0,0,-1,2,1,1,0,0,3,-1,-1,3,-1,3,-1,1,2,1,0,3,3,-1,2,3,-1,3,0,0,0,1,-1,-1,3,0,-1,3,0,1,-1,-1,-1,1,1,1,3,0,-1,-1,1,1,0,1,1,1,0,0,3,0,0,0,0,0,0,0,0,0,0,0]'
+    map_height: 6
+    map_width: 12
+    hole_count: 15
+  gen_map_106:
+    name: Generated Map 106
+    map_layout:
+    - GFFFFHFFHHFS
+    - FHHHFHHFFFFF
+    - FHFFFFFFHFFH
+    - FFFFFFFFHHFH
+    - FFFFFFFFHFFF
+    - FFFFFFFFFFFF
+    frechet_distance: 5.0
+    dtw_distance: 96.05
+    policy_group_b1: '[-1,0,0,0,0,-1,2,1,-1,-1,1,0,3,-1,-1,-1,3,-1,-1,1,0,0,0,0,3,-1,1,0,3,0,0,0,-1,3,0,-1,3,0,0,0,0,0,0,0,-1,-1,3,-1,3,0,0,0,0,0,0,0,-1,1,0,0,3,0,0,0,0,0,0,0,0,0,0,0]'
+    policy_group_b2: '[-1,0,0,0,0,-1,2,1,-1,-1,1,0,3,-1,-1,-1,1,-1,-1,1,0,0,1,0,3,-1,1,1,1,0,1,0,-1,2,1,-1,3,0,1,0,0,0,0,0,-1,-1,1,-1,3,0,0,0,0,0,0,0,-1,1,1,0,3,0,0,0,0,0,0,0,0,0,0,0]'
+    map_height: 6
+    map_width: 12
+    hole_count: 15
+  gen_map_39:
+    name: Generated Map 39
+    map_layout:
+    - SFFFFFFFFFFG
+    - FFFFHHHHHFFF
+    - FHFFFFHFFFFF
+    - FHFFFFFHHHFF
+    - FHHFFFFHFFFF
+    - FHFFFFFFFFFF
+    frechet_distance: 5.0
+    dtw_distance: 95.82
+    policy_group_b1: '[2,2,2,2,2,2,2,2,2,2,2,-1,2,2,2,3,-1,-1,-1,-1,-1,2,2,3,3,-1,2,3,0,0,-1,2,2,2,2,3,3,-1,2,3,0,0,1,-1,-1,-1,2,3,3,-1,-1,3,0,1,1,-1,2,2,2,3,3,-1,2,2,2,2,2,2,2,2,2,3]'
+    policy_group_b2: '[2,2,1,1,2,2,2,2,2,2,2,-1,3,2,1,1,-1,-1,-1,-1,-1,2,2,3,3,-1,2,1,1,1,-1,2,2,2,2,3,3,-1,2,2,1,1,0,-1,-1,-1,2,3,3,-1,-1,1,1,1,1,-1,1,2,2,3,3,-1,2,2,2,2,2,2,2,2,2,3]'
+    map_height: 6
+    map_width: 12
+    hole_count: 15
+  gen_map_90:
+    name: Generated Map 90
+    map_layout:
+    - GFFFFFHHFFFS
+    - FFFFHFHHFFFF
+    - FFFFHFHFFFFF
+    - FFFHHFFFFFFH
+    - FFFFFHHHFFHH
+    - FFFFFFFFFFFF
+    frechet_distance: 5.0
+    dtw_distance: 90.62
+    policy_group_b1: '[-1,0,0,0,0,0,-1,-1,1,0,0,0,3,0,0,0,-1,3,-1,-1,1,0,0,0,3,0,0,0,-1,3,-1,1,0,0,0,0,3,0,0,-1,-1,3,0,0,0,0,0,-1,3,0,0,0,0,-1,-1,-1,3,0,-1,-1,3,0,0,0,0,0,0,0,0,0,0,0]'
+    policy_group_b2: '[-1,0,0,0,0,0,-1,-1,2,1,0,0,3,0,0,0,-1,3,-1,-1,1,1,0,0,3,0,0,0,-1,3,-1,2,1,1,0,0,3,0,0,-1,-1,3,0,2,1,1,0,-1,3,0,0,0,1,-1,-1,-1,1,1,-1,-1,3,0,0,0,0,0,0,0,0,0,0,0]'
+    map_height: 6
+    map_width: 12
+    hole_count: 15
+  gen_map_26:
+    name: Generated Map 26
+    map_layout:
+    - FFFFFFFFFFFF
+    - FFFFHFHHFHHF
+    - FFHHHHFFFFFF
+    - FFFFHFFHFFFF
+    - FFFHHFFHFFFF
+    - GFFFFFFHFFFS
+    frechet_distance: 5.0
+    dtw_distance: 84.23
+    policy_group_b1: '[1,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,-1,3,-1,-1,1,-1,-1,1,1,0,-1,-1,-1,-1,1,0,0,0,0,0,1,0,0,0,-1,1,0,-1,3,0,0,0,1,0,0,-1,-1,1,0,-1,3,0,0,0,-1,0,0,0,0,0,0,-1,3,0,0,0]'
+    policy_group_b2: '[1,0,0,0,0,0,0,0,0,0,0,0,1,0,0,3,-1,3,-1,-1,3,-1,-1,3,1,0,-1,-1,-1,-1,1,2,3,0,0,1,1,0,0,0,-1,1,0,-1,3,0,0,0,1,0,0,-1,-1,1,0,-1,3,3,0,0,-1,0,0,0,0,0,0,-1,2,3,0,0]'
+    map_height: 6
+    map_width: 12
+    hole_count: 15
+  gen_map_23:
+    name: Generated Map 23
+    map_layout:
+    - FFFFFFFHHFFH
+    - FFHHFFFFFFFH
+    - FFFFFFHFFFFF
+    - FHFFFHHHFFFF
+    - FHFHFFFFFFFF
+    - GFFHHFFFFFFS
+    frechet_distance: 3.61
+    dtw_distance: 80.9
+    policy_group_b1: '[1,0,0,0,0,0,0,-1,-1,1,0,-1,1,0,-1,-1,1,0,0,0,0,0,0,-1,1,0,0,0,0,0,-1,3,0,0,0,0,1,-1,1,0,0,-1,-1,-1,1,0,0,0,1,-1,1,-1,3,0,0,0,0,0,0,0,-1,0,0,-1,-1,3,0,0,0,0,0,0]'
+    policy_group_b2: '[1,0,0,0,0,0,0,-1,-1,1,0,-1,1,0,-1,-1,3,3,0,0,0,0,0,-1,1,0,0,0,0,0,-1,3,0,0,0,0,1,-1,1,0,0,-1,-1,-1,3,3,0,0,1,-1,1,-1,3,0,0,0,2,3,0,0,-1,0,0,-1,-1,3,0,0,0,3,0,0]'
+    map_height: 6
+    map_width: 12
+    hole_count: 15
+  gen_map_20:
+    name: Generated Map 20
+    map_layout:
+    - SFHFHHFFFFFG
+    - FFHFFFFHFFFF
+    - FFFFFHFHFFFF
+    - FFHHFHFFFFFF
+    - FFFFFFFHHHFF
+    - FFFFFFFFFHHF
+    frechet_distance: 3.61
+    dtw_distance: 80.53
+    policy_group_b1: '[1,1,-1,1,-1,-1,2,2,2,2,2,-1,1,1,-1,2,2,2,3,-1,2,2,2,3,2,2,2,2,3,-1,3,-1,2,2,2,3,2,3,-1,-1,3,-1,2,2,2,2,2,3,2,2,2,2,2,2,3,-1,-1,-1,2,3,2,2,2,2,2,2,3,0,0,-1,-1,3]'
+    policy_group_b2: '[1,0,-1,1,-1,-1,2,2,2,2,2,-1,1,0,-1,2,2,2,3,-1,2,2,2,3,1,0,2,2,3,-1,3,-1,2,2,2,3,1,1,-1,-1,3,-1,2,2,2,2,2,3,1,1,1,1,1,2,3,-1,-1,-1,2,3,2,2,2,2,2,2,3,0,0,-1,-1,3]'
+    map_height: 6
+    map_width: 12
+    hole_count: 15
+  gen_map_87:
+    name: Generated Map 87
+    map_layout:
+    - SFFHHHFHFFFG
+    - FHHFFFHHFFFF
+    - FFFFHFFFFFFF
+    - FFFHHFFHHFFF
+    - FFFFFFFFFFFH
+    - FFFFFFFFFFFH
+    frechet_distance: 4.0
+    dtw_distance: 73.03
+    policy_group_b1: '[1,0,0,-1,-1,-1,0,-1,2,2,2,-1,1,-1,-1,2,2,1,-1,-1,2,2,2,3,2,2,2,3,-1,2,2,2,2,2,2,3,1,1,1,-1,-1,2,3,-1,-1,2,2,3,2,2,2,2,2,2,2,2,2,2,3,-1,2,2,2,2,2,2,2,2,2,2,3,-1]'
+    policy_group_b2: '[1,0,0,-1,-1,-1,3,-1,2,2,2,-1,1,-1,-1,2,2,1,-1,-1,2,2,2,3,1,1,1,0,-1,2,2,2,2,2,2,3,1,1,1,-1,-1,1,1,-1,-1,2,3,3,1,1,1,1,1,1,1,1,2,2,3,-1,2,2,2,2,2,2,2,2,2,3,3,-1]'
+    map_height: 6
+    map_width: 12
+    hole_count: 15
+  gen_map_88:
+    name: Generated Map 88
+    map_layout:
+    - FFFFFFFFFFFF
+    - HHFFHFHHFFFF
+    - FFFFHFFFFFFF
+    - FHHFFHHFFFFF
+    - FFHFFFFFFFFF
+    - GFFHHFHHFFFS
+    frechet_distance: 4.12
+    dtw_distance: 64.0
+    policy_group_b1: '[2,2,1,0,0,0,0,0,0,0,0,0,-1,-1,1,0,-1,3,-1,-1,3,0,0,0,1,0,0,0,-1,3,0,0,0,0,0,0,1,-1,-1,3,0,-1,-1,1,0,0,0,0,1,0,-1,3,0,0,0,0,0,0,0,0,-1,0,0,-1,-1,3,-1,-1,3,0,0,0]'
+    policy_group_b2: '[2,2,1,0,0,0,0,0,0,0,0,0,-1,-1,1,0,-1,3,-1,-1,3,3,0,0,1,0,0,0,-1,3,0,0,2,3,0,0,1,-1,-1,3,0,-1,-1,2,2,3,0,0,1,0,-1,3,0,0,0,0,2,3,0,0,-1,0,0,-1,-1,3,-1,-1,2,3,0,0]'
+    map_height: 6
+    map_width: 12
+    hole_count: 15
+  gen_map_94:
+    name: Generated Map 94
+    map_layout:
+    - GFFFFHFFFFFS
+    - FFFHHHHFFFFF
+    - FHFFHFFFHFFF
+    - HHFFFFFFHFHH
+    - FFFFFFFFFFFF
+    - HHFFFFFFFFFF
+    frechet_distance: 3.61
+    dtw_distance: 53.12
+    policy_group_b1: '[-1,0,0,0,0,-1,2,1,0,0,0,0,3,0,0,-1,-1,-1,-1,1,0,0,0,0,3,-1,3,0,-1,1,0,0,-1,1,0,0,-1,-1,3,0,0,0,0,0,-1,1,-1,-1,2,2,3,0,0,0,0,0,0,0,0,0,-1,-1,3,0,0,0,0,0,0,0,0,0]'
+    policy_group_b2: '[-1,0,0,0,0,-1,2,1,0,1,0,0,3,0,3,-1,-1,-1,-1,1,0,1,0,0,3,-1,3,0,-1,1,1,0,-1,1,0,3,-1,-1,3,3,0,1,0,0,-1,1,-1,-1,2,2,3,3,0,0,0,0,0,1,0,1,-1,-1,3,3,0,0,0,0,0,0,0,0]'
+    map_height: 6
+    map_width: 12
+    hole_count: 15
+  gen_map_107:
+    name: Generated Map 107
+    map_layout:
+    - GFFHHFHHFFFS
+    - FFFFFFFFFFFF
+    - FFFFFFHFFFFH
+    - FHFFFHHFFFFH
+    - FHHFFFFFFFFF
+    - FFFFFFFFFHHH
+    frechet_distance: 4.0
+    dtw_distance: 52.6
+    policy_group_b1: '[-1,0,0,-1,-1,1,-1,-1,1,0,0,0,3,0,0,0,0,0,0,0,0,0,0,0,3,0,0,0,0,0,-1,3,0,0,0,-1,3,-1,3,0,0,-1,-1,3,0,0,0,-1,3,-1,-1,3,0,0,0,0,0,0,0,0,3,0,0,0,0,0,0,0,0,-1,-1,-1]'
+    policy_group_b2: '[-1,0,0,-1,-1,1,-1,-1,1,1,0,0,3,0,0,0,1,0,0,0,1,0,0,0,3,0,3,0,0,0,-1,2,1,0,0,-1,3,-1,3,3,0,-1,-1,1,1,0,0,-1,3,-1,-1,3,0,0,1,1,0,0,0,0,3,0,2,3,0,0,0,0,0,-1,-1,-1]'
+    map_height: 6
+    map_width: 12
+    hole_count: 15
+  gen_map_64:
+    name: Generated Map 64
+    map_layout:
+    - SFFFHFFFFFFG
+    - FFHHHFHHFHHF
+    - FFFFFFHFFFHF
+    - FFHFFFFFFFFF
+    - FFHFHHFFFFFF
+    - FFFFFFFFFFFF
+    frechet_distance: 5.0
+    dtw_distance: 105.58
+    policy_group_b1: '[1,1,0,0,-1,2,2,2,2,2,2,-1,1,1,-1,-1,-1,3,-1,-1,3,-1,-1,3,2,2,2,2,2,3,-1,2,3,0,-1,3,2,3,-1,2,2,2,2,2,2,2,2,3,2,3,-1,3,-1,-1,2,2,2,2,2,3,2,2,2,2,2,2,2,2,2,2,2,3]'
+    policy_group_b2: '[1,0,0,0,-1,2,2,2,2,2,2,-1,1,0,-1,-1,-1,3,-1,-1,3,-1,-1,3,1,0,0,1,1,1,-1,2,3,1,-1,3,1,0,-1,2,2,2,2,1,1,1,2,3,1,1,-1,1,-1,-1,2,2,2,2,2,3,2,2,2,2,2,2,2,2,2,2,2,3]'
+    map_height: 6
+    map_width: 12
+    hole_count: 14
+  gen_map_69:
+    name: Generated Map 69
+    map_layout:
+    - SFHHFFFFFFFG
+    - FFFHHFFHHHFF
+    - FFFFFFFFHFFF
+    - FFHFFFHFFFHF
+    - FFHFFFHFFFHF
+    - FFFFFFFFFFFF
+    frechet_distance: 5.0
+    dtw_distance: 101.58
+    policy_group_b1: '[1,1,-1,-1,2,2,2,2,2,2,2,-1,1,1,1,-1,-1,2,3,-1,-1,-1,2,3,2,2,2,2,2,2,3,0,-1,2,2,3,2,3,-1,2,2,3,-1,2,2,3,-1,3,2,3,-1,2,2,3,-1,2,2,3,-1,3,2,2,2,2,2,2,2,2,2,2,2,3]'
+    policy_group_b2: '[1,1,-1,-1,2,2,2,2,2,2,2,-1,1,1,1,-1,-1,3,3,-1,-1,-1,2,3,1,2,2,2,2,3,3,0,-1,2,2,3,1,0,-1,2,2,3,-1,2,2,3,-1,3,1,1,-1,1,1,1,-1,1,1,3,-1,3,2,2,2,2,2,2,2,2,2,2,2,3]'
+    map_height: 6
+    map_width: 12
+    hole_count: 14
+  gen_map_70:
+    name: Generated Map 70
+    map_layout:
+    - FFFFFFFFFFFF
+    - FFHHFFFFFFHH
+    - FFFFFFFHHFFF
+    - FFFFHFFFHFHH
+    - FFFFHFHFFFFF
+    - GFFFFFHHFFFS
+    frechet_distance: 5.0
+    dtw_distance: 96.25
+    policy_group_b1: '[1,0,0,0,0,0,0,0,0,0,0,0,1,0,-1,-1,1,0,0,0,0,0,-1,-1,1,0,0,0,0,0,0,-1,-1,1,0,0,1,0,0,0,-1,1,0,0,-1,1,-1,-1,1,0,0,0,-1,1,-1,3,0,0,0,0,-1,0,0,0,0,0,-1,-1,3,0,0,0]'
+    policy_group_b2: '[1,0,0,0,0,0,0,0,0,0,0,0,1,0,-1,-1,3,3,0,0,3,3,-1,-1,1,0,0,0,0,0,0,-1,-1,3,0,0,1,0,0,0,-1,1,0,0,-1,3,-1,-1,1,0,0,0,-1,1,-1,3,0,3,0,1,-1,0,0,0,0,0,-1,-1,2,3,0,0]'
+    map_height: 6
+    map_width: 12
+    hole_count: 14
+  gen_map_99:
+    name: Generated Map 99
+    map_layout:
+    - SFFHFFFFFFFG
+    - FHHHFFHHFFFF
+    - FFFFFFFFHFFF
+    - FFFHHFFFHFHH
+    - FFFHFFFFHFFF
+    - FFFFFFFFFFFF
+    frechet_distance: 5.0
+    dtw_distance: 85.69
+    policy_group_b1: '[1,0,0,-1,2,2,2,2,2,2,2,-1,1,-1,-1,-1,2,3,-1,-1,2,2,2,3,2,2,2,2,2,3,0,0,-1,2,2,3,2,2,3,-1,-1,3,0,0,-1,3,-1,-1,2,2,3,-1,2,3,0,1,-1,3,0,0,2,2,2,2,2,2,2,2,2,3,0,0]'
+    policy_group_b2: '[1,0,0,-1,2,2,2,2,2,2,2,-1,1,-1,-1,-1,2,3,-1,-1,2,2,2,3,1,2,2,2,2,3,0,0,-1,3,3,3,1,1,3,-1,-1,3,0,0,-1,3,-1,-1,1,1,1,-1,2,3,0,1,-1,3,0,1,2,2,2,2,2,2,2,2,2,3,0,0]'
+    map_height: 6
+    map_width: 12
+    hole_count: 14
+  gen_map_79:
+    name: Generated Map 79
+    map_layout:
+    - FFFFFFFFFFFF
+    - FFFHHFFFFFFF
+    - FFFFHHHFFFFH
+    - FFFFFHFHHFFH
+    - FFHHFFFFFFFF
+    - GFHHFFFFFFFS
+    frechet_distance: 5.0
+    dtw_distance: 83.56
+    policy_group_b1: '[1,0,0,0,0,0,0,0,0,0,0,0,1,0,0,-1,-1,3,0,0,0,0,0,0,1,0,0,0,-1,-1,-1,3,0,1,0,-1,1,0,0,0,0,-1,1,-1,-1,1,0,-1,1,0,-1,-1,3,0,0,0,0,0,0,0,-1,0,-1,-1,3,0,0,0,0,0,0,0]'
+    policy_group_b2: '[1,0,0,0,0,0,0,0,0,0,0,0,1,0,0,-1,-1,3,3,3,0,0,0,0,1,0,0,0,-1,-1,-1,3,3,3,0,-1,1,0,0,0,0,-1,1,-1,-1,3,0,-1,1,0,-1,-1,3,0,0,0,2,3,0,0,-1,0,-1,-1,3,0,0,0,0,3,0,0]'
+    map_height: 6
+    map_width: 12
+    hole_count: 14
+  gen_map_34:
+    name: Generated Map 34
+    map_layout:
+    - FFFFFFFFFFFF
+    - FFFHHFFFFFFF
+    - FFFHFFHFFFFH
+    - FFFFFFHHFFFH
+    - FFHHFFHHFFFF
+    - GFHHFFFFFFFS
+    frechet_distance: 5.0
+    dtw_distance: 81.93
+    policy_group_b1: '[1,0,0,0,0,0,0,0,0,0,0,0,1,0,0,-1,-1,1,0,0,0,0,0,0,1,0,0,-1,1,0,-1,3,0,0,0,-1,1,0,0,0,0,0,-1,-1,1,0,0,-1,1,0,-1,-1,3,0,-1,-1,1,0,0,0,-1,0,-1,-1,3,0,0,0,0,0,0,0]'
+    policy_group_b2: '[1,0,0,0,0,0,0,0,0,0,0,0,1,0,0,-1,-1,3,3,3,0,0,0,0,1,0,0,-1,1,0,-1,3,3,0,0,-1,1,0,0,0,0,0,-1,-1,3,3,0,-1,1,0,-1,-1,3,0,-1,-1,2,3,0,0,-1,0,-1,-1,3,0,0,2,2,3,0,0]'
+    map_height: 6
+    map_width: 12
+    hole_count: 14
+  gen_map_105:
+    name: Generated Map 105
+    map_layout:
+    - SFHHHHFFFFFG
+    - FFFFFHHFFFFF
+    - FFFFFFFFFHHF
+    - FHHFFHHHFFFF
+    - FFHFFFFFFFFF
+    - FFFFFFFFFFFF
+    frechet_distance: 4.0
+    dtw_distance: 79.85
+    policy_group_b1: '[1,1,-1,-1,-1,-1,2,2,2,2,2,-1,1,1,1,1,1,-1,-1,2,2,2,2,3,2,2,2,2,2,2,2,2,3,-1,-1,3,3,-1,-1,2,3,-1,-1,-1,2,2,2,3,3,0,-1,2,2,2,2,2,2,2,2,3,2,2,2,2,2,2,2,2,2,2,2,3]'
+    policy_group_b2: '[1,0,-1,-1,-1,-1,2,2,2,2,2,-1,1,0,1,1,1,-1,-1,2,3,3,2,3,1,2,2,2,1,2,2,2,3,-1,-1,3,1,-1,-1,1,1,-1,-1,-1,3,1,2,3,1,1,-1,1,1,1,1,2,2,2,2,3,2,2,2,2,2,2,2,2,2,2,2,3]'
+    map_height: 6
+    map_width: 12
+    hole_count: 14
+  gen_map_91:
+    name: Generated Map 91
+    map_layout:
+    - GFFHHFHHFFFS
+    - FFFHFFFFFFFF
+    - FFFFFHFFHFFF
+    - FFFHHHFFHFFH
+    - FFFFHFFFFFFH
+    - FFFFFFFFFFFF
+    frechet_distance: 4.12
+    dtw_distance: 76.02
+    policy_group_b1: '[-1,0,0,-1,-1,1,-1,-1,1,0,0,0,3,0,0,-1,1,0,0,0,0,0,0,0,3,0,0,0,0,-1,3,0,-1,3,0,0,3,0,0,-1,-1,-1,3,0,-1,3,0,-1,3,0,0,0,-1,1,0,0,0,0,0,-1,3,0,0,0,0,0,0,0,0,0,0,0]'
+    policy_group_b2: '[-1,0,0,-1,-1,1,-1,-1,2,1,0,0,3,0,0,-1,1,0,0,1,2,1,0,0,3,0,0,0,0,-1,1,1,-1,1,0,0,3,0,0,-1,-1,-1,1,1,-1,1,0,-1,3,0,0,0,-1,1,1,0,0,1,0,-1,3,0,0,0,0,0,0,0,0,0,0,0]'
+    map_height: 6
+    map_width: 12
+    hole_count: 14
+  gen_map_122:
+    name: Generated Map 122
+    map_layout:
+    - GFFFFFHHFHFS
+    - FHFFFFFHFHHF
+    - FHHFFFFHFFFF
+    - FFHFFFFHFFHF
+    - FFFFFFFFFFHF
+    - FFFFFFFFFFFF
+    frechet_distance: 4.0
+    dtw_distance: 69.32
+    policy_group_b1: '[-1,0,0,0,0,0,-1,-1,1,-1,2,1,3,-1,3,0,0,0,0,-1,1,-1,-1,1,3,-1,-1,3,0,0,0,-1,1,0,0,0,3,0,-1,3,0,0,0,-1,1,0,-1,1,3,0,0,0,0,0,0,0,0,0,-1,1,3,0,0,0,0,0,0,0,0,0,0,0]'
+    policy_group_b2: '[-1,0,0,0,0,0,-1,-1,1,-1,2,1,3,-1,3,3,0,0,0,-1,1,-1,-1,1,3,-1,-1,3,3,0,0,-1,1,0,0,1,3,0,-1,2,3,0,0,-1,1,0,-1,1,3,0,0,2,3,0,0,0,1,0,-1,1,3,0,0,2,3,0,0,0,0,0,0,0]'
+    map_height: 6
+    map_width: 12
+    hole_count: 14
+  gen_map_112:
+    name: Generated Map 112
+    map_layout:
+    - FFFFFFFFFFFF
+    - FFFFFFFFFFHF
+    - FFFFFFFFFHHH
+    - FHHFFFHFFFFH
+    - FFFFFHHHHFFF
+    - GFHHFFFFFFFS
+    frechet_distance: 4.0
+    dtw_distance: 64.52
+    policy_group_b1: '[1,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,-1,3,1,0,0,0,0,0,0,0,0,-1,-1,-1,1,-1,-1,1,0,0,-1,3,0,0,0,-1,1,0,0,0,0,-1,-1,-1,-1,1,0,0,-1,0,-1,-1,3,0,0,0,0,0,0,0]'
+    policy_group_b2: '[1,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,-1,3,1,0,3,3,0,0,0,3,0,-1,-1,-1,1,-1,-1,3,3,0,-1,3,0,0,0,-1,1,0,0,0,3,-1,-1,-1,-1,3,0,0,-1,0,-1,-1,3,0,0,0,2,3,0,0]'
+    map_height: 6
+    map_width: 12
+    hole_count: 14
+  gen_map_103:
+    name: Generated Map 103
+    map_layout:
+    - FFFFFFFFFFHH
+    - FFFFFFFFFFHF
+    - FHHHFHHFFFFF
+    - FFFHFFFFFFFF
+    - FFHFFHHHFFFF
+    - GFHFFFFFFFFS
+    frechet_distance: 4.47
+    dtw_distance: 60.51
+    policy_group_b1: '[1,0,0,0,0,0,0,0,0,0,-1,-1,1,0,0,0,0,0,0,0,0,0,-1,1,1,-1,-1,-1,3,-1,-1,3,0,0,0,0,1,0,0,-1,3,0,0,0,0,0,0,0,1,0,-1,2,3,-1,-1,-1,3,0,0,0,-1,0,-1,2,3,0,0,0,0,0,0,0]'
+    policy_group_b2: '[1,0,0,0,0,0,0,0,0,0,-1,-1,1,0,3,3,3,0,3,3,0,0,-1,1,1,-1,-1,-1,3,-1,-1,3,3,0,0,1,1,0,0,-1,3,0,2,2,3,0,0,0,1,0,-1,2,3,-1,-1,-1,3,3,0,0,-1,0,-1,2,3,0,2,2,2,3,0,0]'
+    map_height: 6
+    map_width: 12
+    hole_count: 14
+  gen_map_98:
+    name: Generated Map 98
+    map_layout:
+    - SFFFFHHFFFFG
+    - FFFFFHHHFHFF
+    - FFFFFHFFFHFF
+    - FFFFFFFFFHHF
+    - FHFFFFFHHFFF
+    - FHFFFFFFFFFF
+    frechet_distance: 3.61
+    dtw_distance: 60.32
+    policy_group_b1: '[1,1,1,1,1,-1,-1,2,2,2,2,-1,1,1,1,1,1,-1,-1,-1,3,-1,2,3,1,1,1,1,1,-1,2,2,3,-1,2,3,2,2,2,2,2,2,2,2,3,-1,-1,3,3,-1,2,2,2,2,3,-1,-1,2,2,3,3,-1,2,2,2,2,2,2,2,2,2,3]'
+    policy_group_b2: '[1,1,1,1,0,-1,-1,2,2,2,2,-1,1,1,1,1,0,-1,-1,-1,3,-1,2,3,2,2,1,1,1,-1,2,2,3,-1,2,3,3,2,2,1,1,1,3,2,3,-1,-1,3,3,-1,2,1,1,1,1,-1,-1,1,2,3,3,-1,2,2,2,2,2,2,2,2,2,3]'
+    map_height: 6
+    map_width: 12
+    hole_count: 14
+  gen_map_111:
+    name: Generated Map 111
+    map_layout:
+    - GFHFFFHFFFFS
+    - FFHFFFHHFFFF
+    - FFFFHFFFFFFF
+    - FFFFHFFFFFFF
+    - FHFFHHFFFFHF
+    - FHFFFFFFFFHH
+    frechet_distance: 4.0
+    dtw_distance: 55.45
+    policy_group_b1: '[-1,0,-1,1,0,0,-1,2,1,0,0,0,3,0,-1,1,0,0,-1,-1,1,0,0,0,3,0,0,0,-1,3,0,0,0,0,0,0,3,0,0,0,-1,3,0,0,0,0,0,0,3,-1,3,0,-1,-1,1,0,0,0,-1,3,3,-1,3,0,0,0,0,0,0,0,-1,-1]'
+    policy_group_b2: '[-1,0,-1,1,0,0,-1,2,2,1,0,0,3,0,-1,1,0,0,-1,-1,1,1,0,0,3,0,0,0,-1,3,0,1,1,0,0,0,3,0,0,0,-1,3,2,1,0,0,0,3,3,-1,3,0,-1,-1,1,1,0,0,-1,3,3,-1,3,0,0,0,0,0,0,0,-1,-1]'
+    map_height: 6
+    map_width: 12
+    hole_count: 14
+  gen_map_84:
+    name: Generated Map 84
+    map_layout:
+    - FFFFFFFFFHHH
+    - FFHFFFFFFFFF
+    - HHHFFFFFFFFH
+    - FFFFFFFHFFFH
+    - FFFFFFHHFFFF
+    - GFHHFFFFFFFS
+    frechet_distance: 4.0
+    dtw_distance: 55.19
+    policy_group_b1: '[2,2,2,1,0,0,0,0,0,-1,-1,-1,2,3,-1,1,0,0,0,0,0,0,0,0,-1,-1,-1,1,0,0,0,0,0,0,0,-1,1,0,0,0,0,0,0,-1,1,0,0,-1,1,0,0,0,0,0,-1,-1,1,0,0,0,-1,0,-1,-1,3,0,0,0,0,0,0,0]'
+    policy_group_b2: '[2,2,2,2,1,0,0,0,0,-1,-1,-1,3,3,-1,2,1,0,0,0,0,0,0,0,-1,-1,-1,1,1,0,0,0,3,0,0,-1,1,1,0,0,0,0,0,-1,3,3,0,-1,1,0,0,0,0,0,-1,-1,2,3,0,0,-1,0,-1,-1,3,0,0,0,2,3,0,0]'
+    map_height: 6
+    map_width: 12
+    hole_count: 14
+  gen_map_77:
+    name: Generated Map 77
+    map_layout:
+    - SFFFFHHFFFFG
+    - FFFFFFHFFFFF
+    - FFFFHFHFFFFF
+    - HFFFHFFFFFHF
+    - HFFFHFFFFFHH
+    - HHFFFFFFFFFF
+    frechet_distance: 3.61
+    dtw_distance: 51.12
+    policy_group_b1: '[1,1,1,1,1,-1,-1,2,2,2,2,-1,2,2,2,2,2,1,-1,2,2,2,2,3,2,2,2,3,-1,1,-1,2,2,2,2,3,-1,1,1,1,-1,2,2,2,2,3,-1,3,-1,2,1,1,-1,2,2,2,2,3,-1,-1,-1,-1,2,2,2,2,2,2,2,3,0,0]'
+    policy_group_b2: '[1,1,1,0,0,-1,-1,2,2,2,2,-1,2,1,1,0,2,1,-1,2,2,2,2,3,2,2,1,0,-1,1,-1,2,2,3,2,3,-1,2,1,1,-1,2,2,2,3,3,-1,3,-1,2,1,1,-1,2,2,2,3,0,-1,-1,-1,-1,2,2,2,2,2,2,3,0,0,0]'
+    map_height: 6
+    map_width: 12
+    hole_count: 14
+  gen_map_89:
+    name: Generated Map 89
+    map_layout:
+    - SFFHFFHHFFFG
+    - FFHHFFFFFHFF
+    - FFFFFFFFFHHF
+    - FFFFFFFFFFFF
+    - FFHFFFFHFFFF
+    - FFHHFFFHHFFF
+    frechet_distance: 3.61
+    dtw_distance: 46.26
+    policy_group_b1: '[1,1,0,-1,1,1,-1,-1,2,2,2,-1,1,1,-1,-1,2,2,2,2,3,-1,2,3,2,2,2,2,2,2,2,2,3,-1,-1,3,2,2,2,2,2,2,2,2,2,2,2,3,2,3,-1,2,2,2,3,-1,2,2,2,3,2,3,-1,-1,2,2,3,-1,-1,2,2,3]'
+    policy_group_b2: '[1,0,0,-1,1,1,-1,-1,2,2,2,-1,1,1,-1,-1,1,1,2,2,3,-1,2,3,1,1,2,2,2,2,2,2,3,-1,-1,3,2,2,2,2,2,2,2,2,1,1,2,3,3,3,-1,2,2,3,3,-1,2,2,2,3,3,0,-1,-1,2,3,0,-1,-1,2,2,3]'
+    map_height: 6
+    map_width: 12
+    hole_count: 14
+  gen_map_93:
+    name: Generated Map 93
+    map_layout:
+    - HHFFFFFFFFHF
+    - FHFFFFFFFFHF
+    - FFFFFFFFHFHF
+    - FFFFFFHHHFFF
+    - FFFHHFFFFFFF
+    - GFFFFHHFFFFS
+    frechet_distance: 3.61
+    dtw_distance: 44.3
+    policy_group_b1: '[-1,-1,1,0,0,0,0,0,0,0,-1,1,1,-1,1,0,0,0,0,0,0,0,-1,1,1,0,0,0,0,0,0,0,-1,1,-1,1,1,0,0,0,0,0,-1,-1,-1,1,0,0,1,0,0,-1,-1,3,0,0,0,0,0,0,-1,0,0,0,0,-1,-1,3,0,0,0,0]'
+    policy_group_b2: '[-1,-1,2,1,0,0,0,0,0,0,-1,1,1,-1,1,1,0,0,0,0,0,0,-1,1,1,0,1,0,0,0,0,3,-1,3,-1,1,1,0,0,0,3,3,-1,-1,-1,3,0,1,1,0,0,-1,-1,3,0,0,0,3,0,0,-1,0,0,0,0,-1,-1,3,0,3,0,0]'
+    map_height: 6
+    map_width: 12
+    hole_count: 14
+  gen_map_96:
+    name: Generated Map 96
+    map_layout:
+    - GFHFFFHHFFFS
+    - FFHFHHHFFFFF
+    - FFFHFFFFFFFF
+    - FHFHFFFFFFFF
+    - FHFHFFHHFFFF
+    - FFFFFFFFFFFF
+    frechet_distance: 3.61
+    dtw_distance: 41.91
+    policy_group_b1: '[-1,0,-1,1,0,0,-1,-1,1,0,0,0,3,0,-1,3,-1,-1,-1,1,0,0,0,0,3,0,0,-1,1,0,0,0,0,0,0,0,3,-1,3,-1,1,0,0,0,0,0,0,0,3,-1,3,-1,1,0,-1,-1,1,0,0,0,3,0,0,0,0,0,0,0,0,0,0,0]'
+    policy_group_b2: '[-1,0,-1,0,0,3,-1,-1,1,1,0,0,3,0,-1,0,-1,-1,-1,1,1,1,0,0,3,0,0,-1,1,1,0,0,1,1,0,0,3,-1,3,-1,1,1,0,0,2,1,0,0,3,-1,3,-1,1,1,-1,-1,1,1,0,0,3,0,0,0,0,0,0,0,0,0,0,0]'
+    map_height: 6
+    map_width: 12
+    hole_count: 14
+  gen_map_40:
+    name: Generated Map 40
+    map_layout:
+    - SFFHHFFFFFFG
+    - FHHFFFHFFFFF
+    - FFFFHFHFFHFF
+    - FFFFHFFFFHHF
+    - FFFFFFHHFFFF
+    - FFFFFFFFFFFF
+    frechet_distance: 5.0
+    dtw_distance: 110.22
+    policy_group_b1: '[1,0,0,-1,-1,2,2,2,2,2,2,-1,1,-1,-1,2,2,3,-1,2,2,2,2,3,2,2,2,3,-1,3,-1,2,3,-1,2,3,2,2,2,3,-1,2,2,2,3,-1,-1,3,2,2,2,2,2,3,-1,-1,2,2,2,3,2,2,2,2,2,2,2,2,2,2,2,3]'
+    policy_group_b2: '[1,0,0,-1,-1,2,2,2,2,2,2,-1,1,-1,-1,2,2,3,-1,2,3,2,2,3,1,1,1,3,-1,3,-1,2,3,-1,2,3,1,1,1,1,-1,2,2,2,3,-1,-1,3,1,1,1,1,1,1,-1,-1,1,1,2,3,2,2,2,2,2,2,2,2,2,2,2,3]'
+    map_height: 6
+    map_width: 12
+    hole_count: 13
+  gen_map_63:
+    name: Generated Map 63
+    map_layout:
+    - SFHFFFFFHHFG
+    - FFHFFFHFFFFF
+    - FFFFHHHFFFFF
+    - FFHHFFFHFFFF
+    - FFFFFFHHFFFF
+    - FFFFFFFFFFFF
+    frechet_distance: 5.0
+    dtw_distance: 103.28
+    policy_group_b1: '[1,1,-1,2,2,2,2,1,-1,-1,2,-1,1,1,-1,2,2,3,-1,2,2,2,2,3,2,2,2,3,-1,-1,-1,2,2,2,2,3,2,3,-1,-1,1,1,0,-1,2,2,2,3,1,1,1,1,1,1,-1,-1,2,2,2,3,2,2,2,2,2,2,2,2,2,2,2,3]'
+    policy_group_b2: '[1,0,-1,2,2,2,2,1,-1,-1,2,-1,1,0,-1,2,3,3,-1,1,1,2,2,3,1,0,0,0,-1,-1,-1,2,2,2,2,3,1,1,-1,-1,1,1,0,-1,2,2,2,3,1,1,1,1,1,1,-1,-1,2,2,2,3,2,2,2,2,2,2,2,2,2,2,2,3]'
+    map_height: 6
+    map_width: 12
+    hole_count: 13
+  gen_map_65:
+    name: Generated Map 65
+    map_layout:
+    - SFHFHFFFFFFG
+    - FFHHHFFHFFFF
+    - FFFFFFFHHFFF
+    - FFFHHFHFFFFF
+    - FFFHFFHFFFFF
+    - FFFFFFFFFFFF
+    frechet_distance: 5.0
+    dtw_distance: 101.58
+    policy_group_b1: '[1,1,-1,3,-1,2,2,2,2,2,2,-1,1,1,-1,-1,-1,2,3,-1,2,2,2,3,2,2,2,2,2,2,3,-1,-1,2,2,3,2,2,3,-1,-1,3,-1,2,2,2,2,3,2,2,3,-1,2,3,-1,2,2,2,2,3,2,2,2,2,2,2,2,2,2,2,2,3]'
+    policy_group_b2: '[1,0,-1,0,-1,2,2,2,2,2,2,-1,1,1,-1,-1,-1,2,3,-1,2,2,2,3,1,1,0,2,2,2,3,-1,-1,2,2,3,1,1,0,-1,-1,3,-1,2,2,2,2,3,1,1,1,-1,1,1,-1,2,2,2,2,3,2,2,2,2,2,2,2,2,2,2,2,3]'
+    map_height: 6
+    map_width: 12
+    hole_count: 13
+  gen_map_67:
+    name: Generated Map 67
+    map_layout:
+    - SFHHFFFFFFFG
+    - FFFFFFFHHHFF
+    - HFFFFFHHFFFF
+    - HFFHHFFHFFFF
+    - HFFFFFFFFFFF
+    - FFFFFFFFFFFF
+    frechet_distance: 5.0
+    dtw_distance: 99.8
+    policy_group_b1: '[1,1,-1,-1,2,2,2,2,2,2,2,-1,2,2,2,2,2,2,3,-1,-1,-1,2,3,-1,2,2,2,2,3,-1,-1,2,2,2,3,-1,2,3,-1,-1,3,0,-1,2,2,2,3,-1,2,2,2,2,2,2,2,2,2,2,3,2,2,2,2,2,2,2,2,2,2,2,3]'
+    policy_group_b2: '[1,1,-1,-1,2,2,2,2,2,2,2,-1,2,1,1,2,2,3,3,-1,-1,-1,2,3,-1,2,1,0,3,1,-1,-1,2,2,2,3,-1,1,1,-1,-1,1,1,-1,2,2,2,3,-1,1,1,1,1,1,1,2,2,2,2,3,2,2,2,2,2,2,2,2,2,2,2,3]'
+    map_height: 6
+    map_width: 12
+    hole_count: 13
+  gen_map_54:
+    name: Generated Map 54
+    map_layout:
+    - FFFFFFFFFFFF
+    - FFHHFFFHFFFF
+    - FFFFFHHHFFFF
+    - FFFHFFHFFFFF
+    - FHHHFFFFFFFF
+    - GFFFFHHFFFFS
+    frechet_distance: 5.0
+    dtw_distance: 98.37
+    policy_group_b1: '[1,0,0,0,0,0,0,0,0,0,0,0,1,0,-1,-1,1,0,0,-1,1,0,0,0,1,0,0,0,0,-1,-1,-1,1,0,0,0,1,0,0,-1,1,0,-1,1,0,0,0,0,1,-1,-1,-1,1,0,0,0,0,0,0,0,-1,0,0,0,0,-1,-1,3,0,0,0,0]'
+    policy_group_b2: '[1,0,0,0,0,0,0,0,0,0,0,0,1,0,-1,-1,3,3,3,-1,3,3,0,0,1,0,0,0,0,-1,-1,-1,2,3,0,0,1,0,0,-1,3,0,-1,2,2,3,0,0,1,-1,-1,-1,1,0,0,0,2,3,0,0,-1,0,0,0,0,-1,-1,3,2,3,0,0]'
+    map_height: 6
+    map_width: 12
+    hole_count: 13
+  gen_map_66:
+    name: Generated Map 66
+    map_layout:
+    - GFHHFFFFFFFS
+    - FFFFFHHFFFFF
+    - FFHHFFFFHFFF
+    - FFFFFFHHHFFH
+    - FFFFFFFFFFHH
+    - FFFFFFFFFFFF
+    frechet_distance: 5.0
+    dtw_distance: 97.63
+    policy_group_b1: '[-1,0,-1,-1,1,0,0,0,0,0,0,0,3,0,0,0,0,-1,-1,1,0,0,0,0,3,0,-1,-1,3,0,0,0,-1,3,0,0,3,0,0,0,0,0,-1,-1,-1,1,0,-1,3,0,0,0,0,0,0,0,0,0,-1,-1,3,0,0,0,0,0,0,0,0,0,0,0]'
+    policy_group_b2: '[-1,0,-1,-1,1,0,0,0,2,1,0,0,3,0,0,0,0,-1,-1,1,2,1,0,0,3,0,-1,-1,1,0,0,0,-1,1,0,0,3,0,0,1,1,0,-1,-1,-1,1,0,-1,3,0,0,0,0,0,0,1,1,1,-1,-1,3,0,0,0,0,0,0,0,0,0,0,0]'
+    map_height: 6
+    map_width: 12
+    hole_count: 13
+  gen_map_51:
+    name: Generated Map 51
+    map_layout:
+    - FFFFFFFFFFFF
+    - FFFFFFFFFFFH
+    - FFHFHFFHFFFH
+    - FFHHHHFHHFFF
+    - FFFFFFFFFFFF
+    - GFHHFFFFFFFS
+    frechet_distance: 5.0
+    dtw_distance: 96.22
+    policy_group_b1: '[1,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,-1,1,0,-1,3,-1,2,1,-1,2,1,0,-1,1,0,-1,-1,-1,-1,1,-1,-1,1,0,0,1,0,0,0,0,0,0,0,0,0,0,0,-1,0,-1,-1,3,0,0,0,0,0,0,0]'
+    policy_group_b2: '[1,0,0,0,0,0,0,0,0,0,0,0,1,0,0,3,0,3,0,0,3,0,0,-1,1,0,-1,3,-1,3,3,-1,3,3,0,-1,1,0,-1,-1,-1,-1,3,-1,-1,3,0,0,1,0,0,0,0,0,0,0,2,3,0,0,-1,0,-1,-1,3,0,0,0,2,3,0,0]'
+    map_height: 6
+    map_width: 12
+    hole_count: 13
+  gen_map_42:
+    name: Generated Map 42
+    map_layout:
+    - FFFFFFFFHFFF
+    - FFFFHFFFHFFF
+    - FFFFHFFFFFFF
+    - FFFHHFHFFFFF
+    - FFFFHFHHFHHF
+    - GFFFFFFFFHFS
+    frechet_distance: 5.0
+    dtw_distance: 93.58
+    policy_group_b1: '[1,0,0,0,0,0,0,0,-1,1,0,0,1,0,0,0,-1,1,0,0,-1,1,0,0,1,0,0,0,-1,1,0,0,0,0,0,0,1,0,0,-1,-1,1,-1,2,1,0,0,0,1,0,0,0,-1,1,-1,-1,1,-1,-1,3,-1,0,0,0,0,0,0,0,0,-1,2,3]'
+    policy_group_b2: '[1,0,0,0,0,0,0,0,-1,2,1,0,1,0,0,0,-1,3,3,0,-1,1,1,0,1,0,0,0,-1,1,3,0,0,0,0,0,1,0,0,-1,-1,1,-1,3,0,0,3,3,1,0,0,0,-1,1,-1,-1,1,-1,-1,3,-1,0,0,0,0,0,0,0,0,-1,2,3]'
+    map_height: 6
+    map_width: 12
+    hole_count: 13
+  gen_map_22:
+    name: Generated Map 22
+    map_layout:
+    - FFFFFFFFFHFF
+    - FFFFFHFFFHFF
+    - FFFFHHFFFFFF
+    - FFFFHFHHFFFF
+    - FFHHHFFFFFFF
+    - GFFFFFHHFFFS
+    frechet_distance: 5.0
+    dtw_distance: 88.45
+    policy_group_b1: '[1,0,0,0,0,0,0,0,0,-1,1,0,1,0,0,0,0,-1,3,0,1,-1,1,0,1,0,0,0,-1,-1,2,2,1,0,0,0,1,0,0,0,-1,1,-1,-1,1,0,0,0,1,0,-1,-1,-1,1,0,0,0,0,0,0,-1,0,0,0,0,0,-1,-1,3,0,0,0]'
+    policy_group_b2: '[1,0,0,0,0,0,0,0,0,-1,2,1,1,0,0,0,0,-1,3,3,0,-1,1,1,1,0,0,0,-1,-1,3,3,0,0,0,0,1,0,0,0,-1,1,-1,-1,3,0,0,0,1,0,-1,-1,-1,1,0,2,3,0,0,0,-1,0,0,0,0,0,-1,-1,3,3,0,0]'
+    map_height: 6
+    map_width: 12
+    hole_count: 13
+  gen_map_41:
+    name: Generated Map 41
+    map_layout:
+    - SFFHHFFHHFFG
+    - FFFFHFFFFFFF
+    - FFFFFFHFFHFF
+    - FFHHHFHFFHHF
+    - FFFFFFFFFFFF
+    - FFFFFFFFFFFF
+    frechet_distance: 4.0
+    dtw_distance: 87.96
+    policy_group_b1: '[1,1,1,-1,-1,1,1,-1,-1,2,2,-1,1,1,1,1,-1,2,2,2,2,2,2,3,2,2,2,2,2,3,-1,2,3,-1,2,3,2,3,-1,-1,-1,3,-1,2,3,-1,-1,3,2,2,2,2,2,2,2,2,2,2,2,3,2,2,2,2,2,2,2,2,2,2,2,3]'
+    policy_group_b2: '[1,0,0,-1,-1,1,1,-1,-1,2,2,-1,1,0,0,0,-1,2,2,2,2,2,2,3,1,0,0,0,2,1,-1,2,3,-1,2,3,1,1,-1,-1,-1,1,-1,1,1,-1,-1,3,1,1,1,1,1,1,1,1,1,1,2,3,2,2,2,2,2,2,2,2,2,2,2,3]'
+    map_height: 6
+    map_width: 12
+    hole_count: 13
+  gen_map_25:
+    name: Generated Map 25
+    map_layout:
+    - GFFFHHFFFFFS
+    - FFFFFFFFHFFF
+    - FFHFFFHFHFFH
+    - FFHHFFHFFFFH
+    - FFFFFFHFFFFH
+    - FFFFFFFFFFFF
+    frechet_distance: 4.47
+    dtw_distance: 87.88
+    policy_group_b1: '[-1,0,0,0,-1,-1,1,0,0,0,0,0,3,0,0,0,0,0,0,0,-1,3,0,0,3,0,-1,3,0,0,-1,3,-1,1,0,-1,3,0,-1,-1,3,0,-1,3,0,0,0,-1,3,0,0,0,0,0,-1,3,0,0,0,-1,3,0,0,0,0,0,0,0,0,0,0,0]'
+    policy_group_b2: '[-1,0,0,0,-1,-1,1,0,0,1,0,0,3,0,0,0,0,0,0,0,-1,1,0,0,3,0,-1,3,0,0,-1,1,-1,1,0,-1,3,0,-1,-1,1,0,-1,1,1,1,0,-1,3,0,0,1,1,0,-1,1,1,0,0,-1,3,0,0,0,0,0,0,0,0,0,0,0]'
+    map_height: 6
+    map_width: 12
+    hole_count: 13
+  gen_map_17:
+    name: Generated Map 17
+    map_layout:
+    - FFFFFFFFFFHH
+    - FFFHHFFFFFFF
+    - FFFFFHFFFFFF
+    - FFFFFHFFFFHH
+    - FFHHHFFFFFFF
+    - GFFFFFHHFFFS
+    frechet_distance: 5.0
+    dtw_distance: 84.63
+    policy_group_b1: '[1,0,0,0,0,0,0,0,0,0,-1,-1,1,0,0,-1,-1,2,1,0,0,0,0,0,1,0,0,0,0,-1,1,0,0,0,0,0,1,0,0,0,0,-1,1,0,0,0,-1,-1,1,0,-1,-1,-1,1,0,0,0,0,0,0,-1,0,0,0,0,0,-1,-1,3,0,0,0]'
+    policy_group_b2: '[1,0,0,0,0,0,0,0,0,0,-1,-1,1,0,0,-1,-1,3,3,0,0,0,0,0,1,0,0,0,0,-1,3,3,0,0,0,0,1,0,0,0,0,-1,2,3,0,0,-1,-1,1,0,-1,-1,-1,1,0,3,3,0,0,1,-1,0,0,0,0,0,-1,-1,3,3,0,0]'
+    map_height: 6
+    map_width: 12
+    hole_count: 13
+  gen_map_2:
+    name: Generated Map 2
+    map_layout:
+    - SFFHHHFFFFFG
+    - FFFFFHFFFHHF
+    - FFFFFFFHHFFF
+    - FFFFFFFHFHFF
+    - FFFFFFFFFHFF
+    - HHFFFFFFFFFF
+    frechet_distance: 5.0
+    dtw_distance: 84.2
+    policy_group_b1: '[1,1,1,-1,-1,-1,2,2,2,2,2,-1,1,1,1,1,1,-1,2,2,3,-1,-1,3,2,2,2,2,2,2,3,-1,-1,2,2,3,2,2,2,2,2,2,3,-1,1,-1,2,3,2,2,2,2,2,2,3,0,1,-1,2,3,-1,-1,2,2,2,2,2,2,2,2,2,3]'
+    policy_group_b2: '[1,1,1,-1,-1,-1,2,2,2,2,2,-1,1,1,1,1,1,-1,2,3,3,-1,-1,3,1,1,1,1,1,1,3,-1,-1,2,2,3,2,2,1,1,1,1,1,-1,1,-1,2,3,3,2,2,1,1,1,1,1,1,-1,2,3,-1,-1,2,2,2,2,2,2,2,2,2,3]'
+    map_height: 6
+    map_width: 12
+    hole_count: 13
+  gen_map_14:
+    name: Generated Map 14
+    map_layout:
+    - FFFFFFFFFFFH
+    - FHHFFFFFFFFH
+    - FFFFHHHFFFFH
+    - FFFFFFFFFFFF
+    - FFHFFFHHFFFF
+    - GFHHFFFFFFFS
+    frechet_distance: 5.0
+    dtw_distance: 83.45
+    policy_group_b1: '[1,0,0,0,0,0,0,0,0,0,0,-1,1,-1,-1,1,0,0,0,0,0,0,0,-1,1,0,0,0,-1,-1,-1,1,0,0,0,-1,1,0,0,0,0,0,0,0,0,0,0,0,1,0,-1,3,0,0,-1,-1,3,0,0,0,-1,0,-1,-1,3,0,0,0,0,0,0,0]'
+    policy_group_b2: '[1,0,0,0,0,0,0,0,0,0,0,-1,1,-1,-1,1,0,3,3,3,0,0,0,-1,1,0,0,1,-1,-1,-1,3,3,0,0,-1,1,0,0,0,0,0,0,0,3,0,0,0,1,0,-1,3,0,0,-1,-1,3,3,0,0,-1,0,-1,-1,3,0,0,0,0,3,0,0]'
+    map_height: 6
+    map_width: 12
+    hole_count: 13
+  gen_map_92:
+    name: Generated Map 92
+    map_layout:
+    - FFFFFFFFFFFF
+    - FFHFHHFFFFFF
+    - FFHHFHFFFFFF
+    - FFFFHFFFFFHH
+    - FFFHHFFHFFFF
+    - GFFFFFFHFFFS
+    frechet_distance: 5.0
+    dtw_distance: 81.99
+    policy_group_b1: '[1,0,0,0,0,0,0,0,0,0,0,0,1,0,-1,3,-1,-1,1,0,0,0,0,0,1,0,-1,-1,0,-1,1,0,0,0,0,0,1,0,0,0,-1,1,0,0,0,0,-1,-1,1,0,0,-1,-1,1,0,-1,3,0,0,0,-1,0,0,0,0,0,0,-1,3,0,0,0]'
+    policy_group_b2: '[1,0,0,0,0,0,0,0,0,0,0,0,1,0,-1,3,-1,-1,3,3,0,0,0,0,1,0,-1,-1,0,-1,1,3,0,0,0,3,1,0,0,0,-1,1,0,0,3,0,-1,-1,1,0,0,-1,-1,1,0,-1,3,0,0,1,-1,0,0,0,0,0,0,-1,3,3,0,0]'
+    map_height: 6
+    map_width: 12
+    hole_count: 13
+  gen_map_31:
+    name: Generated Map 31
+    map_layout:
+    - FFFFFFFFFHFF
+    - FFHFFFFFFHHF
+    - FFHFFFFFFFHF
+    - FHFFHHFFFFFF
+    - FHFFHFFHFFFF
+    - GFFFFFFHFFFS
+    frechet_distance: 5.0
+    dtw_distance: 79.36
+    policy_group_b1: '[1,0,0,0,0,0,0,0,0,-1,2,1,1,0,-1,1,0,0,0,0,0,-1,-1,1,1,0,-1,1,0,0,0,0,0,0,-1,1,1,-1,1,0,-1,-1,1,0,0,0,0,0,1,-1,1,0,-1,1,0,-1,3,0,0,0,-1,0,0,0,0,0,0,-1,3,0,0,0]'
+    policy_group_b2: '[1,0,0,0,0,0,0,0,0,-1,2,1,1,0,-1,3,3,0,0,0,0,-1,-1,1,1,0,-1,1,0,3,3,0,0,0,-1,1,1,-1,1,1,-1,-1,1,3,3,0,0,1,1,-1,1,1,-1,1,0,-1,3,3,0,0,-1,0,0,0,0,0,0,-1,2,3,0,0]'
+    map_height: 6
+    map_width: 12
+    hole_count: 13
+  gen_map_44:
+    name: Generated Map 44
+    map_layout:
+    - GFFFFFFFHFFS
+    - FFFFFHHFHHHF
+    - HFFFFFHFFFFF
+    - HHFFHFHFFFFF
+    - FFFFHFFFFFFF
+    - FFFFFFFFFFFF
+    frechet_distance: 5.0
+    dtw_distance: 78.79
+    policy_group_b1: '[-1,0,0,0,0,0,0,0,-1,2,2,1,3,0,0,0,0,-1,-1,3,-1,-1,-1,1,-1,3,0,0,0,0,-1,3,0,0,0,0,-1,-1,3,0,-1,3,-1,3,0,0,0,0,2,2,3,0,-1,3,0,0,0,0,0,0,2,2,3,0,0,0,0,0,0,0,0,0]'
+    policy_group_b2: '[-1,0,0,0,0,0,0,0,-1,2,2,1,3,3,0,0,0,-1,-1,3,-1,-1,-1,1,-1,3,3,0,0,0,-1,3,1,1,1,1,-1,-1,3,3,-1,3,-1,1,1,0,0,0,1,2,3,0,-1,1,1,1,0,0,0,0,2,2,3,0,0,0,0,0,0,0,0,0]'
+    map_height: 6
+    map_width: 12
+    hole_count: 13
+  gen_map_36:
+    name: Generated Map 36
+    map_layout:
+    - GFFHFFFFFFFS
+    - FFHHFFFHHFFF
+    - FFFFFFHFFFFF
+    - FFFFFHHFFFHH
+    - FFFFFFFFFFFF
+    - FFFFFFFFFHHH
+    frechet_distance: 4.47
+    dtw_distance: 78.55
+    policy_group_b1: '[-1,0,0,-1,1,0,0,0,0,0,0,0,3,0,-1,-1,1,0,0,-1,-1,3,0,0,3,0,0,0,0,0,-1,1,0,0,0,0,3,0,0,0,0,-1,-1,1,0,0,-1,-1,3,0,0,0,0,0,0,0,0,0,0,0,3,0,0,0,0,0,0,0,0,-1,-1,-1]'
+    policy_group_b2: '[-1,0,0,-1,1,1,0,0,0,1,0,0,3,0,-1,-1,1,0,0,-1,-1,1,0,0,3,0,0,1,0,0,-1,1,1,0,0,0,3,0,0,0,0,-1,-1,1,1,0,-1,-1,3,0,0,0,0,0,1,1,0,0,0,0,3,0,0,0,0,0,0,0,0,-1,-1,-1]'
+    map_height: 6
+    map_width: 12
+    hole_count: 13
+  gen_map_46:
+    name: Generated Map 46
+    map_layout:
+    - GFFFFHHHFFFS
+    - FFFHFFHFFFFF
+    - FFFHFFFFFFHH
+    - FFFHFFFHHFFF
+    - HHFFFFFFFFFF
+    - FFFFFFFFFFFF
+    frechet_distance: 3.61
+    dtw_distance: 76.64
+    policy_group_b1: '[-1,0,0,0,0,-1,-1,-1,1,0,0,0,3,0,0,-1,3,0,-1,1,0,0,0,0,3,0,0,-1,3,0,0,0,0,0,-1,-1,3,0,0,-1,3,0,0,-1,-1,3,0,0,-1,-1,3,0,0,0,0,0,0,0,0,0,2,2,3,0,0,0,0,0,0,0,0,0]'
+    policy_group_b2: '[-1,0,0,0,0,-1,-1,-1,1,1,0,0,3,0,0,-1,3,0,-1,1,0,1,0,3,3,0,0,-1,3,0,0,0,0,1,-1,-1,3,3,0,-1,3,3,0,-1,-1,1,1,1,-1,-1,3,0,1,0,0,0,1,1,0,0,2,2,3,0,0,0,0,0,0,0,0,0]'
+    map_height: 6
+    map_width: 12
+    hole_count: 13
+  gen_map_9:
+    name: Generated Map 9
+    map_layout:
+    - FFFFFFFFFFFF
+    - FFFFHFFHFFFF
+    - FFFFHFHHFFHH
+    - FFFFFFFFHFFF
+    - FFFHHFFFHFFF
+    - GFFFFHHFFFFS
+    frechet_distance: 4.47
+    dtw_distance: 76.26
+    policy_group_b1: '[1,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,-1,1,0,-1,3,0,0,0,1,0,0,0,-1,1,-1,-1,3,0,-1,-1,1,0,0,0,0,0,0,0,-1,1,0,0,1,0,0,-1,-1,3,0,0,-1,1,0,0,-1,0,0,0,0,-1,-1,3,0,0,0,0]'
+    policy_group_b2: '[1,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,-1,3,3,-1,3,3,0,3,1,0,0,0,-1,1,-1,-1,3,3,-1,-1,1,0,0,0,0,0,0,0,-1,3,0,0,1,0,0,-1,-1,3,0,0,-1,3,0,0,-1,0,0,0,0,-1,-1,3,0,3,0,0]'
+    map_height: 6
+    map_width: 12
+    hole_count: 13
+  gen_map_12:
+    name: Generated Map 12
+    map_layout:
+    - FFFFFFFFFFFF
+    - FFFFFFFFFFFH
+    - FFHFFFFFHFFH
+    - FHHFFHFHHFFF
+    - FFFFFHFHFFFF
+    - GFFHHFFFFFFS
+    frechet_distance: 3.61
+    dtw_distance: 75.9
+    policy_group_b1: '[1,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,-1,1,0,-1,1,0,0,0,0,-1,3,0,-1,1,-1,-1,1,0,-1,3,-1,-1,3,0,0,1,0,0,0,0,-1,3,-1,1,0,0,0,-1,0,0,-1,-1,2,3,0,0,0,0,0]'
+    policy_group_b2: '[1,0,0,0,0,0,0,0,0,0,0,0,1,0,0,3,0,0,0,0,0,3,0,-1,1,0,-1,3,3,0,3,0,-1,3,0,-1,1,-1,-1,1,3,-1,3,-1,-1,3,0,0,1,0,0,0,0,-1,3,-1,2,3,0,0,-1,0,0,-1,-1,2,3,0,2,3,0,0]'
+    map_height: 6
+    map_width: 12
+    hole_count: 13
+  gen_map_78:
+    name: Generated Map 78
+    map_layout:
+    - FFFFFFFFFFFF
+    - FHFHHHFFFFFF
+    - FHFFFFHFFFFF
+    - FHFFHFHHFFFF
+    - FFFFHFFFFFFF
+    - GFFHHFFFFFFS
+    frechet_distance: 4.0
+    dtw_distance: 72.68
+    policy_group_b1: '[1,0,0,0,0,0,0,0,0,0,0,0,1,-1,1,-1,-1,-1,3,0,0,0,0,0,1,-1,1,0,0,0,-1,3,0,0,0,0,1,-1,1,0,-1,3,-1,-1,1,0,0,0,1,0,0,0,-1,3,0,0,0,0,0,0,-1,0,0,-1,-1,3,0,0,0,0,0,0]'
+    policy_group_b2: '[1,0,0,0,0,0,0,0,0,0,0,0,1,-1,1,-1,-1,-1,3,3,0,0,0,0,1,-1,1,0,0,0,-1,3,3,0,0,0,1,-1,1,0,-1,3,-1,-1,3,3,0,0,1,0,0,0,-1,3,0,0,2,3,0,0,-1,0,0,-1,-1,3,0,0,2,3,0,0]'
+    map_height: 6
+    map_width: 12
+    hole_count: 13
+  gen_map_110:
+    name: Generated Map 110
+    map_layout:
+    - FFFFFFFFFFFF
+    - FFFFFFHFFFFF
+    - FHHFFFHHFFFF
+    - FFFHFFFFFFFF
+    - FFHHHFHHFFFF
+    - GFHFHFFFFFFS
+    frechet_distance: 4.47
+    dtw_distance: 66.62
+    policy_group_b1: '[1,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,-1,3,0,0,0,0,1,-1,-1,3,0,0,-1,-1,1,0,0,0,1,0,0,-1,3,0,0,0,0,0,0,0,1,0,-1,-1,-1,3,-1,-1,3,0,0,0,-1,0,-1,1,-1,3,0,0,0,0,0,0]'
+    policy_group_b2: '[1,0,0,0,0,0,0,0,0,0,0,0,1,0,3,3,0,0,-1,3,3,0,0,0,1,-1,-1,3,3,0,-1,-1,3,3,0,0,1,0,0,-1,3,0,0,0,2,3,0,0,1,0,-1,-1,-1,3,-1,-1,2,3,0,0,-1,0,-1,0,-1,3,0,2,2,3,0,0]'
+    map_height: 6
+    map_width: 12
+    hole_count: 13
+  gen_map_76:
+    name: Generated Map 76
+    map_layout:
+    - HHFFFFFFFFFF
+    - FFFFFFFFFFFF
+    - FFFFFFHFFFFF
+    - FFFFFFHFHFHH
+    - FFHHFFFFHFFF
+    - GFFHFHHFFFFS
+    frechet_distance: 4.0
+    dtw_distance: 64.92
+    policy_group_b1: '[-1,-1,1,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,-1,1,0,0,0,0,1,0,0,0,0,0,-1,1,-1,1,-1,-1,1,0,-1,-1,3,0,0,0,-1,1,0,0,-1,0,0,-1,3,-1,-1,3,0,0,0,0]'
+    policy_group_b2: '[-1,-1,1,1,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,3,0,0,0,0,1,0,0,0,0,0,-1,3,3,3,0,3,1,0,0,3,3,0,-1,3,-1,3,-1,-1,1,0,-1,-1,3,0,0,0,-1,3,0,1,-1,0,0,-1,3,-1,-1,3,2,3,0,0]'
+    map_height: 6
+    map_width: 12
+    hole_count: 13
+  gen_map_72:
+    name: Generated Map 72
+    map_layout:
+    - SFHFFFFFFFFG
+    - FFHHFHHFFFFF
+    - FFFFFHFFFFFF
+    - FHFFHHFFHHFF
+    - FHFFFFFFFFFF
+    - FFFFFFFFFFFF
+    frechet_distance: 5.0
+    dtw_distance: 109.58
+    policy_group_b1: '[1,1,-1,2,2,2,2,2,2,2,2,-1,1,1,-1,-1,3,-1,-1,2,2,2,2,3,2,2,2,2,3,-1,2,2,2,2,2,3,3,-1,2,3,-1,-1,2,3,-1,-1,2,3,3,-1,2,2,2,2,2,2,2,2,2,3,2,2,2,2,2,2,2,2,2,2,2,3]'
+    policy_group_b2: '[1,0,-1,2,2,2,2,2,2,2,2,-1,1,0,-1,-1,3,-1,-1,2,2,2,2,3,1,2,1,1,3,-1,2,2,3,2,2,3,1,-1,1,1,-1,-1,1,3,-1,-1,2,3,1,-1,1,1,1,1,1,1,1,2,2,3,2,2,2,2,2,2,2,2,2,2,2,3]'
+    map_height: 6
+    map_width: 12
+    hole_count: 12
+  gen_map_71:
+    name: Generated Map 71
+    map_layout:
+    - SFHHHFFFFFFG
+    - FHHHFFFHFFFF
+    - FFFFFHHHFFFF
+    - FHHFFFFFFFFF
+    - FFFFFFFFFFFF
+    - FFFFFFFFFFFF
+    frechet_distance: 5.0
+    dtw_distance: 106.22
+    policy_group_b1: '[1,0,-1,-1,-1,2,2,2,2,2,2,-1,1,-1,-1,-1,2,2,3,-1,2,2,2,3,2,2,2,2,3,-1,-1,-1,2,2,2,3,3,-1,-1,2,2,2,2,2,2,2,2,3,2,2,2,2,2,2,2,2,2,2,2,3,2,2,2,2,2,2,2,2,2,2,2,3]'
+    policy_group_b2: '[1,0,-1,-1,-1,2,2,2,2,2,2,-1,1,-1,-1,-1,1,2,3,-1,2,2,2,3,1,0,2,1,1,-1,-1,-1,2,2,2,3,1,-1,-1,1,1,1,1,2,2,2,2,3,1,1,2,2,2,2,2,2,2,2,2,3,2,2,2,2,2,2,2,2,2,2,2,3]'
+    map_height: 6
+    map_width: 12
+    hole_count: 12
+  gen_map_73:
+    name: Generated Map 73
+    map_layout:
+    - SFFFHFFFFFFG
+    - FFFFHFHHFFFF
+    - FFFFFFHFFFFF
+    - FFFFHFHFFHFF
+    - FFFFHFHHFHFF
+    - FFFFFFFFFFFF
+    frechet_distance: 5.0
+    dtw_distance: 105.58
+    policy_group_b1: '[1,1,1,1,-1,2,2,2,2,2,2,-1,1,1,1,1,-1,3,-1,-1,2,2,2,3,2,2,2,2,2,3,-1,2,2,2,2,3,2,2,2,3,-1,3,-1,2,3,-1,2,3,2,2,2,3,-1,3,-1,-1,3,-1,2,3,2,2,2,2,2,2,2,2,2,2,2,3]'
+    policy_group_b2: '[1,1,1,0,-1,2,2,2,2,2,2,-1,1,1,1,1,-1,3,-1,-1,2,2,2,3,1,1,1,2,2,3,-1,2,2,2,2,3,1,1,1,0,-1,3,-1,2,3,-1,2,3,1,1,1,1,-1,1,-1,-1,1,-1,2,3,2,2,2,2,2,2,2,2,2,2,2,3]'
+    map_height: 6
+    map_width: 12
+    hole_count: 12
+  gen_map_3:
+    name: Generated Map 3
+    map_layout:
+    - GFFFFFFFFFFS
+    - FFHFFHHHFFFF
+    - FFHHFFHHFFFF
+    - FFFHFFFHFFFF
+    - FFFFFFFFFFFF
+    - FFFFFFFFFFHH
+    frechet_distance: 5.0
+    dtw_distance: 103.68
+    policy_group_b1: '[-1,0,0,0,0,0,0,0,0,0,0,0,3,0,-1,3,0,-1,-1,-1,3,0,0,0,3,0,-1,-1,3,0,-1,-1,3,0,0,0,3,0,0,-1,3,0,0,-1,3,0,0,0,3,0,0,0,0,0,0,0,0,0,0,0,3,0,0,0,0,0,0,0,0,0,-1,-1]'
+    policy_group_b2: '[-1,0,0,0,0,0,0,0,2,1,0,0,3,0,-1,3,3,-1,-1,-1,2,1,0,0,3,0,-1,-1,3,1,-1,-1,2,1,0,0,3,0,0,-1,1,1,0,-1,1,1,0,0,3,0,0,0,1,0,0,0,1,0,0,3,3,0,0,0,0,0,0,0,0,0,-1,-1]'
+    map_height: 6
+    map_width: 12
+    hole_count: 12
+  gen_map_21:
+    name: Generated Map 21
+    map_layout:
+    - SFHHHFFFFFFG
+    - FFFFHFFHHFFF
+    - FFFFFFFFFHFF
+    - FFFFFHFFHHHF
+    - FFFFFHFFFFFF
+    - FFFFFFFFFFFF
+    frechet_distance: 5.0
+    dtw_distance: 101.58
+    policy_group_b1: '[1,1,-1,-1,-1,2,2,2,2,2,2,-1,1,1,1,1,-1,2,3,-1,-1,2,2,3,2,2,2,2,2,2,3,0,0,-1,2,3,2,2,2,2,3,-1,3,0,-1,-1,-1,3,2,2,2,2,3,-1,2,2,2,2,2,3,2,2,2,2,2,2,2,2,2,2,2,3]'
+    policy_group_b2: '[1,1,-1,-1,-1,2,2,2,2,2,2,-1,1,1,1,1,-1,2,3,-1,-1,2,2,3,1,1,1,1,2,2,3,0,0,-1,2,3,1,1,1,1,0,-1,3,1,-1,-1,-1,3,1,1,1,1,1,-1,1,1,1,1,2,3,2,2,2,2,2,2,2,2,2,2,2,3]'
+    map_height: 6
+    map_width: 12
+    hole_count: 12
+  gen_map_59:
+    name: Generated Map 59
+    map_layout:
+    - SFHHHFFFFFFG
+    - FFFFHFFHFHFF
+    - FFFFFFFHFHFF
+    - FFFFFHHHFFFF
+    - FFFFFHFFFFFF
+    - FFFFFFFFFFFF
+    frechet_distance: 5.0
+    dtw_distance: 101.58
+    policy_group_b1: '[1,1,-1,-1,-1,2,2,2,2,2,2,-1,1,1,1,1,-1,2,3,-1,3,-1,2,3,2,2,2,2,2,2,3,-1,3,-1,2,3,2,2,2,2,3,-1,-1,-1,2,2,2,3,2,2,2,2,3,-1,2,2,2,2,2,3,2,2,2,2,2,2,2,2,2,2,2,3]'
+    policy_group_b2: '[1,1,-1,-1,-1,2,2,2,2,2,2,-1,1,1,1,1,-1,2,3,-1,3,-1,2,3,1,1,1,1,0,2,3,-1,3,-1,2,3,1,1,1,1,0,-1,-1,-1,1,2,2,3,1,1,1,1,1,-1,1,2,2,2,2,3,2,2,2,2,2,2,2,2,2,2,2,3]'
+    map_height: 6
+    map_width: 12
+    hole_count: 12
+  gen_map_68:
+    name: Generated Map 68
+    map_layout:
+    - FFFFFFFFFFFF
+    - FFFFFHFFFFFF
+    - FFFFHHFFFFFF
+    - FFFFHFFHFFFF
+    - FFHHFFHHFHHF
+    - GFFFFFFFFHFS
+    frechet_distance: 5.0
+    dtw_distance: 100.64
+    policy_group_b1: '[1,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,-1,1,0,0,0,0,0,1,0,0,0,-1,-1,1,0,0,0,0,0,1,0,0,0,-1,1,0,-1,1,0,0,0,1,0,-1,-1,1,0,-1,-1,1,-1,-1,3,-1,0,0,0,0,0,0,0,0,-1,2,3]'
+    policy_group_b2: '[1,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,-1,3,3,0,0,0,0,1,0,0,0,-1,-1,3,3,3,0,0,0,1,0,0,0,-1,1,0,-1,3,3,3,3,1,0,-1,-1,1,1,-1,-1,3,-1,-1,3,-1,0,0,0,0,0,0,0,0,-1,2,3]'
+    map_height: 6
+    map_width: 12
+    hole_count: 12
+  gen_map_56:
+    name: Generated Map 56
+    map_layout:
+    - SFHHHFFFFFFG
+    - FFFHHFFFHFFF
+    - FFFFFFFHHFFF
+    - FFHHFFFFHHFF
+    - FFFFFFFFFFFF
+    - FFFFFFFFFFFF
+    frechet_distance: 5.0
+    dtw_distance: 98.5
+    policy_group_b1: '[1,1,-1,-1,-1,2,2,2,2,2,2,-1,1,1,1,-1,-1,2,2,3,-1,2,2,3,2,2,2,2,2,2,3,-1,-1,2,2,3,2,3,-1,-1,2,2,3,0,-1,-1,2,3,2,2,2,2,2,2,2,2,2,2,2,3,2,2,2,2,2,2,2,2,2,2,2,3]'
+    policy_group_b2: '[1,0,-1,-1,-1,2,2,2,2,2,2,-1,1,0,0,-1,-1,2,3,3,-1,2,2,3,1,0,0,2,2,1,3,-1,-1,2,2,3,1,1,-1,-1,1,1,1,1,-1,-1,2,3,1,1,1,1,1,1,1,1,1,2,2,3,2,2,2,2,2,2,2,2,2,2,2,3]'
+    map_height: 6
+    map_width: 12
+    hole_count: 12
+  gen_map_60:
+    name: Generated Map 60
+    map_layout:
+    - GFFFFFHFFFFS
+    - FFFFHFHFFFFF
+    - FFFHHFFFFFFF
+    - FFFHFFFHFFFF
+    - FFFFHHFHFFFH
+    - FFFFFFFFFFFH
+    frechet_distance: 5.0
+    dtw_distance: 98.25
+    policy_group_b1: '[-1,0,0,0,0,0,-1,1,0,0,0,0,3,0,0,0,-1,3,-1,1,0,0,0,0,3,0,0,-1,-1,3,0,0,0,0,0,0,3,0,0,-1,2,3,0,-1,3,0,0,0,3,0,0,0,-1,-1,3,-1,3,0,0,-1,3,0,0,0,0,0,0,0,0,0,0,-1]'
+    policy_group_b2: '[-1,0,0,0,0,0,-1,2,1,1,0,0,3,0,0,0,-1,3,-1,2,1,1,0,0,3,0,0,-1,-1,3,0,0,2,1,0,0,3,0,0,-1,2,3,1,-1,2,1,0,0,3,0,0,0,-1,-1,1,-1,1,1,0,-1,3,0,0,0,0,0,0,0,0,0,0,-1]'
+    map_height: 6
+    map_width: 12
+    hole_count: 12
+  gen_map_10:
+    name: Generated Map 10
+    map_layout:
+    - GFFFFFFFFFFS
+    - FFHHHHHFFFFF
+    - FFFFFFHHFFFF
+    - FFFFHFFFFFFH
+    - FFFFHFFFFFFH
+    - FFFFFFFFFFFH
+    frechet_distance: 5.0
+    dtw_distance: 98.22
+    policy_group_b1: '[-1,0,0,0,0,0,0,0,0,0,0,0,3,0,-1,-1,-1,-1,-1,3,0,0,0,0,3,0,0,0,0,0,-1,-1,3,0,0,0,3,0,0,0,-1,3,0,0,0,0,0,-1,3,0,0,0,-1,3,0,0,0,0,0,-1,3,0,0,0,0,0,0,0,0,0,0,-1]'
+    policy_group_b2: '[-1,0,0,0,0,0,0,2,1,1,0,0,3,0,-1,-1,-1,-1,-1,2,2,1,0,0,3,0,0,0,0,0,-1,-1,1,1,0,0,3,0,0,0,-1,1,1,1,1,0,0,-1,3,0,0,0,-1,1,1,0,0,0,0,-1,3,0,0,0,0,0,0,0,0,0,0,-1]'
+    map_height: 6
+    map_width: 12
+    hole_count: 12
+  gen_map_45:
+    name: Generated Map 45
+    map_layout:
+    - SFFHFFFFFFFG
+    - FFHHFFFFFHFF
+    - FFFFFHHFFHHF
+    - FFHFFFFFFHHF
+    - FFHFFFFFFFFF
+    - FFFFFFFFFFFF
+    frechet_distance: 5.0
+    dtw_distance: 97.97
+    policy_group_b1: '[1,1,0,-1,2,2,2,2,2,2,2,-1,1,1,-1,-1,2,2,2,2,3,-1,2,3,2,2,2,2,3,-1,-1,2,3,-1,-1,3,2,3,-1,2,2,2,2,2,3,-1,-1,3,2,3,-1,2,2,2,2,2,2,2,2,3,2,2,2,2,2,2,2,2,2,2,2,3]'
+    policy_group_b2: '[1,0,0,-1,2,2,2,2,2,2,2,-1,1,0,-1,-1,2,3,2,3,3,-1,2,3,1,0,2,2,3,-1,-1,3,3,-1,-1,3,1,0,-1,2,1,1,2,3,0,-1,-1,3,1,1,-1,2,2,2,2,3,0,1,2,3,2,2,2,2,2,2,2,2,2,2,2,3]'
+    map_height: 6
+    map_width: 12
+    hole_count: 12
+  gen_map_62:
+    name: Generated Map 62
+    map_layout:
+    - GFFFFFFFFHFS
+    - FHHFHFHFFHHF
+    - FFFFHFHFFFFF
+    - FFFFFFHFFFFF
+    - FFFFFHHFFFFF
+    - FFFFFFFFFFFF
+    frechet_distance: 5.0
+    dtw_distance: 97.58
+    policy_group_b1: '[-1,0,0,0,0,0,0,0,0,-1,2,1,3,-1,-1,3,-1,3,-1,3,0,-1,-1,1,3,0,0,0,-1,3,-1,3,0,0,0,0,3,0,0,0,0,0,-1,3,0,0,0,0,3,0,0,0,0,-1,-1,3,0,0,0,0,3,0,0,0,0,0,0,0,0,0,0,0]'
+    policy_group_b2: '[-1,0,0,0,0,0,0,0,0,-1,2,1,3,-1,-1,3,-1,3,-1,3,0,-1,-1,1,3,0,1,1,-1,1,-1,3,1,0,1,1,3,0,0,0,0,0,-1,2,1,0,0,0,3,0,0,0,0,-1,-1,1,1,0,0,0,3,0,0,0,0,0,0,0,0,0,0,0]'
+    map_height: 6
+    map_width: 12
+    hole_count: 12
+  gen_map_8:
+    name: Generated Map 8
+    map_layout:
+    - SFFFFFFFFFFG
+    - FFFFFHHFHHFF
+    - HHFFFFHFFFFF
+    - HFFFFFHHHHFF
+    - FFFFFFFFFFFF
+    - FFFFFFFFFFFF
+    frechet_distance: 5.0
+    dtw_distance: 97.08
+    policy_group_b1: '[2,2,2,2,2,2,2,2,2,2,2,-1,2,2,2,2,3,-1,-1,3,-1,-1,2,3,-1,-1,2,2,3,0,-1,2,2,2,2,3,-1,2,2,2,3,0,-1,-1,-1,-1,2,3,2,2,2,2,2,2,2,2,2,2,2,3,2,2,2,2,2,2,2,2,2,2,2,3]'
+    policy_group_b2: '[2,2,1,1,0,2,2,2,2,2,2,-1,3,2,2,1,1,-1,-1,3,-1,-1,2,3,-1,-1,1,1,1,0,-1,2,2,2,2,3,-1,1,1,1,1,1,-1,-1,-1,-1,2,3,1,1,1,1,1,1,1,1,1,2,2,3,2,2,2,2,2,2,2,2,2,2,2,3]'
+    map_height: 6
+    map_width: 12
+    hole_count: 12
+  gen_map_29:
+    name: Generated Map 29
+    map_layout:
+    - SFFHFFFFFFFG
+    - FFFHFFHHFFFF
+    - FFFFFFFHHFFF
+    - FFFFHFFHFFFF
+    - FFFFHFFHFFFF
+    - FFFFFFFFFFHH
+    frechet_distance: 5.0
+    dtw_distance: 95.33
+    policy_group_b1: '[1,1,1,-1,2,2,2,2,2,2,2,-1,1,1,1,-1,2,3,-1,-1,2,2,2,3,2,2,2,2,2,3,0,-1,-1,2,2,3,2,2,2,3,-1,3,0,-1,2,2,2,3,2,2,2,3,-1,3,0,-1,2,2,2,3,2,2,2,2,2,2,2,2,2,3,-1,-1]'
+    policy_group_b2: '[1,1,0,-1,2,2,2,2,2,2,2,-1,1,1,1,-1,2,3,-1,-1,2,2,2,3,1,1,1,2,2,3,0,-1,-1,2,2,3,1,1,1,0,-1,3,1,-1,2,2,2,3,1,1,1,1,-1,1,1,-1,2,3,3,3,2,2,2,2,2,2,2,2,2,3,-1,-1]'
+    map_height: 6
+    map_width: 12
+    hole_count: 12
+  gen_map_33:
+    name: Generated Map 33
+    map_layout:
+    - FFFFFFFFFHHF
+    - FHHFFHFFFFFF
+    - FFFFFHFFFFFF
+    - FFFFFFFHFFFF
+    - FHHFFFFHFFFF
+    - GFFFHHFFFFFS
+    frechet_distance: 5.0
+    dtw_distance: 93.17
+    policy_group_b1: '[1,0,0,0,0,0,0,0,0,-1,-1,1,1,-1,-1,1,0,-1,1,0,0,0,0,0,1,0,0,0,0,-1,1,0,0,0,0,0,1,0,0,0,0,0,0,-1,1,0,0,0,1,-1,-1,1,0,0,0,-1,1,0,0,0,-1,0,0,0,-1,-1,3,0,0,0,0,0]'
+    policy_group_b2: '[1,0,0,0,0,0,0,0,0,-1,-1,1,1,-1,-1,1,0,-1,3,3,0,0,1,1,1,0,0,0,0,-1,1,0,3,0,0,0,1,0,0,0,0,0,0,-1,3,3,0,0,1,-1,-1,1,3,0,0,-1,2,3,0,0,-1,0,0,0,-1,-1,3,0,2,3,0,0]'
+    map_height: 6
+    map_width: 12
+    hole_count: 12
+  gen_map_13:
+    name: Generated Map 13
+    map_layout:
+    - SFHFFFFFHFFG
+    - FFHFFFHFHHFF
+    - FFFFFFHFFFFF
+    - FFFFFFHFFHHF
+    - FFFFFFHHFFFF
+    - FFFFFFFFFFFF
+    frechet_distance: 5.0
+    dtw_distance: 91.84
+    policy_group_b1: '[1,1,-1,2,2,2,2,1,-1,2,2,-1,1,1,-1,2,2,3,-1,1,-1,-1,2,3,2,2,2,2,2,3,-1,2,2,2,2,3,1,1,1,1,1,1,-1,2,3,-1,-1,3,1,1,1,1,1,1,-1,-1,2,2,2,3,2,2,2,2,2,2,2,2,2,2,2,3]'
+    policy_group_b2: '[1,0,-1,2,1,0,0,1,-1,2,2,-1,1,1,-1,1,1,0,-1,1,-1,-1,2,3,1,1,1,1,1,0,-1,2,2,2,2,3,1,1,1,1,1,0,-1,2,3,-1,-1,3,1,1,1,1,1,1,-1,-1,1,1,2,3,2,2,2,2,2,2,2,2,2,2,2,3]'
+    map_height: 6
+    map_width: 12
+    hole_count: 12
+  gen_map_28:
+    name: Generated Map 28
+    map_layout:
+    - SFFHFFFFFFFG
+    - FFHHFHHFFFFF
+    - FFFFFHFFFFFF
+    - FFHHFFFFFFFF
+    - FHHFFFFFFFHH
+    - FFFFFFFFFFFF
+    frechet_distance: 5.0
+    dtw_distance: 91.63
+    policy_group_b1: '[1,1,0,-1,2,2,2,2,2,2,2,-1,1,1,-1,-1,3,-1,-1,2,2,2,2,3,2,2,2,2,3,-1,2,2,2,2,2,3,2,3,-1,-1,2,2,2,2,2,2,2,3,3,-1,-1,2,2,2,2,2,2,3,-1,-1,2,2,2,2,2,2,2,2,2,3,0,0]'
+    policy_group_b2: '[1,0,0,-1,2,2,2,2,2,2,2,-1,1,1,-1,-1,3,-1,-1,2,2,2,2,3,1,2,2,2,1,-1,2,2,2,2,2,3,1,0,-1,-1,1,2,2,2,2,3,3,3,1,-1,-1,2,2,2,2,2,3,3,-1,-1,2,2,2,2,2,2,2,2,3,0,0,0]'
+    map_height: 6
+    map_width: 12
+    hole_count: 12
+  gen_map_32:
+    name: Generated Map 32
+    map_layout:
+    - GFFHHHFFFFFS
+    - FFFFFFFFFFFF
+    - FHHHFHHHFFFF
+    - FFFFFHFHFFFF
+    - FFFFFHFFFFFF
+    - FFFFFFFFFFFF
+    frechet_distance: 4.47
+    dtw_distance: 87.88
+    policy_group_b1: '[-1,0,0,-1,-1,-1,1,0,0,0,0,0,3,0,0,0,0,0,0,0,0,0,0,0,3,-1,-1,-1,3,-1,-1,-1,3,0,0,0,3,0,0,0,0,-1,1,-1,3,0,0,0,3,0,0,0,0,-1,1,0,3,0,0,0,3,0,0,0,0,0,0,0,0,0,0,0]'
+    policy_group_b2: '[-1,0,0,-1,-1,-1,2,2,1,1,0,0,3,0,0,0,0,0,0,2,2,1,0,0,3,-1,-1,-1,3,-1,-1,-1,2,1,0,0,3,0,1,1,0,-1,1,-1,1,1,0,0,3,0,0,0,0,-1,1,1,1,0,0,0,3,0,0,0,0,0,0,0,0,0,0,0]'
+    map_height: 6
+    map_width: 12
+    hole_count: 12
+  gen_map_19:
+    name: Generated Map 19
+    map_layout:
+    - FFFFFFFFFFFF
+    - FFFFHFFFFFFF
+    - FFFFHFHFFFFF
+    - FFHFHHHHFFFF
+    - FFHFFFFFFHHF
+    - GFFFFFFFFHFS
+    frechet_distance: 5.0
+    dtw_distance: 86.55
+    policy_group_b1: '[1,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,-1,3,0,0,1,0,0,0,1,0,0,0,-1,3,-1,2,1,0,0,0,1,0,-1,1,-1,-1,-1,-1,1,0,0,0,1,0,-1,1,0,0,0,0,0,-1,-1,3,-1,0,0,0,0,0,0,0,0,-1,2,3]'
+    policy_group_b2: '[1,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,-1,3,3,3,0,0,0,0,1,0,0,0,-1,3,-1,3,3,0,0,0,1,0,-1,1,-1,-1,-1,-1,3,3,3,3,1,0,-1,1,1,1,1,1,0,-1,-1,3,-1,0,0,0,0,0,0,0,0,-1,2,3]'
+    map_height: 6
+    map_width: 12
+    hole_count: 12
+  gen_map_85:
+    name: Generated Map 85
+    map_layout:
+    - SFFFFFHHFFFG
+    - FFFFHHFFFFFF
+    - FFFFFFFHHFFF
+    - FFFFHFHFHFFF
+    - FFFFHHHFFFFF
+    - FFFFFFFFFFFF
+    frechet_distance: 4.0
+    dtw_distance: 85.96
+    policy_group_b1: '[1,1,1,1,0,0,-1,-1,2,2,2,-1,1,1,1,1,-1,-1,2,2,2,2,2,3,2,2,2,2,2,2,3,-1,-1,2,2,3,2,2,2,3,-1,3,-1,1,-1,2,2,3,2,2,2,3,-1,-1,-1,2,2,2,2,3,2,2,2,2,2,2,2,2,2,2,2,3]'
+    policy_group_b2: '[1,1,1,0,0,0,-1,-1,2,2,2,-1,1,1,1,0,-1,-1,2,2,2,2,2,3,1,1,1,0,2,2,3,-1,-1,2,2,3,1,1,1,0,-1,3,-1,1,-1,2,2,3,1,1,1,1,-1,-1,-1,1,2,2,2,3,2,2,2,2,2,2,2,2,2,2,2,3]'
+    map_height: 6
+    map_width: 12
+    hole_count: 12
+  gen_map_120:
+    name: Generated Map 120
+    map_layout:
+    - SFFFFHFHHFFG
+    - FFFFHHFFFFFF
+    - FFFFFFFFHHFF
+    - FFFFHHFFFHFF
+    - FFFFFFHHFFFF
+    - FFFFFFFFFFFF
+    frechet_distance: 4.0
+    dtw_distance: 83.96
+    policy_group_b1: '[1,1,1,1,0,-1,1,-1,-1,2,2,-1,1,1,1,1,-1,-1,2,2,2,2,2,3,2,2,2,2,2,2,2,3,-1,-1,2,3,2,2,2,3,-1,-1,2,3,0,-1,2,3,2,2,2,3,0,1,-1,-1,2,2,2,3,2,2,2,2,2,2,2,2,2,2,2,3]'
+    policy_group_b2: '[1,1,1,0,0,-1,1,-1,-1,2,2,-1,1,1,1,0,-1,-1,2,2,2,2,2,3,1,1,1,0,0,2,2,3,-1,-1,2,3,1,1,1,1,-1,-1,3,2,1,-1,2,3,1,1,1,1,1,1,-1,-1,1,2,2,3,2,2,2,2,2,2,2,2,2,2,2,3]'
+    map_height: 6
+    map_width: 12
+    hole_count: 12
+  gen_map_27:
+    name: Generated Map 27
+    map_layout:
+    - GFFFFFFFFHFS
+    - FFFFFFFHFHHF
+    - FFFFFFFHFFFF
+    - HHFFFFFHHFFF
+    - FHFFFFFFFFFF
+    - FFFFFFFFFFHH
+    frechet_distance: 5.0
+    dtw_distance: 83.02
+    policy_group_b1: '[-1,0,0,0,0,0,0,0,0,-1,2,1,3,0,0,0,0,0,0,-1,3,-1,-1,1,3,0,0,0,0,0,0,-1,3,0,0,0,-1,-1,3,0,0,0,0,-1,-1,3,0,0,1,-1,3,0,0,0,0,0,0,0,0,0,2,2,3,0,0,0,0,0,0,0,-1,-1]'
+    policy_group_b2: '[-1,0,0,0,0,0,0,0,0,-1,2,1,3,0,0,0,0,0,0,-1,3,-1,-1,1,3,3,3,0,0,0,0,-1,3,1,1,1,-1,-1,3,3,0,0,0,-1,-1,1,0,0,1,-1,2,3,0,0,0,0,1,0,0,0,2,2,2,3,0,0,0,0,0,0,-1,-1]'
+    map_height: 6
+    map_width: 12
+    hole_count: 12
+  gen_map_49:
+    name: Generated Map 49
+    map_layout:
+    - SFHFFFFFFFFG
+    - FFHHFFFFHHHF
+    - FFFFFHFFFHFF
+    - FFFFHHFFFFFF
+    - FFFFFFFFHFFF
+    - FFFFFFFFHFFF
+    frechet_distance: 3.61
+    dtw_distance: 82.08
+    policy_group_b1: '[1,1,-1,2,2,2,2,2,2,2,2,-1,1,1,-1,-1,2,2,2,3,-1,-1,-1,3,2,2,2,2,3,-1,2,3,0,-1,2,3,2,2,2,3,-1,-1,2,2,2,2,2,3,2,2,2,2,2,2,2,3,-1,2,2,3,2,2,2,2,2,2,2,3,-1,2,2,3]'
+    policy_group_b2: '[1,0,-1,2,2,2,2,2,2,2,2,-1,1,1,-1,-1,3,2,3,3,-1,-1,-1,3,1,1,1,2,3,-1,3,1,1,-1,2,3,1,1,1,1,-1,-1,2,2,2,2,2,3,1,1,1,1,1,2,2,3,-1,2,2,3,2,2,2,2,2,2,3,3,-1,2,2,3]'
+    map_height: 6
+    map_width: 12
+    hole_count: 12
+  gen_map_15:
+    name: Generated Map 15
+    map_layout:
+    - SFHHFFHHFFFG
+    - FFFFFFFFFFFF
+    - HFFFFFFFFHFF
+    - HHFFFFFHHHHF
+    - FFFFFFFFFFFF
+    - FFFFFFFFFFFF
+    frechet_distance: 4.0
+    dtw_distance: 77.54
+    policy_group_b1: '[1,1,-1,-1,1,1,-1,-1,2,2,2,-1,2,2,2,2,2,2,2,2,2,2,2,3,-1,2,2,2,2,2,2,2,3,-1,2,3,-1,-1,2,2,2,2,3,-1,-1,-1,-1,3,2,2,2,2,2,2,2,2,2,2,2,3,2,2,2,2,2,2,2,2,2,2,2,3]'
+    policy_group_b2: '[1,1,-1,-1,1,1,-1,-1,2,2,2,-1,2,1,1,2,2,2,2,2,2,2,2,3,-1,2,2,1,1,1,2,2,3,-1,2,3,-1,-1,1,1,1,1,1,-1,-1,-1,-1,3,1,1,1,1,1,1,1,1,1,1,2,3,2,2,2,2,2,2,2,2,2,2,2,3]'
+    map_height: 6
+    map_width: 12
+    hole_count: 12
+  gen_map_38:
+    name: Generated Map 38
+    map_layout:
+    - GFFFFFHHFFFS
+    - FFHHFFFHFFFF
+    - FFFFHHFFFFHH
+    - FFFFHFFFFFFF
+    - FFFHHFFFFFFF
+    - FFFFFFFFFFFF
+    frechet_distance: 5.0
+    dtw_distance: 77.13
+    policy_group_b1: '[-1,0,0,0,0,0,-1,-1,1,0,0,0,3,0,-1,-1,3,0,0,-1,1,0,0,0,3,0,0,0,-1,-1,3,0,0,0,-1,-1,3,0,0,0,-1,2,3,0,0,0,0,0,3,0,0,-1,-1,1,3,0,0,0,0,0,3,0,0,0,0,0,0,0,0,0,0,0]'
+    policy_group_b2: '[-1,0,0,0,0,0,-1,-1,1,1,0,0,3,0,-1,-1,3,0,0,-1,1,0,0,3,3,0,0,0,-1,-1,1,1,1,0,-1,-1,3,0,0,0,-1,2,1,0,0,0,0,1,3,0,0,-1,-1,1,1,0,0,0,0,0,3,0,0,0,0,0,0,0,0,0,0,0]'
+    map_height: 6
+    map_width: 12
+    hole_count: 12
+  gen_map_37:
+    name: Generated Map 37
+    map_layout:
+    - FFFFFFFFFFFF
+    - FHFFFFHFFFFF
+    - FHFFFFHHFFFF
+    - FFHFFFFFFFFF
+    - FHHFFHHHFFFF
+    - GFFFFHFFFFFS
+    frechet_distance: 4.24
+    dtw_distance: 76.25
+    policy_group_b1: '[1,0,0,0,0,0,0,0,0,0,0,0,1,-1,1,1,0,0,-1,2,1,0,0,0,1,-1,2,1,0,0,-1,-1,1,0,0,0,1,0,-1,1,0,0,0,0,0,0,0,0,1,-1,-1,1,0,-1,-1,-1,3,0,0,0,-1,0,0,0,0,-1,2,2,3,0,0,0]'
+    policy_group_b2: '[1,0,0,0,0,0,0,0,0,0,0,0,1,-1,2,1,0,0,-1,3,3,0,0,0,1,-1,2,1,0,0,-1,-1,3,3,0,0,1,0,-1,1,0,0,0,0,0,3,0,0,1,-1,-1,1,0,-1,-1,-1,3,3,0,0,-1,0,0,0,0,-1,2,2,2,3,0,0]'
+    map_height: 6
+    map_width: 12
+    hole_count: 12
+  gen_map_114:
+    name: Generated Map 114
+    map_layout:
+    - GFFFHHFFFFFS
+    - FFFFHFFHFFFF
+    - FFFFFFHHFFHH
+    - FFFFFFHFFFFF
+    - FFFFFFFFFFHF
+    - FFFFFFFFFFHH
+    frechet_distance: 3.61
+    dtw_distance: 73.8
+    policy_group_b1: '[-1,0,0,0,-1,-1,1,0,0,0,0,0,3,0,0,0,-1,1,0,-1,3,0,0,0,3,0,0,0,0,0,-1,-1,1,0,-1,-1,3,0,0,0,0,0,-1,1,0,0,0,0,3,0,0,0,0,0,0,0,0,0,-1,3,3,0,0,0,0,0,0,0,0,0,-1,-1]'
+    policy_group_b2: '[-1,0,0,0,-1,-1,1,2,2,1,0,0,3,0,0,0,-1,1,0,-1,1,1,0,3,3,0,0,0,0,0,-1,-1,1,1,-1,-1,3,0,0,0,0,0,-1,1,1,0,0,0,3,0,0,0,0,0,0,1,0,0,-1,3,3,0,0,0,0,0,0,0,0,0,-1,-1]'
+    map_height: 6
+    map_width: 12
+    hole_count: 12
+  gen_map_75:
+    name: Generated Map 75
+    map_layout:
+    - GFFFFHHFFFFS
+    - FHHFFFFFFFFF
+    - FFHFFFFHFFFF
+    - FFFFFFFHFFFF
+    - FFFFFFFFFFFF
+    - FFHHHFFFFFHH
+    frechet_distance: 4.12
+    dtw_distance: 72.71
+    policy_group_b1: '[-1,0,0,0,0,-1,-1,1,0,0,0,0,3,-1,-1,3,0,0,0,0,0,0,0,0,3,0,-1,3,0,0,0,-1,3,0,0,0,3,0,0,0,0,0,0,-1,3,0,0,0,3,0,0,0,0,0,0,0,0,0,0,0,3,0,-1,-1,-1,3,0,0,0,0,-1,-1]'
+    policy_group_b2: '[-1,0,0,0,0,-1,-1,2,1,1,0,0,3,-1,-1,3,0,0,0,0,2,1,0,0,3,0,-1,1,1,0,0,-1,2,1,0,0,3,0,0,0,0,0,0,-1,1,1,0,0,3,0,0,3,3,3,0,0,1,0,0,3,3,0,-1,-1,-1,3,3,0,0,0,-1,-1]'
+    map_height: 6
+    map_width: 12
+    hole_count: 12
+  gen_map_115:
+    name: Generated Map 115
+    map_layout:
+    - GFHFFFFFFFFS
+    - FFHFHHFFFFFF
+    - FFFFHFHHFFFF
+    - FFHFHFFFFFFF
+    - FFHFFFFHFFFF
+    - FFFFFFFHFFFF
+    frechet_distance: 3.61
+    dtw_distance: 71.67
+    policy_group_b1: '[-1,0,-1,1,0,0,0,0,0,0,0,0,3,0,-1,1,-1,-1,3,0,0,0,0,0,3,0,0,0,-1,1,-1,-1,1,0,0,0,3,0,-1,3,-1,1,0,0,0,0,0,0,3,0,-1,3,0,0,0,-1,3,0,0,0,3,0,0,0,0,0,0,-1,3,0,0,0]'
+    policy_group_b2: '[-1,0,-1,1,0,0,0,0,0,1,0,0,3,0,-1,1,-1,-1,3,3,2,1,0,0,3,0,0,0,-1,1,-1,-1,1,1,0,0,3,0,-1,3,-1,1,0,0,0,0,0,0,3,0,-1,1,1,1,0,-1,3,3,0,0,3,0,0,0,0,0,0,-1,2,3,0,0]'
+    map_height: 6
+    map_width: 12
+    hole_count: 12
+  gen_map_108:
+    name: Generated Map 108
+    map_layout:
+    - GFHFFFFFFFFS
+    - FFHHFFFFFFFF
+    - FFHFFHHHFFFF
+    - FFFFHHFFFFFF
+    - HFFFFHFFFFFF
+    - HFFFFFFFFFFF
+    frechet_distance: 5.0
+    dtw_distance: 70.23
+    policy_group_b1: '[-1,0,-1,2,1,0,0,0,0,0,0,0,3,0,-1,-1,1,0,0,0,0,0,0,0,3,0,-1,1,0,-1,-1,-1,3,0,0,0,3,0,0,0,-1,-1,1,0,0,0,0,0,-1,3,0,0,0,-1,1,0,0,0,0,0,-1,3,0,0,0,0,0,0,0,0,0,0]'
+    policy_group_b2: '[-1,0,-1,2,1,0,2,2,1,1,0,0,3,0,-1,-1,1,0,3,2,2,1,0,0,3,0,-1,1,0,-1,-1,-1,1,1,0,0,3,0,0,0,-1,-1,1,1,1,0,0,0,-1,3,0,0,0,-1,1,1,0,0,0,0,-1,3,3,0,0,0,0,0,0,0,0,0]'
+    map_height: 6
+    map_width: 12
+    hole_count: 12
+  gen_map_116:
+    name: Generated Map 116
+    map_layout:
+    - GFFFFHHHFFFS
+    - FFFFFFFFFFFF
+    - FFFHHHFFFFFH
+    - FFFFFHFFFFHH
+    - FFFFFFFFFFHH
+    - FFFFFFFFFFFF
+    frechet_distance: 4.0
+    dtw_distance: 68.37
+    policy_group_b1: '[-1,0,0,0,0,-1,-1,-1,1,0,0,0,3,0,0,0,0,0,0,0,0,0,0,0,3,0,0,-1,-1,-1,3,0,0,0,0,-1,3,0,0,0,0,-1,3,0,0,0,-1,-1,3,0,0,0,0,0,0,0,0,0,-1,-1,3,0,0,0,0,0,0,0,0,0,0,0]'
+    policy_group_b2: '[-1,0,0,0,0,-1,-1,-1,1,1,0,0,3,0,0,0,0,0,0,1,1,0,0,0,3,0,0,-1,-1,-1,2,1,0,0,0,-1,3,0,0,0,1,-1,1,1,0,0,-1,-1,3,0,0,0,0,0,1,0,0,0,-1,-1,3,0,0,0,0,0,0,0,0,0,0,0]'
+    map_height: 6
+    map_width: 12
+    hole_count: 12
+  gen_map_104:
+    name: Generated Map 104
+    map_layout:
+    - SFFFHHFFFFFG
+    - FFFFHFFFFFFF
+    - FFFFHFFHFFFF
+    - FFFFFFFHHHFF
+    - HFHHFFFFFFFF
+    - HFFFFFFFFFFF
+    frechet_distance: 4.0
+    dtw_distance: 56.19
+    policy_group_b1: '[1,1,1,1,-1,-1,2,2,2,2,2,-1,1,1,1,1,-1,2,2,2,2,2,2,3,1,1,1,1,-1,2,3,-1,2,2,2,3,2,2,2,2,2,2,3,-1,-1,-1,2,3,-1,3,-1,-1,2,2,2,2,2,2,2,3,-1,2,2,2,2,2,2,2,2,2,2,3]'
+    policy_group_b2: '[1,1,1,0,-1,-1,2,2,2,2,2,-1,1,1,1,1,-1,2,2,2,2,2,2,3,2,1,1,1,-1,1,3,-1,3,2,2,3,2,2,2,2,2,1,1,-1,-1,-1,2,3,-1,1,-1,-1,1,1,1,1,1,2,2,3,-1,2,2,2,2,2,2,2,2,2,2,3]'
+    map_height: 6
+    map_width: 12
+    hole_count: 12
+  gen_map_101:
+    name: Generated Map 101
+    map_layout:
+    - FFFFFFFFFFHH
+    - FFFFFFFFFFHH
+    - FFFFFFFFHFFH
+    - FFFHFFFFHFFF
+    - FFFHHFFFFFFF
+    - GFFFFFHHFFFS
+    frechet_distance: 4.0
+    dtw_distance: 52.96
+    policy_group_b1: '[1,0,0,0,0,0,0,0,0,0,-1,-1,1,0,0,0,0,0,0,0,0,0,-1,-1,1,0,0,0,0,0,0,0,-1,1,0,-1,1,0,0,-1,2,1,0,0,-1,1,0,0,1,0,0,-1,-1,1,0,0,0,0,0,0,-1,0,0,0,0,0,-1,-1,3,0,0,0]'
+    policy_group_b2: '[1,0,0,0,0,0,0,0,0,0,-1,-1,1,0,0,0,0,0,0,0,0,0,-1,-1,1,0,0,0,3,0,0,0,-1,3,0,-1,1,0,0,-1,3,3,0,0,-1,3,1,0,1,0,0,-1,-1,3,3,0,0,0,0,0,-1,0,0,0,0,0,-1,-1,3,3,0,0]'
+    map_height: 6
+    map_width: 12
+    hole_count: 12
+  gen_map_119:
+    name: Generated Map 119
+    map_layout:
+    - SFFHFFFFFFFG
+    - FFFHFFFFFHHF
+    - FFFHFFFFFFHF
+    - FFFFFHHFFFFF
+    - HFFFFFFFFFFF
+    - HFFFFHHFFFFF
+    frechet_distance: 3.61
+    dtw_distance: 52.32
+    policy_group_b1: '[1,1,1,-1,2,2,2,2,2,2,2,-1,1,1,1,-1,2,2,2,2,3,-1,-1,3,1,1,1,-1,2,2,2,2,3,0,-1,3,2,2,2,2,3,-1,-1,2,2,2,2,3,-1,2,2,2,2,2,2,2,2,2,2,3,-1,2,2,2,3,-1,-1,2,2,2,2,3]'
+    policy_group_b2: '[1,1,0,-1,2,2,2,2,2,2,2,-1,1,1,0,-1,2,2,2,3,3,-1,-1,3,2,1,1,-1,2,3,2,3,0,0,-1,3,2,2,1,1,3,-1,-1,3,1,1,2,3,-1,2,2,2,2,2,2,2,2,2,2,3,-1,2,2,3,3,-1,-1,2,2,2,2,3]'
+    map_height: 6
+    map_width: 12
+    hole_count: 12
+  gen_map_121:
+    name: Generated Map 121
+    map_layout:
+    - GFFFFFFFFHFS
+    - FFFFFFFFHHHF
+    - FHHFFFFHFFFF
+    - FFHFFFFHFFFF
+    - FFFFFFFFFFFF
+    - FFFHHHFFFFFF
+    frechet_distance: 4.0
+    dtw_distance: 48.68
+    policy_group_b1: '[-1,0,0,0,0,0,0,0,0,-1,2,1,3,0,0,0,0,0,0,0,-1,-1,-1,1,3,-1,-1,3,0,0,0,-1,1,0,0,0,3,0,-1,3,0,0,0,-1,1,0,0,0,3,0,0,0,0,0,0,0,0,0,0,0,3,0,0,-1,-1,-1,3,0,0,0,0,0]'
+    policy_group_b2: '[-1,0,0,0,0,0,0,0,0,-1,2,1,3,0,3,3,0,0,0,0,-1,-1,-1,1,3,-1,-1,3,3,0,0,-1,1,1,1,1,3,0,-1,2,3,0,0,-1,1,1,0,0,3,0,0,2,3,3,0,0,0,0,0,0,3,0,0,-1,-1,-1,3,0,0,0,0,0]'
+    map_height: 6
+    map_width: 12
+    hole_count: 12
+  gen_map_83:
+    name: Generated Map 83
+    map_layout:
+    - GFFFFHFFFFFS
+    - FHFFHHFFFFFF
+    - FHHFHFFFFFFF
+    - FHFFFFHHFFFF
+    - FFFFFFFFFFFF
+    - FFFFFFFHHFFF
+    frechet_distance: 3.61
+    dtw_distance: 40.71
+    policy_group_b1: '[-1,0,0,0,0,-1,1,0,0,0,0,0,3,-1,3,0,-1,-1,1,0,0,0,0,0,3,-1,-1,3,-1,1,0,0,0,0,0,0,3,-1,1,3,0,0,-1,-1,1,0,0,0,3,0,0,0,0,0,0,0,0,0,0,0,3,0,0,0,0,0,0,-1,-1,3,0,0]'
+    policy_group_b2: '[-1,0,0,0,0,-1,1,1,1,1,0,0,3,-1,3,3,-1,-1,1,0,1,1,0,0,3,-1,-1,3,-1,1,0,0,2,1,0,0,3,-1,2,3,0,1,-1,-1,1,1,0,0,3,0,2,3,0,0,0,0,0,0,0,0,3,0,0,3,0,0,0,-1,-1,3,3,0]'
+    map_height: 6
+    map_width: 12
+    hole_count: 12

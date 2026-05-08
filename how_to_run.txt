@@ -1,0 +1,24 @@
+python flask_app.py (to run flask backend)
+python -m http.server 8000 (to start the front end - important to use with cookies)
+
+
+If you want to export the conda env so that you can have the same env on a different machine:
+conda env export -n <env_name> -f environment.yml --no-builds
+
+To run locally:
+flask run --port=5001
+
+To start the tables:
+python 1_migrate_users_to_db.py 
+python 4_reset_database_table.py
+
+To get data from onRender:
+python get_data_from_render.py
+
+source ~/.bash-profile to get the "export DATABASE_URL=postgresql://..." to work (get the External URL from onrender)
+
+also update the DATABASE_URL = <internal link>
+
+
+RUN ALL TESTS:
+python tests/run_all_tests.py

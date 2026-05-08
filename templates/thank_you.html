@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Experiment Complete</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <link rel="icon" href="{{ url_for('static', filename='imgs/elf_down.png') }}" type="image/png">
+</head>
+
+<body class="bg-gray-100 flex items-center justify-center min-h-screen">
+    <div class="content-container form-page-container text-center max-w-4xl">
+        <h1 id="main-message" class="text-3xl font-bold mb-2 text-green-600">Thank You!</h1>
+
+        <img src="{{ url_for('static', filename='imgs/elf_down.png') }}" alt="A drawing of Elfie the elf"
+            class="mx-auto my-4 h-32">
+
+        <p id="elfie-message" class="text-lg text-gray-800 font-semibold mb-4">Elfie appreciates your help! 🍪</p>
+
+       <div id="completion-message" class="emphasis-box emphasis-box-yellow text-left">
+            <h3 class="emphasis-box-title">Do not close this window yet!</h3>
+            <ul class="emphasis-box-list">
+                <li>Wait for the <strong>Finish Study</strong> button to appear and <strong>click on it</strong> to finalize your submission.</li>
+                <li>The button will appear <strong>after</strong> the Debriefing Form has loaded.</li>
+                <li>The button <strong>will not appear</strong> if study was not completed.</li>
+            </ul>
+        </div>
+
+        <div id="results-loader" class="text-center text-gray-600 my-8 p-4 bg-gray-200/50 rounded-lg">
+            <p>Verifying your submission and generating final summary<span class="loading-dots"></span></p>
+        </div>
+
+        <p id="verification-status" class="text-md my-4 p-3 rounded-lg"></p>
+        <div id="debrief-container"
+            class="hidden text-left text-sm mt-8 p-4 bg-blue-50 border border-blue-200 rounded-lg shadow-sm">
+            <div id="debrief-loader" class="text-center text-gray-600">
+                <p>Loading<span class="loading-dots"></span></p>
+            </div>
+            <div id="debrief-content" class="hidden">
+                <h2 id="debrief-form-title" class="font-bold text-lg mb-3 text-gray-800 text-center"></h2>
+                <div class="space-y-4 text-gray-700">
+                    <p id="debrief-form-intro"></p>
+                    
+                    <h3 id="debrief-section-1-title" class="font-semibold text-md mt-4"></h3>
+                    <p id="debrief-section-1-content"></p>
+
+                    <h3 id="debrief-section-2-title" class="font-semibold text-md mt-4"></h3>
+                    <p id="debrief-section-2-content"></p>
+
+                    <h3 id="debrief-section-3-title" class="font-semibold text-md mt-4"></h3>
+                    <p id="debrief-section-3-content"></p>
+
+                    <h3 id="debrief-section-4-title" class="font-semibold text-md mt-4"></h3>
+                    <p id="debrief-section-4-content"></p>
+                </div>
+
+                <hr class="my-6">
+                <h2 id="debrief-key-facts-header" class="font-bold text-md mb-2 text-gray-800"></h2>
+                <div class="space-y-2 text-gray-700">
+                    <p id="debrief-main-goal"></p>
+                    <p id="debrief-user-specific-info"></p>
+                    <p id="debrief-condition-summary"></p>
+                    <p id="debrief-conclusion" class="mt-2 font-semibold"></p>
+                </div>
+            </div>
+        </div>
+        <p id="gift-card-message" class="hidden text-md text-gray-600 my-6 p-3 bg-blue-100 border border-blue-200 rounded-lg">
+            Loading
+        </p>
+
+        <button id="finishButton" class="w-full mt-6 btn btn-success hidden" disabled>Finish Study</button>
+        <!-- <p id="closing-message" class="hidden mt-6 text-sm text-gray-500"></p> -->
+    </div>
+
+    <footer id="page-footer" class="mt-12 pt-4 border-t border-gray-200">
+    </footer>
+
+    <script>
+        // Dynamically load scripts with a cache-busting timestamp
+        const timestamp = new Date().getTime();
+        document.write(`<script src="{{ url_for('static', filename='js/utils.js') }}?t=${timestamp}"><\/script>`);
+        document.write(`<script src="{{ url_for('static', filename='js/thank_you.js') }}?t=${timestamp}"><\/script>`);
+    </script>
+</body>
+
+<div id="progress-bar-container"
+    class="fixed top-0 left-0 w-full bg-gray-100 border-b border-gray-300 z-50 p-2 hidden shadow-sm">
+    <div class="max-w-4xl mx-auto">
+        <div class="flex items-center justify-between mb-1">
+            <span id="progress-milestone-text" class="text-sm font-semibold text-gray-700"></span>
+            <span id="progress-round-text" class="text-sm text-gray-600"></span>
+        </div>
+        <div class="w-full bg-gray-200 rounded-full h-2">
+            <div id="progress-bar" class="bg-red-700 h-2 rounded-full transition-all duration-300" style="width: 0%">
+            </div>
+        </div>
+    </div>
+</div>
+
+</html>

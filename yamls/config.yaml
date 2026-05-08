@@ -1,0 +1,43 @@
+game_title: Get the Cookie!
+
+task_config:
+  num_demonstrations: 5
+  num_comparisons: 5
+  num_offs: 5
+  num_corrections: 5
+
+  # Epsilon for trajectory generation (0.05 = 5% random action)
+  trajectory_generation_epsilon: 0.15 # (about 3 cells per 20 step-trajectory)
+  # Number of attempts for each task
+  num_correction_attempts: -1 # Changed from 10 to -1 (infinite attempts)
+  num_off_attempts: 5 
+  # Speed of the animations (step time in milliseconds)
+  off_task_animation_speed: 150 # 450
+  correction_animation_speed: 150 #200 #450
+  comparison_animation_speed: 150 # 350
+  # demonstrations don't need to be animated
+  demonstration_practice_env: practice_env
+  correction_practice_env: practice_env
+  comparison_practice_env: practice_env
+  off_practice_env: practice_env
+
+policy_generation_config:
+  DISCOUNT_FACTOR: 0.9
+  PROBABILITY_DENOMINATOR: 3
+  REWARDS:  
+  - -10 # 0: Reward for landing in a Hole (H)
+  - 0   # 1: Reward for landing on the Goal (G)
+  - -1  # 2: Reward for a standard step (F)
+  - -0.7   # 3: Reward for landing on an 'X' tile (direction I selected)
+  - -1.5  # 4: Reward for landing on an 'Y' tile (Opposite of direction I selected)
+
+form_field_config:
+  name: false
+  user_id_field: true
+  email: false
+  phone: false
+  age: false
+  gender: false
+  familiarity:
+    is_played: false
+    level: false

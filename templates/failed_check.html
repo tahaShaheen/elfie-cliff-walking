@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Study Incomplete</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body class="bg-gray-50">
+
+    <div class="min-h-screen flex items-center justify-center p-4">
+        <div class="max-w-3xl w-full bg-white p-8 rounded-xl shadow-lg text-center">
+            
+            <i class="fas fa-exclamation-triangle text-5xl text-red-500 mb-4"></i>
+            <h1 class="text-3xl font-bold mb-3 text-red-600">
+                Apologies, You Cannot Continue
+            </h1>
+            
+            <p class="text-lg text-gray-700 mb-6">
+                Unfortunately, you did not pass the comprehension check after the maximum number of attempts.
+            </p>
+
+            <div id="debrief-container" class="mt-6 text-left border-t pt-6">
+                <h2 id="debrief-title" class="text-2xl font-semibold text-gray-800 mb-3 text-center"></h2>
+                <p id="debrief-main-goal" class="text-gray-600 leading-relaxed"></p>
+                <p id="debrief-login-notice" class="text-md text-red-700/90 leading-relaxed mt-4 p-3 bg-red-50 border border-red-200 rounded-lg"></p>
+            </div>
+
+            <div class="mt-8 border-t pt-6">
+                <p class="text-md text-gray-500 mb-2">
+                    If you believe this is an error, please contact the researchers by replying to the email you received with your user ID.
+                </p>
+            </div>
+            
+            <div class="mt-6">
+                <p class="text-md text-gray-600">
+                    You may now close this window.
+                </p>
+            </div>
+        </div>
+
+    <script src="{{ url_for('static', filename='js/utils.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/failed_check.js') }}"></script>
+</body>
+</html>

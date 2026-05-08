@@ -1,0 +1,17 @@
+# The user_groups.yaml file maps a user's ID to the instruction group they belong to.
+# This file should be kept on the server and is not accessible by the client.
+
+# I have switched to also using a dynamic apporach so I don't have to git push everytime. 
+
+# a1: Not Slippery Instructions
+# a2: Slippery Instructions
+# b1: Not Slippery Environment (Visual)
+# b2: Slippery Environment (Visual)
+
+# Users in 'group_a1b1' will see the not slippery instructions and not slippery environment.
+
+# Users in 'group_a1b2' will see the not slippery instructions and slippery environment.
+
+# Users in 'group_a2b1' will see the slippery instructions and not slippery environment.
+
+# Users in 'group_a2b2' will see the slippery instructions and slippery environment.

@@ -1,0 +1,1252 @@
+/* Combined Styles for Cliff Walking Application */
+
+/* --- General Body and Layout --- */
+body {
+    font-family: 'Inter', sans-serif; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    padding-top: 2rem; 
+    padding-bottom: 2rem; 
+    background-color: #f0f4f8; 
+}
+
+body.form-page-body {
+    justify-content: center; 
+}
+
+.content-container {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 0.5rem; 
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); 
+    width: 100%;
+    margin-bottom: 2rem;
+}
+
+.form-page-container {
+    max-width: 500px; 
+}
+
+.instructions-page-container { /* Also used by corrections.html, off.html */
+    max-width: 700px; 
+    text-align: left;
+}
+
+.game-page-container {
+    max-width: 950px;
+    width: 100%; /* Ensures it fills available space up to the max-width */
+    box-sizing: border-box; /* Ensures padding doesn't add to the width */
+}
+
+
+/* --- Form Specific Styles --- */
+.form-field { 
+    margin-bottom: 1rem; 
+    text-align: left; 
+}
+.form-field label { 
+    display: block; 
+    margin-bottom: 0.25rem; 
+    font-weight: 500; 
+    color: #374151; 
+}
+.form-field input[type="text"],
+.form-field input[type="email"],
+.form-field input[type="tel"],
+.form-field input[type="number"],
+.form-field select {
+    width: 100%;
+    padding: 0.5rem 0.75rem; 
+    border: 1px solid #d1d5db; 
+    border-radius: 0.375rem; 
+    box-sizing: border-box;
+    color: #1f2937; 
+}
+.form-field input[type="checkbox"],
+.form-field input[type="radio"] {
+    margin-right: 0.5rem;
+    color: #4f46e5; 
+}
+.form-field .radio-group label, 
+.form-field .checkbox-group label {
+    font-weight: normal; 
+    margin-right: 1rem;
+    color: #374151; 
+}
+
+/* --- Instructions Page Specific Styles --- */
+/* (These styles are now more generic for structured content from YAML) */
+.instruction-item {
+    margin-bottom: 1.5rem;
+}
+.instruction-item h1, 
+.instruction-item h2,
+.instruction-item h3 { /* General header styling for instruction elements */
+    font-weight: bold;
+    color: #1f2937; 
+    margin-bottom: 0.75rem; 
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid #e5e7eb; 
+}
+/* Specific sizes can be applied by JS if needed or more specific classes */
+/* .instruction-item h1 { font-size: 1.875rem; } */
+/* .instruction-item h2 { font-size: 1.5rem; } */
+/* .instruction-item h3 { font-size: 1.25rem; } */
+
+.instruction-item p {
+    line-height: 1.625; 
+    color: #374151; 
+    margin-bottom: 0.75rem; 
+}
+.instruction-item img { /* For larger images in main instructions */
+    max-width: 100%; 
+    height: auto;
+    margin-top: 0.5rem; 
+    margin-bottom: 0.25rem; 
+    border-radius: 0.375rem; 
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06); 
+    display: block; 
+    margin-left: auto;
+    margin-right: auto;
+}
+.instruction-item .image-caption {
+    font-size: 0.875rem; 
+    color: #6b7280; 
+    text-align: center;
+    margin-top: 0.25rem;
+    margin-bottom: 1rem; 
+}
+
+/* --- New Image Group Styles --- */
+.image-group-container {
+    display: flex;
+    justify-content: space-around; /* This distributes space evenly */
+    align-items: flex-start;      /* Aligns items to the top */
+    flex-wrap: wrap;              /* Allows items to wrap onto the next line */
+    gap: 1rem;                    /* Space between items */
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.image-group-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;    /* This centers the image and caption */
+    flex-basis: 120px;      /* Gives each item a base width */
+    flex-grow: 1;           /* Allows items to grow to fill space */
+}
+
+.image-group-item img {
+    /* Set a fixed height for all images in the group */
+    height: 50px; 
+    /* Set a max-width to prevent any image from becoming too wide */
+    max-width: 100px; 
+    /* This is the key: it scales the image to fit without stretching or distorting it */
+    object-fit: contain; 
+    
+    margin-bottom: 0.5rem;
+    border-radius: 0.375rem;
+    /* Optional: Removing the shadow can look cleaner for small icons */
+    /* box-shadow: 0 1px 3px 0 rgba(0,0,0,0.1), 0 1px 2px -1px rgba(0,0,0,0.06); */
+}
+
+.image-group-item .image-caption {
+    font-size: 0.875rem;
+    color: #6b7280;
+    text-align: center; /* Ensures caption text is centered */
+}
+
+/* --- Demonstration Task Specific Instructions Area (Top of Demo Page) --- */
+#demonstration-task-instructions-area { 
+    padding: 1rem;
+    background-color: #f9fafb; 
+    border-radius: 0.375rem; 
+    margin-bottom: 1.5rem;
+    border: 1px solid #e5e7eb; 
+    /* font-size and color are set by Tailwind on the div itself */
+}
+#demonstration-task-instructions-area p { /* For paragraphs *within* this specific area */
+    margin-bottom: 0.5rem;
+    line-height: 1.5;
+}
+#demonstration-task-instructions-area img { /* For small inline images *within* this specific area */
+    max-width: 20px; 
+    max-height: 20px; 
+    display: inline-block; 
+    margin: 0 0.25rem; 
+    vertical-align: middle;
+}
+
+
+/* --- Game Grid Styles (Common for Demonstrations & Comparisons) --- */
+.grid-wrapper { 
+    display: flex; 
+    justify-content: center; 
+    width: 100%; 
+    margin-top: 1rem; 
+    margin-bottom: 1rem; 
+}
+.grid-container { /* Applied to grid-container-a, grid-container-b, and the demo grid */
+    display: grid; 
+    border: 2px solid #4b5563; 
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); 
+    border-radius: 0.5rem; 
+    overflow: hidden; 
+    cursor: default; 
+    -webkit-user-select: none; /* For Safari */
+    -moz-user-select: none;    /* For Firefox */
+    -ms-user-select: none;     /* For Internet Explorer/Edge */
+    user-select: none;         /* Standard syntax */
+}
+.grid-cell {
+    border: 1px solid #d1d5db; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center;
+    box-sizing: border-box; 
+    transition: background-image 0.2s ease-out, box-shadow 0.2s ease-out, outline 0.1s ease-in-out, border 0.1s ease-in-out; 
+    cursor: pointer; 
+    background-size: cover; 
+    background-repeat: no-repeat; 
+    background-position: center;
+    position: relative; 
+}
+.grid-cell:hover { 
+    outline: 3px solid #60a5fa; 
+    z-index: 10; 
+}
+.start-cell { 
+    /* Can add specific background or indicator if needed, e.g., a subtle border */
+    /* border: 2px solid green; */
+}
+.goal-cell::after { 
+    content: ""; 
+    position: absolute; 
+    top: 10%; left: 10%; right: 10%; bottom: 10%; 
+    background-image: url('../imgs/cookie.png'); 
+    background-color: transparent; 
+    background-size: contain; 
+    background-repeat: no-repeat; 
+    background-position: center; 
+    pointer-events: none; 
+}
+.cliff-cell { 
+    background-image: url('../imgs/mountain_cliff.png') !important; 
+    background-size: cover; 
+}
+.cliff-fallen { 
+    background-image: url('../imgs/mountain_cliff_skull.png') !important; 
+    background-size: cover;
+    opacity: 0.8;
+}
+.path-cell { 
+    box-shadow: inset 0 0 0 1000px rgba(255, 0, 0, 0.25); /* Reddish fill */
+    border: 1px solid #d1d5db; 
+}
+.trajectory-path-cell { 
+    box-shadow: inset 0 0 0 1000px rgba(173, 216, 230, 0.4); 
+    border: 2px solid #A78BFA; 
+}
+.agent-sprite { 
+    width: 80%;  
+    height: 80%; 
+    background-size: contain; 
+    background-repeat: no-repeat; 
+    background-position: center;
+    pointer-events: none; 
+    z-index: 5; 
+    position: relative; 
+}
+.cell-with-agent-at-goal.goal-cell { 
+    border: 2px solid #10B981; 
+}
+
+/* --- Comparison Page Specific Styles --- */
+.comparison-container {
+    display: flex;
+    gap: 1rem; 
+    justify-content: center;
+    align-items: flex-start; 
+    margin-bottom: 2rem;
+    flex-wrap: wrap; 
+}
+.grid-pair-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 2px solid transparent; 
+    padding: 0.5rem; 
+    border-radius: 0.5rem;
+    cursor: pointer;
+    /* max-width: 48%; */ /* Helps with side-by-side on smaller screens if flex-wrap is active */
+    /* box-sizing: border-box; */
+}
+.grid-pair-item.selected {
+    border-color: #3b82f6; 
+    box-shadow: 0 0 10px rgba(59, 130, 246, 0.5);
+}
+.grid-pair-item .grid-container { 
+     margin-bottom: 0.5rem; 
+}
+.grid-label { /* For "Trajectory A", "Trajectory B" labels */
+    font-weight: 600; /* Tailwind font-semibold */
+    font-size: 1.125rem; /* Tailwind text-lg */
+    color: #374151; /* Tailwind text-gray-700 */
+    margin-top: 0.5rem;
+    margin-bottom: 0.75rem; /* Increased bottom margin */
+}
+#comparison-instructions { /* Styles for the instruction box on comparisons page */
+    /* Tailwind classes are applied directly on the div in comparisons.html */
+    /* e.g. text-sm text-gray-700 p-4 bg-blue-50 border border-blue-200 rounded-md mb-6 */
+}
+#comparison-instructions p {
+    margin-bottom: 0.25rem;
+}
+
+
+/* --- Refined Buttons --- */
+.controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.btn {
+    padding: 0.625rem 1.5rem;
+    border-radius: 0.5rem;
+    font-weight: 600;
+    font-size: 1rem;
+    border: 1px solid transparent;
+    cursor: pointer;
+    text-decoration: none; /* For button-styled links */
+    display: inline-block; /* For button-styled links */
+    text-align: center;
+    transition: all 0.2s ease-in-out;
+    box-shadow: 0 1px 2px 0 rgba(0,0,0,0.05);
+}
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px -1px rgba(0,0,0,0.1), 0 2px 4px -2px rgba(0,0,0,0.1);
+}
+.btn:active {
+    transform: translateY(0px);
+    box-shadow: 0 1px 2px 0 rgba(0,0,0,0.05);
+}
+.btn:disabled {
+    background-color: #d1d5db !important;
+    color: #6b7280 !important;
+    border-color: #d1d5db !important;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+}
+
+/* Color Variants */
+/* Primary Button Style - Restored to the lighter blue */
+.btn-primary { 
+    background-color: #3b82f6; /* Original blue-500 */
+    color: white; 
+    border-color: #3b82f6; 
+}
+.btn-primary:hover { 
+    background-color: #2563eb; /* Original blue-600 */
+}
+
+.btn-secondary { background-color: white; color: #4b5563; border-color: #d1d5db; }
+.btn-secondary:hover { border-color: #9ca3af; color: #1f2937; }
+
+/* Success Button Style - Restored to the lighter green */
+.btn-success { 
+    background-color: #22c55e; /* Original green-500 */
+    color: white; 
+    border-color: #22c55e; 
+}
+.btn-success:hover { 
+    background-color: #16a34a; /* Original green-600 */
+}
+
+.btn-danger { background-color: #dc2626; color: white; border-color: #dc2626; }
+.btn-danger:hover { background-color: #b91c1c; }
+
+
+/* --- Legend Styles (Common for all pages) --- */
+.legend { 
+    display: flex; 
+    gap: 1.5rem;
+    margin-bottom: 1.5rem; 
+    flex-wrap: wrap; 
+    justify-content: center; 
+    align-items: center;
+    padding: 0.75rem;
+    background-color: #f9fafb;
+    border-radius: 0.5rem;
+    border: 1px solid #e5e7eb;
+}
+.legend-item { 
+    display: flex; 
+    align-items: center; 
+    gap: 0.5rem; 
+    font-size: 0.875rem; 
+    color: #4b5563; 
+}
+.legend-color { 
+    width: 24px; 
+    height: 24px; 
+    border-radius: 0.25rem; 
+    border: 1px solid #9ca3af; 
+    background-size: contain; 
+    background-position: center; 
+    background-repeat: no-repeat;
+}
+.legend-elfie {
+    background-image: url('../imgs/elf_down.png');
+}
+.legend-goal {
+    background-image: url('../imgs/cookie.png');
+}
+
+
+/* --- Common Utility Styles --- */
+#form-message-box, 
+#instructions-message-box,
+#message-box { /* #message-box is used by game/demonstrations.html & comparisons.html */
+    margin-top: 2rem; 
+    padding: 0.75rem 1rem; 
+    border-radius: 0.375rem; 
+    min-height: 44px; 
+    width: 100%; 
+    text-align: left; 
+    box-sizing: border-box;
+    font-size: 0.875rem; 
+}
+.info-box { /* Applied by JS via showAppMessage */
+    background-color: #eff6ff; 
+    color: #1e40af; 
+    border: 1px solid #93c5fd; 
+}
+.error-box { /* Applied by JS via showAppMessage */
+    background-color: #fee2e2; 
+    color: #991b1b; 
+    border: 1px solid #fca5a5; 
+}
+.hidden { 
+    display: none !important; 
+}
+
+.corrected-path-cell {
+    box-shadow: inset 0 0 0 1000px rgba(59, 130, 246, 0.35); /* Bluish fill */
+    border: 2px solid #3b82f6;
+}
+
+.corrected-step-cell {
+    box-shadow: inset 0 0 0 1000px rgba(59, 130, 246, 0.4); /* Bluish fill */
+    border: 1px solid #3b82f6; /* A slightly darker blue border */
+}
+
+/* --- NEW Emphasis Box Styles --- */
+.emphasis-box {
+    /* Base structural styles */
+    border-left-width: 4px;
+    padding: 1rem;
+    margin: 1.5rem 0;
+    border-radius: 0.375rem;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px -1px rgba(0, 0, 0, 0.1);
+}
+
+.emphasis-box-title {
+    font-weight: bold;
+    margin-bottom: 0.75rem;
+    font-size: 1.125rem;
+}
+
+.emphasis-box-list {
+    list-style-type: disc;
+    padding-left: 1.5rem;
+    color: #374151;
+}
+
+/* --- Color Variants --- */
+.emphasis-box-yellow {
+    background-color: #fefce8; /* yellow-50 */
+    border-color: #facc15; /* yellow-400 */
+}
+.emphasis-box-yellow .emphasis-box-title {
+    color: #b45309; /* yellow-800 */
+}
+
+.emphasis-box-blue {
+    background-color: #eff6ff; /* blue-50 */
+    border-color: #60a5fa; /* blue-400 */
+}
+.emphasis-box-blue .emphasis-box-title {
+    color: #1e40af; /* blue-800 */
+}
+
+.emphasis-box-green {
+    background-color: #f0fdf4; /* green-50 */
+    border-color: #4ade80; /* green-400 */
+}
+.emphasis-box-green .emphasis-box-title {
+    color: #166534; /* green-800 */
+}
+
+.emphasis-box-red {
+    background-color: #fee2e2; /* red-50 */
+    border-color: #f87171; /* red-400 */
+}
+.emphasis-box-red .emphasis-box-title {
+    color: #991b1b; /* red-800 */
+}
+
+.emphasis-box-gray {
+    background-color: #f9fafb; /* gray-50 */
+    border-color: #9ca3af; /* gray-400 */
+}
+.emphasis-box-gray .emphasis-box-title {
+    color: #1f2937; /* gray-800 */
+}
+
+.emphasis-box-indigo {
+    background-color: #eef2ff; /* indigo-50 */
+    border-color: #818cf8; /* indigo-400 */
+}
+.emphasis-box-indigo .emphasis-box-title {
+    color: #3730a3; /* indigo-800 */
+}
+
+.emphasis-box-teal {
+    background-color: #f0fdfa; /* teal-50 */
+    border-color: #2dd4bf; /* teal-400 */
+}
+.emphasis-box-teal .emphasis-box-title {
+    color: #115e59; /* teal-800 */
+}
+
+.emphasis-box-orange {
+    background-color: #fff7ed; /* orange-50 */
+    border-color: #fb923c; /* orange-400 */
+}
+.emphasis-box-orange .emphasis-box-title {
+    color: #9a3412; /* orange-800 */
+}
+
+.emphasis-box-pink {
+    background-color: #fdf2f8; /* pink-50 */
+    border-color: #f472b6; /* pink-400 */
+}
+.emphasis-box-pink .emphasis-box-title {
+    color: #9d174d; /* pink-800 */
+}
+
+.emphasis-box-lime {
+    background-color: #f7fee7; /* lime-50 */
+    border-color: #a3e635; /* lime-400 */
+}
+.emphasis-box-lime .emphasis-box-title {
+    color: #3f6212; /* lime-800 */
+}
+
+.emphasis-box-cyan {
+    background-color: #ecfeff; /* cyan-50 */
+    border-color: #22d3ee; /* cyan-400 */
+}
+.emphasis-box-cyan .emphasis-box-title {
+    color: #155e75; /* cyan-800 */
+}
+
+
+/* --- New Message Box Styles --- */
+
+/* .current-pos-highlight {
+    background-color: rgba(220, 38, 38, 0.6); /* A translucent red color
+    box-shadow: inset 0 0 4px 1px rgba(127, 29, 29, 0.8);
+} */
+
+@keyframes pulse-red {
+  0% {
+    box-shadow: 0 0 0 0 rgba(255, 0, 0, 0.7);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(255, 0, 0, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(255, 0, 0, 0);
+  }
+}
+
+/* Replace your existing .current-pos-highlight rule with this */
+.current-pos-highlight {
+    background-color: rgba(220, 38, 38, 0.6); /* A translucent red color */
+    outline: 3px solid #cc0000; /* A slightly darker, solid red outline */
+    outline-offset: -3px; /* Pulls the outline inside the cell a bit */
+    box-shadow: inset 0 0 4px 1px rgba(127, 29, 29, 0.8);
+    animation: pulse-red 1.5s infinite; /* The pulsing animation */
+    position: relative; /* Ensures z-index will apply */
+    z-index: 20; /* Sets a high stacking order */
+}
+
+
+/* --- Enhanced Message Box Styles --- */
+@keyframes fade-slide-down {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.message-box {
+    display: flex;
+    align-items: center;
+    padding: 0.75rem 1rem;
+    /* This ensures consistent spacing both above and below */
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+    border-radius: 0.375rem;
+    border-width: 1px;
+    border-style: solid;
+    width: 100%;
+    box-sizing: border-box;
+    animation: fade-slide-down 0.3s ease-out forwards;
+}
+
+.message-box-icon {
+    flex-shrink: 0;
+    width: 20px;
+    height: 20px;
+    margin-right: 0.75rem;
+}
+
+.message-box-text {
+    font-weight: 700; /* Increased from 500 to 700 for bolder text */
+    font-size: 1.125rem; /* Increased from default to 1.125rem (approximately 18px) */
+    white-space: pre-line;
+}
+
+/* Color Variants */
+.message-box-info {
+    background-color: #FFB347; /* A bright, vibrant orange */
+    color: #663300; /* A deep, rich brown-orange for high contrast text */
+    border-color: #FF8C00; /* A slightly darker, more intense orange for the border */
+}
+
+.message-box-error {
+    background-color: #fecaca; /* Lighter red, can go darker like #FCA5A5 */
+    color: #8c1e1e; /* Darker red text */
+    border-color: #f87171; /* Stronger red border */
+}
+
+.message-box-success {
+    background-color: #dcfce7; /* Lighter green, can go darker like #A7F3D0 */
+    color: #156535; /* Darker green text */
+    border-color: #4ade80; /* Stronger green border */
+}
+
+.message-box-muted {
+    background-color: #eff6ff; /* A very light, muted blue (Tailwind blue-50) */
+    color: #1e40af;          /* A deep, contrasting blue for text (Tailwind blue-800) */
+    border-color: #93c5fd;   /* A soft, slightly darker blue for the border (Tailwind blue-300) */
+}
+/* --- Practice Round Banner Style --- */
+.practice-banner {
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 1.5rem;
+    margin-top: 2rem;
+    padding: 1rem;
+    text-align: center;
+    text-transform: uppercase;
+
+    /* New styles for a more integrated look */
+    background-color: #fefce8; /* yellow-50 */
+    border-left: 5px solid #facc15; /* yellow-400 */
+    border-radius: 0.5rem;
+    color: #b45309; /* yellow-800 */
+    font-size: 1rem;
+    font-weight: 600; /* semibold */
+    letter-spacing: 0.05em;
+}
+
+/* --- Collapsible Instructions Styles --- */
+.collapsible-container {
+    background-color: #f9fafb; /* gray-50 */
+    border: 1px solid #e5e7eb; /* gray-200 */
+    border-radius: 0.5rem;
+    margin-bottom: 1rem;
+    overflow: hidden; /* Important for the border-radius */
+}
+
+.collapsible-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 0.75rem 1.25rem;
+    cursor: pointer;
+    font-weight: 600;
+    color: #374151; /* gray-700 */
+    background-color: transparent;
+    border: none;
+    text-align: left;
+    transition: background-color 0.2s ease;
+}
+
+.collapsible-header:hover {
+    background-color: #f3f4f6; /* gray-100 */
+}
+
+.collapsible-icon {
+    transition: transform 0.3s ease;
+    width: 1.25rem;
+    height: 1.25rem;
+    color: #6b7280; /* gray-500 */
+}
+
+.collapsible-header.active .collapsible-icon {
+    transform: rotate(180deg);
+}
+
+.collapsible-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease-out;
+    padding: 0 1.25rem;
+    color: #374151;
+    background-color: white; /* Give content a clean white background */
+    border-top: 1px solid #e5e7eb; /* Separator line */
+}
+
+.collapsible-content.active {
+    max-height: 1000px;
+    transition: max-height 0.5s ease-in;
+    padding: 1.25rem 1.25rem;
+    overflow-y: auto;
+}
+
+
+/* --- Polished Task Status Bar --- */
+/* In styles.css */
+
+/* Replace the existing .task-status-bar rule with this one */
+.task-status-bar {
+    display: flex;
+    justify-content: center; /* This centers the pills inside */
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    width: 100%;
+    box-sizing: border-box;
+
+    /* New "Game HUD" Style */
+    background-color: #374151; /* A dark slate-700 */
+    border-radius: 0.5rem;
+    padding: 0.75rem;
+    border: 1px solid #4b5563; /* A slightly lighter slate-600 border for depth */
+}
+/* Style for each pill/item in the bar */
+.status-pill {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.25rem 0.75rem;
+    border-radius: 9999px; /* rounded-full */
+    font-weight: 600;
+    font-size: 0.875rem;
+}
+
+/* The original Indigo pill style now provides a nice contrast */
+.status-pill.task-counter {
+    background-color: #eef2ff; /* indigo-50 */
+    color: #4338ca; /* indigo-700 */
+}
+
+/* Practice mode pill remains yellow */
+.status-pill.practice-mode {
+    background-color: #fefce8; /* yellow-50 */
+    color: #b45309; /* yellow-700 */
+}
+
+/* Task-specific stat pill remains slate */
+.status-pill.task-stat {
+    background-color: #f1f5f9; /* slate-100 */
+    color: #475569; /* slate-600 */
+}
+
+
+/* --- Task Title Styles --- */
+/* In static/css/styles.css */
+
+.task-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #374151;
+    text-align: center;
+
+    /* New styles for the divider */
+    border-bottom: 1px solid #e5e7eb; /* The underline/divider */
+    padding-bottom: 1rem;             /* Space between text and the line */
+    margin-bottom: 1.5rem;            /* Space below the line */
+}
+
+
+/* #correction-interface {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 1rem;
+    padding: 1rem;
+    border: 2px dashed #c7d2fe;
+    border-radius: 0.5rem;
+} */
+
+/* --- Mobile Phone User Warning Overlay Styles --- */
+#mobile-warning-overlay.hidden {
+    display: none;
+}
+
+#mobile-warning-overlay .overlay-backdrop {
+    position: fixed;
+    inset: 0;
+    background-color: rgba(17, 24, 39, 0.8); /* bg-gray-900 with opacity */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 50;
+}
+
+#mobile-warning-overlay .warning-box {
+    background-color: #FEF3C7; /* yellow-100 */
+    color: #92400E; /* yellow-800 */
+    border-left: 8px solid #F59E0B; /* yellow-500 */
+    padding: 2rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+    max-width: 28rem; /* 448px */
+    margin: 1rem;
+    display: flex;
+}
+
+#mobile-warning-overlay .warning-icon-container {
+    padding-top: 0.25rem;
+    padding-bottom: 0.25rem;
+}
+
+#mobile-warning-overlay .warning-icon {
+    height: 2rem; /* 32px */
+    width: 2rem; /* 32px */
+    color: #F59E0B; /* yellow-500 */
+    margin-right: 1rem;
+}
+
+#mobile-warning-overlay .warning-text-title {
+    font-size: 1.25rem; /* text-xl */
+    font-weight: 700; /* font-bold */
+}
+
+#mobile-warning-overlay .warning-text-body {
+    font-size: 1rem; /* text-base */
+    margin-top: 0.5rem;
+}
+
+/* --- Selection Highlight Styles --- */
+.selection-highlight {
+    background-color: #bee3f8; /* A light blue */
+    outline: 3px solid #3b82f6; /* A sharp blue outline to make it pop */
+    outline-offset: -2px;
+}
+
+/* This is the NEW rule */
+/* .correction-arrow.previous-correction {
+    background-color: #facc15 !important;
+    border-color: #eab308 !important;
+    color: #422006 !important; 
+    opacity: 0.9;
+    cursor: not-allowed;
+} */
+
+/* --- Inline Emoji Styles --- */
+.inline-emoji {
+  display: inline-block !important; /* Forces the image to stay on the same line as text */
+  height: 1.5em;                   /* Sets the height relative to the parent text size */
+  width: auto;                     /* Maintains the image's aspect ratio */
+  vertical-align: -0.25em;         /* Finely adjusts vertical alignment with the text baseline. You can tweak this value. */
+  margin: 0 0.15em;                /* Adds a small amount of horizontal space */
+}
+/* This is the base wrapper that ALL tiles in the group will use. */
+.tile-wrapper {
+  position: relative;
+  display: inline-block;
+  line-height: 0; /* Prevents alignment gaps */
+
+  /* --- FIX --- */
+  /* 1. Apply the border-radius to the wrapper itself. */
+  border-radius: 0.375rem;
+  /* 2. Hide anything that spills outside the rounded corners. */
+  overflow: hidden;
+}
+
+/* Make sure the image behaves correctly within the wrapper */
+.tile-wrapper img {
+  display: block;
+  width: 100%;
+  display: block; /* Prevents alignment gaps */
+}
+
+/* The overlay is defined here but is invisible by default. */
+.tile-wrapper::after {
+  content: '';
+  position: absolute;
+  top: 7px; /* This ensures the overlay covers the entire tile */
+  left: 0; /* This ensures the overlay covers the entire tile */
+  width: 100%;
+  height: 80%;
+  /* The radius here is now redundant but harmless */
+  border-radius: 0.375rem;
+  box-shadow: none; /* IMPORTANT: No shadow by default */
+  /* Optional: Add a transition for a smooth effect */
+  transition: box-shadow 0.2s ease-in-out;
+}
+
+/* This simple class "turns on" the highlight shadow when needed. */
+.is-highlighted::after {
+  box-shadow: inset 0 0 0 1000px rgba(255, 0, 0, 0.25);
+}
+
+.section-header {
+    font-size: 1.125rem;        /* text-lg */
+    font-weight: 600;           /* font-semibold */
+    color: #1e3a8a;             /* A deep blue text (blue-900) */
+    background-color: #e0e7ff;  /* A light indigo background (indigo-100) */
+    border: 1px solid #c7d2fe;  /* A soft border (indigo-200) */
+    border-radius: 0.5rem;      /* rounded-lg */
+    padding: 0.75rem 1.25rem;   /* py-3 px-5 */
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    width: 100%;
+    box-sizing: border-box;     /* Ensures padding is included in the width */
+}
+
+/* --- NEW Header Style for Task Pages --- */
+.task-section-header {
+    font-size: 1.25rem;       /* text-xl */
+    font-weight: 600;        /* font-semibold */
+    color: #374151;          /* text-gray-700 */
+    text-align: center;
+    margin-top: 2rem;        /* Add some space above the header */
+    margin-bottom: 1rem;
+}
+
+.correction-target-cell {
+  cursor: pointer;
+  border: 2px dashed #007bff; /* A distinct blue dashed border */
+  background-color: rgba(0, 123, 255, 0.15); /* A light blue highlight */
+  transition: background-color 0.2s ease-in-out, border-color 0.2s ease-in-out;
+}
+
+/* Optional: Add a hover effect for better feedback when the user mouses over it. */
+.correction-target-cell:hover {
+  background-color: rgba(0, 123, 255, 0.3); /* A slightly darker blue on hover */
+  border-color: #0056b3;
+}
+
+/* Rule 3: Styles the arrow button for the implemented change to be yellow */
+.correction-arrow.previous-correction {
+  background-color: #ffc107; /* Yellow */
+  border-color: #d39e00;
+  opacity: 1; /* Make sure it's fully opaque */
+}
+
+/* Rule 3: Styles the arrow button for the original path direction to be dark gray */
+/* .correction-arrow.disabled-original-path {
+  background-color: #343a40; 
+  border-color: #23272b;
+  opacity: 1;
+} */
+
+/* Ensure disabled buttons with these classes don't get the default disabled look */
+.correction-arrow.previous-correction:disabled,
+.correction-arrow.disabled-original-path:disabled {
+  opacity: 1;
+}
+
+
+/* Styling for the new disambiguation pop-up */
+#disambiguation-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+#disambiguation-modal.hidden {
+    display: none;
+}
+
+#disambiguation-modal .modal-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+#disambiguation-modal #disambiguation-options button {
+    display: block;
+    width: 100%;
+    margin: 8px 0;
+    padding: 10px;
+    border: 1px solid #ccc;
+    background-color: #f0f0f0;
+    cursor: pointer;
+}
+
+#disambiguation-modal #disambiguation-options button:hover {
+    background-color: #e0e0e0;
+}
+
+.instruction-item .contextual-large-image {
+  max-width: 500px; /* Or 10px, or whatever size you want */
+  height: auto;
+  display: block;
+  margin: 1rem auto;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+}
+
+.user-description-box {
+    background-color: #f6f8fa; /* Light gray background like GitHub */
+    border: 1px solid #d1d5db; /* Gray border */
+    border-radius: 6px;
+    padding: 12px;
+    font-family: monospace;
+    font-size: 0.9em;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    white-space: pre-wrap; /* Allows text to wrap */
+    word-wrap: break-word; /* Ensures long words don't overflow */
+    color: #24292e; /* Darker text color for readability */
+}
+
+
+/* Give visual feedback while dragging a cell */
+.grid-cell.dragging {
+  cursor: grabbing;
+  background-color: #dbeafe; /* A light blue to indicate selection */
+  outline: 2px solid #3b82f6;
+  z-index: 50;
+}
+
+/* Keyboard navigation cursor */
+.keyboard-cursor {
+    outline: 3px solid #16a34a; /* A distinct green outline */
+    outline-offset: -3px;
+    box-shadow: inset 0 0 0 2px white; /* An inner border to make it stand out */
+}
+
+.obstacle-cell::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='red' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cline x1='18' y1='6' x2='6' y2='18'%3E%3C/line%3E%3Cline x1='6' y1='6' x2='18' y2='18'%3E%3C/line%3E%3C/svg%3E");
+    background-size: 70%;
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0.85; /* Control the opacity of the X overlay */
+}
+.trajectory-cell:hover {
+    cursor: pointer;
+    outline: 2px solid #3b82f6; /* blue-500 */
+}
+.selected-cell {
+    outline: 3px solid #1d4ed8; /* blue-700 */
+    box-shadow: 0 0 10px rgba(29, 78, 216, 0.7);
+}
+
+.grid-cell {
+    position: relative; /* This is crucial for positioning child elements */
+}
+
+.instruction-overlay-image {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none; /* Prevents the image from being clickable */
+    z-index: 10;
+}
+
+.loading-dots::after {
+  display: inline-block;
+  animation: ellipsis 1.25s infinite;
+  content: ".";
+  width: 1em;
+  text-align: left;
+}
+
+@keyframes ellipsis {
+  0% { content: "."; }
+  33% { content: ".."; }
+  66% { content: "..."; }
+}
+
+/* Style the error text when the loader is in an error state */
+#debrief-loader.error-state p {
+    color: #b91c1c; /* A dark red, matching your .btn-danger style */
+    font-weight: 500;
+}
+
+/* Hide the animated dots when the error message is showing */
+#debrief-loader.error-state .loading-dots::after {
+    display: none;
+}
+
+.plan-execution-container {
+    display: flex;
+    flex-direction: row; /* Default to horizontal for larger screens */
+    align-items: flex-start;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    margin-top: 1.5rem;
+}
+
+.plan-execution-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1; /* Allow items to grow */
+    min-width: 280px; /* Prevent items from getting too small */
+}
+
+.animation-title {
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: #374151;
+    margin-bottom: 1rem;
+    text-align: center;
+
+    /* Forcefully remove any text decoration or bottom border */
+    text-decoration: none !important;
+    border-bottom: none !important;
+}
+
+.animation-caption {
+    font-size: 0.95rem;
+    color: #6B7280; /* gray-500 */
+    text-align: center;
+    margin-top: 1rem;
+    line-height: 1.4;
+    max-width: 280px;
+}
+
+.pve-top-container {
+    margin-bottom: 2rem; /* Adds space between the top map and the bottom pair */
+}
+
+.pve-bottom-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 2rem;
+    flex-wrap: wrap; /* Allows maps to stack on very small screens */
+}
+
+/* Loading placeholder animation for thank_you.html */
+@keyframes pulse-bg {
+  0%, 100% {
+    background-color: #e5e7eb; /* gray-200 */
+  }
+  50% {
+    background-color: #d1d5db; /* gray-300 */
+  }
+}
+
+.loading-placeholder {
+  animation: pulse-bg 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  border-radius: 0.5rem; /* rounded-lg */
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+/* For the free-form question selection animation */
+.selection-highlight {
+    transition: box-shadow 0.1s ease-in-out !important;
+    box-shadow: 0 0 35px 10px rgba(59, 130, 246, 0.8) !important;
+    border-radius: 0.75rem; /* This should match the border-radius of your grid */
+    z-index: 20;
+    position: relative;
+}
+
+/* Styles for the assignment animation popup */
+#selection-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(4px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+    transition: opacity 0.3s ease-in-out;
+}
+
+#selection-overlay.hidden {
+    display: none;
+}
+
+#selection-popup {
+    background-color: white;
+    padding: 2rem 3rem;
+    border-radius: 12px;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #374151; /* gray-700 */
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+.loading-dots::after {
+  display: inline-block;
+  animation: ellipsis 1.25s infinite;
+  content: ".";
+  width: 1em;
+  text-align: left;
+}
+
+@keyframes ellipsis {
+  0% { content: "."; }
+  33% { content: ".."; }
+  66% { content: "..."; }
+}
+
+/* Style the error text when the loader is in an error state */
+#debrief-loader.error-state p {
+    color: #b91c1c; /* A dark red, matching your .btn-danger style */
+    font-weight: 500;
+}
+
+/* Hide the animated dots when the error message is showing */
+#debrief-loader.error-state .loading-dots::after {
+    display: none;
+}

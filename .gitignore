@@ -1,0 +1,6 @@
+# Python Cache
+__pycache__/
+*.py[cod]
+
+# User configurations
+user_groups.yaml

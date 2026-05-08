@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Instructions</title>
+
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}"> 
+    <link rel="icon" href="{{ url_for('static', filename='imgs/elf_down.png') }}" type="image/png">
+</head>
+<body class="bg-gray-100">
+
+    <div id="mobile-warning-overlay" class="hidden">
+        <div class="overlay-backdrop">
+            <div class="warning-box">
+                <div class="warning-icon-container">
+                    <svg class="warning-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                    <path fill-rule="evenodd" d="M8.257 3.099c.636-1.214 2.43-1.214 3.066 0l7.106 13.572c.636 1.214-.265 2.729-1.533 2.729H2.684c-1.268 0-2.169-1.515-1.533-2.729L8.257 3.099zM10 12a1 1 0 100-2 1 1 0 000 2zm1-4a1 1 0 11-2 0 1 1 0 012 0z" clip-rule="evenodd" />
+                    </svg>
+                </div>
+                <div>
+                    <p id="mobile-warning-title" class="warning-text-title"></p>
+                    <p id="mobile-warning-text" class="warning-text-body"></p>
+                    <p id="mobile-warning-action" class="warning-text-body"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div id="message-box" class="mt-4 content-container" style="max-width: 700px;"></div>
+
+    <div id="instructions-loader" class="content-container instructions-page-container flex items-center justify-center" style="min-height: 300px;">
+        <p id="loader-text" class="text-xl text-gray-600">Loading ...</p>
+    </div>
+
+    <form id="instructions-form">
+        <div id="instructions-content-wrapper" class="content-container instructions-page-container hidden">
+            <div id="instructions-display-area">
+                </div>
+            <button id="proceedToTaskButton" class="w-full mt-8 btn btn-primary" disabled>
+                Loading...
+            </button>
+        </div>
+    </form>
+
+    <script>
+        // Dynamically load utils.js with a cache-busting parameter
+        const utilsScript = document.createElement('script');
+        utilsScript.src = `{{ url_for('static', filename='js/utils.js') }}?t=${new Date().getTime()}`;
+        document.body.appendChild(utilsScript);
+
+        // After utils.js is fully loaded, then load the specific script for this page
+        utilsScript.onload = () => {
+            const instructionsScript = document.createElement('script');
+            instructionsScript.src = `{{ url_for('static', filename='js/manipulation_check.js') }}?t=${new Date().getTime()}`;
+            document.body.appendChild(instructionsScript);
+        };
+    </script>
+</body>
+<div id="progress-bar-container" class="fixed top-0 left-0 w-full bg-gray-100 border-b border-gray-300 z-50 p-2 hidden shadow-sm">
+    <div class="max-w-4xl mx-auto">
+        <div class="flex items-center justify-between mb-1">
+            <span id="progress-milestone-text" class="text-sm font-semibold text-gray-700"></span>
+            <span id="progress-round-text" class="text-sm text-gray-600"></span>
+        </div>
+        <div class="w-full bg-gray-200 rounded-full h-2">
+            <div id="progress-bar" class="bg-red-700 h-2 rounded-full transition-all duration-300" style="width: 0%"></div>
+        </div>
+    </div>
+</div>
+</html>

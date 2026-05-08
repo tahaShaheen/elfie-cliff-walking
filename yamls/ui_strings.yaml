@@ -1,0 +1,227 @@
+ui_strings:
+
+  common:
+    loading_task: Loading mini-game, please wait...
+    loading_instructions: Loading page ...
+    error_loading_environment: 'Error loading environment: '
+    error_message_default: An unexpected error occurred. Please try again.
+    message_use_arrow_keys: Use Arrow Keys ⬅️ ⬆️ ➡️ ⬇️ or Click on adjacent tiles to create a plan.
+    message_proceeding_next_task: Proceeding to next task...
+    button_start_task: End Practice
+    task_title_template: "Mini-Game {current} of {total}"
+    practice_round_banner: "PRACTICE ROUND"
+    progress_round_template: "Round {current} of {total}"
+    progress_practice_notice: "Practice Round"
+    button_end_practice: End Practice
+    button_next_map: Next Map
+    button_finish_and_submit: 'Finish Mini-Game'
+    progress_complete_notice: 'Thank you!'
+    instructions_title: 'Instructions'
+    welcome_text: 'Welcome!'
+    a_note_on_plan_vs_execution_title: "These games are about PLANNING only"
+    plan_vs_execution_title: "Note on Plan vs Execution"
+    manipulation_check_title_pre: "That was a lot! Let's see if you understood..."
+    manipulation_check_title_post: "Did you understand the new information?"
+
+  form_page:
+    title: Participant Login
+    button_continue: Login and Continue
+    message_loading_config: Loading configuration...
+    message_fill_required: Please enter your User ID.
+    message_submitting: "One moment ..."
+    message_submission_success: ID verified! Redirecting to instructions...
+    error_config_missing: 'Error: Form configuration is missing. Please contact support.'
+    error_missing_fields: Please enter your User ID.
+    error_submission_failed: 'Submission Error:'
+    label_full_name: Full Name
+    placeholder_full_name: Enter your name
+    label_user_id: User ID
+    placeholder_user_id: Enter your assigned User ID
+    label_email: Email Address
+    placeholder_email: your@email.com
+    label_phone: Phone Number
+    placeholder_phone: e.g., 123-456-7890
+    label_age: Age
+    placeholder_age: Enter your age
+    label_gender: Gender
+    gender_male: Male
+    gender_female: Female
+    gender_other: Other
+    gender_prefer_not_to_say: Prefer not to say
+    label_familiarity_played_before: Have you played this type of game before?
+    label_familiarity_level: If yes, what is your familiarity level?
+    select_level_placeholder: Select level...
+    familiarity_low: Low
+    familiarity_medium: Medium
+    familiarity_high: High
+
+  free_form_page:
+    title: "Describe the Environment"
+    page_header: "Welcome to the Experiment!"
+    textarea_placeholder: "e.g., rocky, slippery, rough, smooth, sticky, ..."
+    error_description_too_short: "Please provide a short description."
+    error_selection_required: "Please select one of the options to continue."
+    message_submission_success: "Thank you! Your description has been saved."
+    message_free_form_question_instructions: "Please select one of the options to continue."
+    submit_button: "Submit Description"
+
+  instructions_page:
+    title: "✉️ We have received more information!"
+    button_proceed_to_task: "Continue"
+    message_verifying_access: Verifying form completion status...
+    message_form_not_completed: Please complete the player information form first.
+    message_read_carefully: Please read the instructions carefully before proceeding.
+    collapsible_header_text: "Click to see instructions again"
+
+  demonstrations_page:
+    title: 'Mini-Game: Demonstrate the Best Plan'
+    instructions_title: Instructions
+    message_initial_load_error: 'Error setting up demonstrations: '
+    message_goal_reached: Congratulations! You reached the cookie 🍪!
+    message_cliff_fall: Oops! If Elfie follows your plan, she will fall off a cliff. Click 'Create Plan Again'.
+    message_invalid_move: "Oops! If Elfie follows your plan, she will fall off a cliff. Select a different tile."
+    message_attempt_reset: "Current attempt reset. Your plan for this demonstration has been cleared. \n Use Arrow Keys ⬅️ ⬆️ ➡️ ⬇️ or Click on adjacent tiles to create a plan."
+    message_finalizing_demos: Saving demonstrations for this task...
+    error_submitting_demos: 'Error saving demonstrations: '
+    button_reset_attempt: Reset
+    button_reset_try_again: Create Plan Again
+    task_name: 'Demonstration'
+    message_no_real_tasks: 'No real tasks to complete.'
+    message_step_limit_reached: "Step limit reached for this attempt. Click 'Create Plan Again'."
+    error_saving_progress: "Failed to save progress: "
+
+  corrections_page:
+    title: "Mini-Game: Correct Elfie's Planned Path"
+    instructions_title: 'Instructions'
+    button_watch_plan: "Watch Current Plan"
+    button_next_trajectory: Next Map
+    message_submitting_corrections: Submitting your corrections...
+    error_submission_failed: 'Failed to submit corrections: '
+    message_initial_prompt: "Press 'Watch Current Plan' to begin."
+    message_watching_plan: Watching Elfie's current plan...
+    message_plan_finished_can_correct: "You have **{attemptsLeft}** correction attempts remaining.\nClick and hold any highlighted tile to drag and change the plan.\nClick the cookie 🍪 or press Enter when you're satisfied with the plan."
+    message_plan_finished_no_attempts: "You have no corrections left.\nClick on Elfie :elf: or press **Backspace** (delete on Mac) to undo all corrections.\nPlease click the cookie 🍪 to finalize."
+    message_goal_clicked_practice: "Practice complete! You may now start the real task.\nClick on Elfie :elf: or press **Backspace** (delete on Mac) to undo all corrections."
+    message_goal_clicked_real: "Corrections finalized. You may now proceed.\nClick on Elfie :elf: or press **Backspace** (delete on Mac) to undo all corrections."
+    button_watch_plan_again: Watch Plan Again
+    button_watching_plan: Watching Plan...
+    button_click_on_cookie: "Click on Cookie 🍪"
+    unlimited_corrections_instruction: "You can make **unlimited corrections** to make Elfie's plan better."
+    message_reverting_plan: "Reverting to the original plan..."
+    message_drag_instructions_unlimited: "Click and hold any highlighted tile to drag and change the plan.\nClick the cookie 🍪 or press Enter when you're satisfied with the plan."
+    message_drag_mode_prompt: "Drag Mode: Use arrows to move, Enter to confirm, Escape to cancel."
+    error_correction_too_large: "Correction too large. Cancelling."
+    message_correction_applied_unlimited: "Correction applied! Continue making changes or click the cookie 🍪 to finalize."
+    message_correction_applied_template: "Correction applied! Attempts left: {attemptsLeft}"
+    message_correction_cancelled: "Correction cancelled."
+    error_correction_too_large_for_attempts: "Correction too large for attempts remaining. Please try a smaller change."
+    message_saving_correction: "Saving correction..."
+    button_reset_trial: "Reset All"
+    
+
+  off_page:
+    title: 'Mini-Game: Watch for Better Choices'
+    instructions_title: 'Instructions'
+    button_next_trajectory: Next Map
+    message_submitting_interventions: Submitting your interventions...
+    error_submission_failed: 'Failed to submit interventions: '
+    message_no_scenarios: "No review scenarios available. Proceeding..."
+    message_goal_clicked_off_practice: "Practice complete! Click on 'End Practice' to begin the game.\nClick on Elfie :elf: or press **Backspace** (delete on Mac) to try again."
+    message_goal_clicked_off_real: "Response Saved. You may proceed to the next map.\nClick on Elfie :elf: or press **Backspace** (delete on Mac) to try again."
+    message_initial_prompt: "Press 'Watch Current Plan' to begin."
+    button_click_on_cookie: "Click on Cookie 🍪"
+    button_reset_trial: "Reset All"
+    button_watch_current_plan: "Watch Current Plan"
+    button_watching_plan: "Watching Plan..."
+    message_animation_playing_status: "Animation playing..."
+    message_watch_then_place_obstacles: "Watch the initial animation. Afterwards, you can place obstacles."
+    message_obstacle_prompt_template: "Click a blue tile where Elfie should not step ({obstaclesLeft} more selections possible).\nClick on an X to remove a selection.\nClick the cookie 🍪 if you're satisfied with the plan."
+    button_recalculating: "Recalculating..."
+    message_training_new_policy: "Training a new policy with your obstacles..."
+    button_play_new_path: "Play New Plan"
+    button_watching_new_plan: "Watching Plan..."
+    message_playing_new_plan: "Playing the new plan..."
+    message_obstacle_removed_recalculating: "Selection removed. Recalculating plan..."
+    error_recalculating_path: "Error recalculating plan: "
+    error_max_obstacles_template: "You have reached the maximum of {maxObstacles} selections for this trial."
+    error_unsolvable_obstacle: "This selection would make the cookie unreachable. Please choose another spot."
+    error_place_on_blue_path: "Please place obstacles on the blue tiles."
+    message_obstacle_placed_retraining: "Tile selected. Updating plan..."
+    message_trial_reset: "Trial reset to its original state."
+    message_saving_action: "Saving your action..."
+    button_watching_plan: "Watching Plan..."
+    button_disabled: "Disabled"
+
+  comparisons_page:
+    title: 'Mini-Game: Pick the Best Plan'
+    instructions_title: 'Instructions:'
+    message_loading_scenarios: Loading mini-game ...
+    message_no_scenarios: No comparison scenarios are available.
+    message_init_error: 'Error initializing comparison task:'
+    message_playback_prompt: "Press 'Watch Both Plans' then select your preferred plan.\nIf you cannot decide, pick any plan."
+    message_playing_trajectories: Playing animation...
+    message_playback_finished_select: "Playback finished. Please select the plan you prefer or rewatch."
+    message_playback_error: An error occurred during playback.
+    message_play_first: Please press 'Watch Both Plans' before making a selection.
+    message_selection_made: You selected Plan
+    message_select_first: Please select a plan before proceeding.
+    message_submitting_choices: Submitting your choices...
+    error_submission_failed: 'Submission Error:'
+    label_trajectory_a: Plan A
+    label_trajectory_b: Plan B
+    button_play_trajectories: "Watch Both Plans"
+    button_playing_trajectories: Playing...
+    button_replay_trajectories: 'Rewatch Both Plans'
+    button_select_prompt: Select a Plan
+    button_next_comparison: Next Map
+    button_finish_comparisons: Finish
+    task_name: 'Comparison'
+    error_loading_map: 'Error loading map for '
+    error_try_restarting: '. Try restarting.'
+    message_saving_choice: "Saving choice..."
+    error_server_status_code: "Server error: "
+
+  thank_you_page:
+    title: Experiment Complete
+    message_main: Thank You!
+    message_completed_all: You have successfully completed all mini-games.
+    message_can_close: Do not close this window yet.
+    # DEBRIEFING FORM TEXT ---
+    debrief_form_title: "DEBRIEFING FORM"
+    debrief_form_intro: "Thank you for your valuable contribution to our study! The purpose of this document is to provide you with information about the study you participated in and its educational value."
+    
+    debrief_section_1_title: "1. The Problem We Are Investigating"
+    debrief_section_1_content: "Our study is focused on investigating if a person's beliefs about how the world works influence the feedback or guidance they provide to an Artificial Intelligence (AI) agent.\n\nHuman feedback is crucial for aligning AI systems with what people want. You participated in a task where you helped an AI agent get from a starting point to a goal in a grid-world. Your role was to provide guidance to the agent, but the key element we were studying was how your understanding of the environment affected the plans you helped create."
+
+    debrief_section_2_title: "2. The Importance of This Research in Psychology"
+    debrief_section_2_content: "This research fits into a field known as Human-Robot Interaction (HRI). HRI draws from Computer Science and Robotics, Psychology, and the Behavioral Sciences.\n\nWe are trying to better understand the beliefs and assumptions that people have and how these shape how they teach robots to do tasks. If a human doesn't understand the environment in which a task is to be done, they might teach a robot a suboptimal or incorrect way of doing that task. This is an assumption made in a lot of the research literature and we are trying to empirically see if this is true. For example, imagine a passenger is helping teach a self-driving car (like Waymo). A passenger, under the assumption that the road is slippery due to rainfall will teach the car to be “careful”. If this belief does not match the actual road conditions or if the road being slippery doesn't actually affect the car because it has tires that never slip, the car learning to be “careful” is making it learn a suboptimal way of doing something."
+    
+    debrief_section_3_title: "3. Our Central Hypothesis and the Study's Design"
+    debrief_section_3_content: "Our central hypothesis was that a mismatch between a person's belief about an environment and the environment's actual properties would produce the greatest difference between the guidance they provide and the truly optimal path.\n\nSome participants were part of a **'mismatched'** group. This is where a minor form of deception was used in the study's design. Some participants were shown visuals of stable, grassy terrain but were told its physics were slippery and unpredictable. Other participants were shown visuals of slippery, icy terrain but were told its physics were stable and non-slippery. For the participants in the **'matched'** group, the visuals matched the description of the terrain.\n\nThis intentional mismatch was essential for our research. It allowed us to separate the influence of your belief from the influence of the environment's actual characteristic. By comparing the results from the 'mismatched' groups to the 'matched' groups (where visuals and information aligned), we can isolate and measure the specific impact that belief has on behavior. We predicted that, when there was conflict between what the ground looked like (strongly associated with a slippery nature or stable rough nature) and what you were told (belief), the path you provided would be different from the ideal path for that specific environment."
+
+    debrief_section_4_title: "4. Further Questions"
+    debrief_section_4_content: "We greatly appreciate your time and effort. Your participation has provided us with valuable data. If you have any further questions about this study, please do not hesitate to contact us:\n\nTaha Shaheen (taha.shaheen@asu.edu)\nDr Stephen West (sgwest@asu.edu)\nDr Yu “Tony” Zhang (yu.zhang.442@asu.edu)\n\n**(2) IRB CONTACT INFORMATION**\nRichard Gilmour: rgilmou@asu.edu"
+    
+    debrief_key_facts_header: "Your Personal Session Summary"
+
+    message_elfie_thanks: 'Elfie appreciates your help! 🍪'
+    message_gift_card_info: 'If you requested payment, eligible submissions will receive a $5 Amazon gift card sent to the email address you provided. Please allow up to two weeks for processing. If you have any questions or concerns, feel free to contact us at taha.shaheen@asu.edu.'
+    footer_title: 'Attributions & Resources'
+    footer_links:
+    - text: 'Mouse Icons by rcherem on Flaticon'
+      href: 'https://www.flaticon.com'
+    - text: 'Elf and Ice Sprites from Farama Gymnasium'
+      href: 'https://gymnasium.farama.org/environments/toy_text/frozen_lake/'
+    - text: 'Grass Tileset from Itch.io'
+      href: 'https://ninjikin.itch.io/grass'
+    - text: 'Dry Grass Photo'
+      href: 'https://unsplash.com/photos/green-grass-HKJCs7jNd3w'
+    - text: 'Ice Photo'
+      href: 'https://unsplash.com/photos/white-snow-mountain-S-5qu7iwQfc'
+    - text: 'Assistance from Gemini 2.5 Pro'
+      href: 'https://gemini.google.com'
+
+  mobile_warning:
+    title: Device Not Supported
+    main_text: This experiment is designed for laptops, desktops, or large tablets.
+    call_to_action: 'Please switch to a supported device to continue. If you have any questions, please contact us at taha.shaheen@asu.edu.'

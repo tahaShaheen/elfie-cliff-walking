@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Player Information</title>
+
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}"> 
+    <link rel="icon" href="{{ url_for('static', filename='imgs/elf_down.png') }}" type="image/png">
+</head>
+<body class="bg-gray-100 form-page-body"> 
+
+
+    <div id="mobile-warning-overlay" class="hidden">
+        <div class="overlay-backdrop">
+            <div class="warning-box">
+                <div class="warning-icon-container">
+                    <svg class="warning-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                    <path fill-rule="evenodd" d="M8.257 3.099c.636-1.214 2.43-1.214 3.066 0l7.106 13.572c.636 1.214-.265 2.729-1.533 2.729H2.684c-1.268 0-2.169-1.515-1.533-2.729L8.257 3.099zM10 12a1 1 0 100-2 1 1 0 000 2zm1-4a1 1 0 11-2 0 1 1 0 012 0z" clip-rule="evenodd" />
+                    </svg>
+                </div>
+                <div>
+                    <p id="mobile-warning-title" class="warning-text-title"></p>
+                    <p id="mobile-warning-text" class="warning-text-body"></p>
+                    <p id="mobile-warning-action" class="warning-text-body"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+    <div id="message-box" class="mt-4 content-container" style="max-width: 500px;"></div>
+    <div class="content-container form-page-container"> 
+        <h1 id="form-title" class="text-2xl font-bold mb-6 text-gray-700 text-center"></h1>
+        <form id="pregame-form" novalidate> 
+            <div id="form-fields-container">
+                </div>
+            <button type="submit" id="continueToGameButton" class="w-full mt-4 btn btn-success">
+            </button>
+        </form>
+    </div>
+
+    <script>
+        const utilsScript = document.createElement('script');
+        utilsScript.src = `{{ url_for('static', filename='js/utils.js') }}?t=${new Date().getTime()}`;
+        document.body.appendChild(utilsScript);
+
+        utilsScript.onload = () => {
+            const formScript = document.createElement('script');
+            formScript.src = `{{ url_for('static', filename='js/index.js') }}?t=${new Date().getTime()}`;
+            document.body.appendChild(formScript);
+        };
+    </script>
+</body>
+</html>
