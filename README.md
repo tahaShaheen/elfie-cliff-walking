@@ -38,7 +38,7 @@ You can log in using any of the following accounts to test the different experim
 
 ## Local Development & Setup
 
-### 1. Python Environment Setup
+### 1. Environment Setup
 We highly recommend using Conda to manage your local environment to ensure all dependencies resolve correctly.
 
 **Option A: Standard Conda Installation:**
@@ -74,7 +74,7 @@ Once your Python environment is activated (and dependencies are installed), you 
 flask run --port=5001
 ```
 
-### 3. Database Configuration (Optional)
+### 3. Database Configuration
 
 **Please note: Data-saving functionality is currently disabled in the live demo.** Because free-tier PostgreSQL databases on onRender automatically expire after a limited time, the demo no longer collects or saves new participant data. 
 
