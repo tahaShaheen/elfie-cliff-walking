@@ -28,8 +28,8 @@
   }
 
   function populateUsers() {
-    const users = [...new Set(allRows.map(r => r.user_id_field).filter(Boolean))];
-    userSelect.innerHTML = '<option value="">-- select user --</option>' + users.map(u => `<option value="${u}">${u}</option>`).join('');
+    const users = [...new Set(allRows.map(r => r.user_id_field).filter(Boolean))].sort();
+    userSelect.innerHTML = `<option value="">-- select participant (${users.length}) --</option>` + users.map(u => `<option value="${u}">${u}</option>`).join('');
   }
 
   userSelect.addEventListener('change', () => {
@@ -43,6 +43,10 @@
     const user = userSelect.value;
     if (!user) return;
     const rows = allRows.filter(r => r.user_id_field === user);
+    
+    // Sort rows by time so feedback types appear chronologically
+    rows.sort((a, b) => new Date(a.submission_time || a.form_submission_time || 0) - new Date(b.submission_time || b.form_submission_time || 0));
+
     const feedbacks = [...new Set(rows.map(r => r.feedback_type || 'unknown'))];
     feedbackSelect.innerHTML = '<option value="">-- select feedback type --</option>' + feedbacks.map(f => `<option value="${f}">${f}</option>`).join('');
     feedbackSelect.disabled = false;
@@ -54,6 +58,10 @@
     const user = userSelect.value; const feedback = feedbackSelect.value;
     if (!user || !feedback) return;
     const rows = allRows.filter(r => r.user_id_field === user && (r.feedback_type || 'unknown') === feedback);
+    
+    // Sort rows by time so trials appear chronologically
+    rows.sort((a, b) => new Date(a.submission_time || a.form_submission_time || 0) - new Date(b.submission_time || b.form_submission_time || 0));
+
     rows.forEach((r, i) => {
       const tn = r.trial_number || r.trial || i + 1;
       const opt = document.createElement('option');
@@ -98,7 +106,7 @@
 
   function renderTextSummary(row) {
     // 1. Clear visualization area and disable playback buttons
-    gridContainer.innerHTML = 'No visualization for this data type.';
+    gridContainer.innerHTML = '';
     playBtn.disabled = true;
     resetBtn.disabled = true;
     summaryEl.innerHTML = ''; // Clear previous summary
@@ -150,15 +158,23 @@
       </thead>`;
 
       const tbody = document.createElement('tbody');
+      
+      const questionMap = {
+        'slippery_outcome_q': 'Likelihood of slip (plan close to cliff)? (1=Unlikely, 5=Likely)',
+        'slippery_outcome_q_2': 'Likelihood of slip (plan far from cliff)? (1=Unlikely, 5=Likely)',
+        'execution_q': 'Agreement: "Mini-games are about PLANNING, will NOT see Elfie move" (1=Disagree... 5=Agree)',
+        'what_is_task_q': 'Agreement: "My task is to act as an OBSERVER" (1=Disagree... 5=Agree)'
+      };
+
       // Populate table with responses and individual error counts
       if (responses && typeof responses === 'object') {
         for (const [key, value] of Object.entries(responses)) {
           const tr = document.createElement('tr');
-          const formattedKey = key.replace(/_/g, ' ').replace(/\b\w/g, l => l.toUpperCase());
+          const formattedKey = questionMap[key] || key.replace(/_/g, ' ').replace(/\b\w/g, l => l.toUpperCase());
           // Get the specific error count for this question, defaulting to 0 if not found
           const errorCount = errorsData ? (errorsData[key] || 0) : 0;
           
-          tr.innerHTML = `<td style="padding: 4px 0;">${formattedKey}</td><td style="padding: 4px 0;"><strong>${value}</strong></td><td style="padding: 4px 0;">${errorCount}</td>`;
+          tr.innerHTML = `<td style="padding: 4px 5px 4px 0;">${formattedKey}</td><td style="padding: 4px 5px; text-align: center;"><strong>${value}</strong></td><td style="padding: 4px 0; text-align: center;">${errorCount}</td>`;
           tbody.appendChild(tr);
         }
       }
@@ -173,11 +189,16 @@
       title.textContent = 'Free Form Question Summary';
       contentDiv.appendChild(title);
 
+      const questionMap = {
+        'stable_rating': 'Rating for the Stable Realm (1=Rough & Stable, 5=Slick & Slippery)',
+        'slippery_rating': 'Rating for the Slippery Realm (1=Rough & Stable, 5=Slick & Slippery)'
+      };
+
       if (dataToShow && typeof dataToShow === 'object' && !Array.isArray(dataToShow)) {
         for (const [key, value] of Object.entries(dataToShow)) {
           const item = document.createElement('div');
           item.className = 'info-row small';
-          const formattedKey = key.replace(/_/g, ' ').replace(/\b\w/g, l => l.toUpperCase());
+          const formattedKey = questionMap[key] || key.replace(/_/g, ' ').replace(/\b\w/g, l => l.toUpperCase());
           item.innerHTML = `<strong style="margin-top: 8px; display: inline-block;">${formattedKey}:</strong><p style="margin: 4px 0 0 10px; white-space: pre-wrap;">${value}</p>`;
           contentDiv.appendChild(item);
         }
@@ -190,7 +211,7 @@
       contentDiv.innerHTML = '<p>No data found in the expected column for this entry.</p>';
     }
 
-    summaryEl.appendChild(contentDiv);
+    gridContainer.appendChild(contentDiv);
   }
 
   function renderSummaryAndGrid() {
@@ -202,6 +223,27 @@
       <div class="info-row small"><strong>Group:</strong> ${row.instruction_group || 'N/A'}</div>
       <div class="info-row small"><strong>Feedback:</strong> ${row.feedback_type || 'N/A'}</div>
       <div class="info-row small"><strong>Policy served:</strong> ${row.policy_type_served || 'N/A'}</div>`;
+      
+    // Add Legend based on feedback type
+    let legendHtml = '';
+    const fb = row.feedback_type;
+    if (fb === 'comparison' || fb === 'correction' || fb === 'off_intervention') {
+      legendHtml = `<div class="info-row small" style="margin-top:10px; border:1px solid #ccc; padding:6px; border-radius:4px; max-width: 300px;">
+        <strong>Legend:</strong><br>
+        <span style="color:#007bff; font-weight:bold;">A (Blue):</span> Participant's final plan<br>
+        <span style="color:#ffc107; font-weight:bold;">B (Yellow):</span> What they started with`;
+      if (fb === 'off_intervention') {
+        legendHtml += `<br><span style="color:gray; font-weight:bold;">Gray X Box:</span> Obstacle placed by user`;
+      }
+      legendHtml += `</div>`;
+    } else if (fb === 'demonstration' || fb === 'demonstration_pre') {
+      legendHtml = `<div class="info-row small" style="margin-top:10px; border:1px solid #ccc; padding:6px; border-radius:4px; max-width: 300px;">
+        <strong>Legend:</strong><br>
+        <span style="color:#007bff; font-weight:bold;">A (Blue):</span> Participant's demonstrated trajectory
+      </div>`;
+    }
+    info.innerHTML += legendHtml;
+    
     summaryEl.appendChild(info);
 
     const { a, b, obstacles } = extractData(row);
