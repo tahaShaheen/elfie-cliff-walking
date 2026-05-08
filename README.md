@@ -109,7 +109,7 @@ The codebase will automatically detect this `DATABASE_URL` variable, connect to 
 **This repository is currently not being maintained.** Please feel free to fork and use the code for your own projects! If you do so, please cite the study using:
 
 ```bibtex
-@inproceedings{shaheen2026elfie,
+@inproceedings{shaheen2026,
   title={Empirical Evidence and Analysis of a Critical Pitfall in Reward Learning from Human Feedback},
   author={Shaheen, Taha and West, Stephen G. and Zhang, Yu},
   booktitle={Proceedings of the International Joint Conference on Artificial Intelligence (IJCAI)},
