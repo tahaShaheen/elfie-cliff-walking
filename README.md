@@ -19,7 +19,7 @@ Participants were recruited via general advertisement (paid $5) and a Psych 101 
 
 You can log in using any of the following accounts to test the different experimental conditions:
 
-| Group ID | Instructions (`a`) | Visual Environment (`b`) | Regular User Login | Psych Pool Login |
+| Experiment Condition | Instructions (`a`) | Visual Environment (`b`) | Regular User Login | Psych Pool Login |
 | :--- | :--- | :--- | :--- | :--- |
 | **a1b1** | Safe (Not Slippery) | Not Slippery | `test_user1` | `psych_user1` |
 | **a1b2** | Safe (Not Slippery) | Slippery | `test_user2` | `psych_user2` |
@@ -31,7 +31,7 @@ You can log in using any of the following accounts to test the different experim
 ## Data & Visualizations
 
 * **Raw Final Data:** [View the Dataset on GitHub](https://github.com/tahaShaheen/elfie-cliff-walking/blob/main/experiment_data/processed_participant_data.csv)
-* **Final Data Visualizations:** [View Interactive Trajectories and Responses for Individual Participants](https://elfie-cliff-walking.onrender.com/experiment_data/trajectory_visualizer/index.html)
+* **Final Data Visualizations:** [View Interactive Trajectories and Responses from Dataset](https://elfie-cliff-walking.onrender.com/experiment_data/trajectory_visualizer/index.html)
 
 
 ---
