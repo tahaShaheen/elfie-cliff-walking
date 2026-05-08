@@ -1,6 +1,6 @@
 # webapp/main_routes.py
-
-from flask import Blueprint, render_template
+import os
+from flask import Blueprint, render_template, send_from_directory
 
 main_bp = Blueprint('main', __name__)
 
@@ -25,3 +25,10 @@ def serve_page(page_name):
         return render_template(page_name)
     else:
         return "Not Found", 404
+
+@main_bp.route('/experiment_data/<path:filename>')
+def serve_experiment_data(filename):
+    """Serves static files from the experiment_data directory."""
+    base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+    target_dir = os.path.join(base_dir, 'experiment_data')
+    return send_from_directory(target_dir, filename)
