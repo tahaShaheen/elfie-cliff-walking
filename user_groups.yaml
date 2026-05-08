@@ -1,3 +1,13 @@
+# a1: Not Slippery Instructions
+# a2: Slippery Instructions
+# b1: Not Slippery Environment (Visual)
+# b2: Slippery Environment (Visual)
+#
+# Users in 'group_a1b1' will see the not slippery instructions and not slippery environment.
+# Users in 'group_a1b2' will see the not slippery instructions and slippery environment.
+# Users in 'group_a2b1' will see the slippery instructions and not slippery environment.
+# Users in 'group_a2b2' will see the slippery instructions and slippery environment.
+
 - user_id: psych_user1
   instruction_group: group_a1b1
   notes: psych_123
