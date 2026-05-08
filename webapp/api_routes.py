@@ -1720,7 +1720,7 @@ def get_participant_data():
     """
     # Using a specific, recent data file for visualization.
     # This can be changed to a different file or made dynamic if needed.
-    data_file = 'render_hosting/participant_data_backup.csv'
+    data_file = 'experiment_data/processed_participant_data.csv'
     try:
         if os.path.exists(data_file):
             df = pd.read_csv(data_file)
