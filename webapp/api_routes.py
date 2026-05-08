@@ -2,6 +2,8 @@
 
 from flask import Blueprint, jsonify, request, session
 import pandas as pd
+import numpy as np
+import math
 import random
 import yaml
 import json
@@ -1725,8 +1727,18 @@ def get_participant_data():
         if os.path.exists(data_file):
             df = pd.read_csv(data_file)
             # Replace NaN with None (which becomes null in JSON) for cleaner data
-            df = df.where(pd.notnull(df), None)
-            return jsonify(df.to_dict(orient='records'))
+            
+            # More aggressive replacement to guarantee no NaNs leak into JSON
+            df = df.replace({np.nan: None})
+            
+            # Convert to dictionary and do a deep clean just in case pandas missed something
+            records = df.to_dict(orient='records')
+            for row in records:
+                for k, v in row.items():
+                    if isinstance(v, float) and math.isnan(v):
+                        row[k] = None
+                        
+            return jsonify(records)
         else:
             return jsonify({"error": f"Data file not found: {data_file}"}), 404
     except Exception as e:

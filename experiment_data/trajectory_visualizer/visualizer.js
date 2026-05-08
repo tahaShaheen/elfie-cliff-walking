@@ -1,5 +1,4 @@
 // RUN THIS: http://127.0.0.1:5001/static/trajectory_visualizer/index.html
-//  Make sure that the csv file is not being edited in VScode
 
 (function () {
   const API_BASE = '/api';
