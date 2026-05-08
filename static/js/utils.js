@@ -113,7 +113,6 @@ function showAppMessage(elementId, text, type = "info", error_timeout = 4500) {
     messageBox.classList.add(`message-box-${type}`);
 
     if (isError) {
-        // --- ADD THIS LINE ---
         messageBox.scrollIntoView({ behavior: 'smooth', block: 'center' });
         messageBox.timeoutId = setTimeout(() => {
             // --- NEW: Restore the saved state ---
@@ -379,9 +378,7 @@ async function fetchAndRenderStructuredInstructions(endpoint, displayAreaId, mes
 }
 
 
-// --- CHANGE 4: ADD THIS NEW HELPER FUNCTION ---
-// This new function contains the rendering logic that used to be inside your forEach loop.
-// Add this function right below fetchAndRenderStructuredInstructions in your utils.js file.
+// This function contains the rendering logic that used to be inside your forEach loop.
 function renderInstructionItem(item, options = {}) {
     const itemDiv = document.createElement('div');
     itemDiv.classList.add('instruction-item');
@@ -999,7 +996,7 @@ function renderInstructionItem(item, options = {}) {
         };
 
         // renderAnimations();
-        setTimeout(renderAnimations, 0); // ADD THIS LINE
+        setTimeout(renderAnimations, 0); 
         return componentWrapper;
 
     } else if (item.type === "render_environment_statically") {
@@ -2423,7 +2420,6 @@ function highlightElement(element, color = 'red', shouldScroll = true) {
     }, 2500);
 }
 
-// Add this function to utils.js
 
 /**
  * Calculates the Dynamic Time Warping (DTW) distance between two trajectories.

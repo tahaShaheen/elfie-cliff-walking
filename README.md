@@ -106,6 +106,16 @@ The codebase will automatically detect this `DATABASE_URL` variable, connect to 
 
 ## 🛑 Maintenance & License
 
-**This repository is currently not being maintained.** Please feel free to fork and use the code for your own projects!
+**This repository is currently not being maintained.** Please feel free to fork and use the code for your own projects! If you do so, please cite the study using:
+
+```bibtex
+@inproceedings{shaheen2026elfie,
+  title={Empirical Evidence and Analysis of a Critical Pitfall in Reward Learning from Human Feedback},
+  author={Shaheen, Taha and West, Stephen G. and Zhang, Yu},
+  booktitle={Proceedings of the International Joint Conference on Artificial Intelligence (IJCAI)},
+  year={2026}
+}
+```
 
 This project is licensed under the **MIT License**.
+

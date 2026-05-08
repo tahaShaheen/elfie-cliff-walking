@@ -111,7 +111,6 @@ instruction_components:
     - "On **STABLE ground**, Elfie would be **completely safe** following the plan shown above."
     - "On **SLIPPERY ground**, Elfie **risks slipping** and falling off the cliff if she follows the plan shown above."
 
-  # Add this new component under the 'instruction_components' section
   manipulation_check_questions_post:
   - type: new_card
     display_mode: main_only

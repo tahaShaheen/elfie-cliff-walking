@@ -710,7 +710,7 @@ function handleGridMouseDown(event) {
     dragStartInfo = {
         index: index,
         coords: correctedTrajectory[index],
-        lastMouseCoords: null // Add this to track mouse position during the drag
+        lastMouseCoords: null 
     };
 
     clickedCell.classList.add('dragging');
