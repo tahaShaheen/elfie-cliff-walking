@@ -3,4 +3,5 @@ __pycache__/
 flask_session/
 local_database.db
 game_data.yaml
-static/.DS_Store
+.DS_Store
+**/.DS_Store

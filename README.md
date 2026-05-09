@@ -30,9 +30,11 @@ You can log in using any of the following accounts to test the different experim
 
 ## Data & Visualizations
 
-* **Raw Final Data:** [View the Dataset on GitHub](https://github.com/tahaShaheen/elfie-cliff-walking/blob/main/experiment_data/processed_participant_data.csv)
+* **Raw Final Data:** The final processed ananymized dataset can be found in this repository at: [`/experiment_data/experiment_data/processed_participant_data.csv`](https://github.com/tahaShaheen/elfie-cliff-walking/blob/main/experiment_data/processed_participant_data.csv)
 * **Final Data Visualizations:** [View Interactive Trajectories and Responses from Dataset](https://elfie-cliff-walking.onrender.com/experiment_data/trajectory_visualizer/index.html)
 
+* **Statistical Analysis & SPSS Data:** The final amalgamated dataset, along with our analysis files, can be found in this repository at: [`/experiment_data/data_analysis_SPSS`](https://github.com/tahaShaheen/elfie-cliff-walking/tree/main/experiment_data/data_analysis_SPSS).
+  * *Note on SPSS:* The analyses for this paper were conducted using SPSS (Statistical Package for the Social Sciences), a proprietary software. While it is highly likely that these exact statistical procedures can be replicated using R or Python, we have not attempted or verified this.
 
 ---
 
