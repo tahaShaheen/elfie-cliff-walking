@@ -106,7 +106,7 @@ The codebase will automatically detect this `DATABASE_URL` variable, connect to 
 * [Ice Photo](https://unsplash.com/photos/white-snow-mountain-S-5qu7iwQfc)
 * [Assistance from Gemini 2.5 Pro and 3.0 Pro](https://gemini.google.com)
 
-## 🛑 Maintenance & License
+## Maintenance, License, Citation
 
 **This repository is currently not being maintained.** Please feel free to fork and use the code for your own projects! If you do so, please cite the study using:
 
